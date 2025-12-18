@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Agree Realty - A leading Real Estate Investment Trust (REIT) focused on net leased retail properties">
+    <title>About Us | Agree Realty</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header" id="site-header" role="banner">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="Agree Realty Home">
+                <svg class="logo-svg" viewBox="0 0 180 40" aria-hidden="true">
+                    <text x="0" y="28" class="logo-text">AGREE REALTY</text>
+                </svg>
+            </a>
+
+            <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+                <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li role="none"><a href="acquire.html" role="menuitem" class="nav-link" data-nav="acquire">ACQUIRE</a></li>
+                    <li role="none"><a href="develop.html" role="menuitem" class="nav-link" data-nav="develop">DEVELOP</a></li>
+                    <li role="none"><a href="#fund" role="menuitem" class="nav-link" data-nav="fund">FUND</a></li>
+                    <li role="none"><a href="#investors" role="menuitem" class="nav-link" data-nav="investors">INVESTORS</a></li>
+                    <li role="none"><a href="#sustainability" role="menuitem" class="nav-link" data-nav="sustainability">SUSTAINABILITY</a></li>
+                    <li role="none"><a href="about.html" role="menuitem" class="nav-link active" data-nav="about">ABOUT</a></li>
+                    <li role="none"><a href="#properties" role="menuitem" class="nav-link" data-nav="properties">PROPERTIES</a></li>
+                    <li role="none"><a href="#careers" role="menuitem" class="nav-link" data-nav="careers">CAREERS</a></li>
+                </ul>
+            </nav>
+
+            <button class="search-trigger" id="search-trigger" aria-label="Open search" aria-expanded="false" aria-controls="search-overlay">
+                <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Site search" hidden>
+        <div class="search-overlay-inner">
+            <button class="search-close" id="search-close" aria-label="Close search">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <form class="search-form" role="search" action="#" method="get">
+                <label for="site-search" class="visually-hidden">Search the site</label>
+                <input type="search" id="site-search" name="q" class="search-input" placeholder="Search..." autocomplete="off">
+                <button type="submit" class="search-submit" aria-label="Submit search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Hero -->
+        <section class="page-hero" aria-labelledby="page-title">
+            <div class="page-hero-background">
+                <div class="page-hero-image" role="img" aria-label="Corporate office building">
+                    <!--
+                        IMAGE PLACEHOLDER: Replace with actual hero image
+                        Recommended size: 1920x800
+                    -->
+                </div>
+                <div class="page-hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 id="page-title" class="page-title" data-content="aboutPageTitle">About Us</h1>
+                    <p class="page-subtitle" data-content="aboutPageSubtitle">A leading Real Estate Investment Trust focused on net leased retail properties</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Intro Section -->
+        <section class="content-section reveal-section" aria-labelledby="about-intro-heading">
+            <div class="container">
+                <div class="two-column-grid">
+                    <div class="content-block">
+                        <span class="section-eyebrow">Who We Are</span>
+                        <h2 id="about-intro-heading" class="section-title" data-content="aboutIntroTitle">Our Story</h2>
+                        <p data-content="aboutIntroText">
+                            Agree Realty Corporation is a fully integrated, self-administered, and self-managed real estate investment trust (REIT) focused on the acquisition and development of properties net leased to industry leading, omni-channel retail tenants throughout the United States.
+                        </p>
+                        <p>
+                            As one of the largest net lease REITs in the country, we specialize in acquiring and developing properties that are leased on a long-term basis to industry-leading retailers. Our portfolio includes properties leased to top retailers across essential sectors including grocery, home improvement, convenience, and quick-service restaurants.
+                        </p>
+                    </div>
+                    <div class="image-placeholder" role="img" aria-label="Agree Realty headquarters">
+                        <!--
+                            IMAGE PLACEHOLDER: Replace with actual image
+                            Recommended size: 600x450
+                        -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section reveal-section" aria-labelledby="stats-heading">
+            <h2 id="stats-heading" class="visually-hidden">Company Statistics</h2>
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2603" data-suffix="">0</span>
+                        <span class="stat-label">Properties</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="54" data-suffix="M">0</span>
+                        <span class="stat-label">Square Feet</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50" data-suffix="">0</span>
+                        <span class="stat-label">States</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="12" data-suffix="B+">0</span>
+                        <span class="stat-label">Enterprise Value</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="content-section alt reveal-section" aria-labelledby="history-heading">
+            <div class="container">
+                <div class="two-column-grid">
+                    <div class="image-placeholder" role="img" aria-label="Historical company photo">
+                        <!--
+                            IMAGE PLACEHOLDER: Replace with actual image
+                            Recommended size: 600x450
+                        -->
+                    </div>
+                    <div class="content-block">
+                        <span class="section-eyebrow">Our Heritage</span>
+                        <h2 id="history-heading" class="section-title" data-content="aboutHistoryTitle">Our History</h2>
+                        <p data-content="aboutHistoryText">
+                            Founded in 1971 as Agree Development Company, we have grown from a regional developer to a national leader in the net lease sector. Today, Agree Realty is a $12B+ industry leader with a portfolio spanning all 50 states.
+                        </p>
+                        <p>
+                            Over five decades, we've built a reputation for excellence in the acquisition and development of retail properties. Our long-standing relationships with leading retailers, combined with our disciplined investment approach, have enabled us to grow into one of the largest net lease REITs in the country.
+                        </p>
+                        <ul>
+                            <li>1971 - Founded as Agree Development Company</li>
+                            <li>1994 - Initial Public Offering (NYSE: ADC)</li>
+                            <li>2010 - Began significant portfolio expansion</li>
+                            <li>2020 - Reached $10B+ in total market capitalization</li>
+                            <li>Today - 2,600+ properties across all 50 states</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="content-section reveal-section" aria-labelledby="mission-heading">
+            <div class="container">
+                <div class="two-column-grid">
+                    <div class="content-block">
+                        <span class="section-eyebrow">Our Purpose</span>
+                        <h2 id="mission-heading" class="section-title" data-content="aboutMissionTitle">Our Mission</h2>
+                        <p data-content="aboutMissionText">
+                            To be the premier net lease REIT, delivering consistent growth and value for our shareholders through disciplined acquisitions, strategic development, and operational excellence.
+                        </p>
+                        <p>
+                            We are committed to:
+                        </p>
+                        <ul>
+                            <li>Maintaining a high-quality portfolio of retail properties</li>
+                            <li>Partnering with industry-leading tenants</li>
+                            <li>Delivering consistent returns to shareholders</li>
+                            <li>Operating with integrity and transparency</li>
+                            <li>Investing in sustainable practices</li>
+                        </ul>
+                    </div>
+                    <div class="image-placeholder" role="img" aria-label="Modern retail property">
+                        <!--
+                            IMAGE PLACEHOLDER: Replace with actual image
+                            Recommended size: 600x450
+                        -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section reveal-section" aria-labelledby="cta-heading">
+            <div class="cta-background">
+                <div class="cta-image"></div>
+                <div class="cta-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-heading" class="cta-title">Work With Us</h2>
+                    <p class="cta-text">Whether you're looking to sell, acquire, or develop properties, we'd love to hear from you.</p>
+                    <div class="cta-buttons">
+                        <a href="acquire.html" class="btn btn-primary">
+                            Acquisition Inquiries
+                            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="develop.html" class="btn btn-outline-light">
+                            Development Services
+                            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-contact">
+                    <a href="index.html" class="footer-logo" aria-label="Agree Realty Home">
+                        <svg class="logo-svg" viewBox="0 0 180 40" aria-hidden="true">
+                            <text x="0" y="28" class="logo-text">AGREE REALTY</text>
+                        </svg>
+                    </a>
+                    <address class="footer-address">
+                        <p>70 E. Long Lake Road</p>
+                        <p>Bloomfield Hills, MI 48304</p>
+                    </address>
+                    <div class="footer-contact-links">
+                        <a href="tel:+12487373980" class="footer-link">
+                            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            (248) 737-3980
+                        </a>
+                        <a href="mailto:info@agreerealty.com" class="footer-link">
+                            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="2,4 12,13 22,4" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            info@agreerealty.com
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Company</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#investors">Investor Relations</a></li>
+                            <li><a href="#sustainability">Sustainability</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Services</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="acquire.html">Acquire</a></li>
+                            <li><a href="develop.html">Develop</a></li>
+                            <li><a href="#fund">Fund</a></li>
+                            <li><a href="#properties">Properties</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Resources</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#for-lease">For Lease</a></li>
+                            <li><a href="#for-sale">For Sale</a></li>
+                            <li><a href="#news">News</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="footer-social">
+                    <h3 class="footer-nav-title">Connect</h3>
+                    <div class="social-links">
+                        <a href="#linkedin" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#twitter" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Agree Realty Corporation. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Use</a>
+                    <a href="#accessibility">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

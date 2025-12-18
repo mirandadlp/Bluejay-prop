@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acquire - Agree Realty acquires high-quality net lease properties throughout the United States">
+    <title>Acquire | Agree Realty</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header" id="site-header" role="banner">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="Agree Realty Home">
+                <svg class="logo-svg" viewBox="0 0 180 40" aria-hidden="true">
+                    <text x="0" y="28" class="logo-text">AGREE REALTY</text>
+                </svg>
+            </a>
+
+            <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+                <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li role="none"><a href="acquire.html" role="menuitem" class="nav-link active" data-nav="acquire">ACQUIRE</a></li>
+                    <li role="none"><a href="develop.html" role="menuitem" class="nav-link" data-nav="develop">DEVELOP</a></li>
+                    <li role="none"><a href="#fund" role="menuitem" class="nav-link" data-nav="fund">FUND</a></li>
+                    <li role="none"><a href="#investors" role="menuitem" class="nav-link" data-nav="investors">INVESTORS</a></li>
+                    <li role="none"><a href="#sustainability" role="menuitem" class="nav-link" data-nav="sustainability">SUSTAINABILITY</a></li>
+                    <li role="none"><a href="about.html" role="menuitem" class="nav-link" data-nav="about">ABOUT</a></li>
+                    <li role="none"><a href="#properties" role="menuitem" class="nav-link" data-nav="properties">PROPERTIES</a></li>
+                    <li role="none"><a href="#careers" role="menuitem" class="nav-link" data-nav="careers">CAREERS</a></li>
+                </ul>
+            </nav>
+
+            <button class="search-trigger" id="search-trigger" aria-label="Open search" aria-expanded="false" aria-controls="search-overlay">
+                <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Site search" hidden>
+        <div class="search-overlay-inner">
+            <button class="search-close" id="search-close" aria-label="Close search">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <form class="search-form" role="search" action="#" method="get">
+                <label for="site-search" class="visually-hidden">Search the site</label>
+                <input type="search" id="site-search" name="q" class="search-input" placeholder="Search..." autocomplete="off">
+                <button type="submit" class="search-submit" aria-label="Submit search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Hero with Big Stat -->
+        <section class="page-hero" aria-labelledby="page-title" style="min-height: 60vh;">
+            <div class="page-hero-background">
+                <div class="page-hero-image" role="img" aria-label="Retail property exterior">
+                    <!--
+                        IMAGE PLACEHOLDER: Replace with actual hero image
+                        Recommended size: 1920x800
+                    -->
+                </div>
+                <div class="page-hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 id="page-title" class="page-title" data-content="acquirePageTitle">Acquire</h1>
+                    <div class="big-stat" data-content="acquireStatValue">$9B+</div>
+                    <p class="big-stat-label" data-content="acquireStatLabel">Acquired Throughout the United States</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acquisition Focus Section -->
+        <section class="content-section reveal-section" aria-labelledby="acquire-intro-heading">
+            <div class="container">
+                <div class="two-column-grid">
+                    <div class="content-block">
+                        <span class="section-eyebrow">What We Do</span>
+                        <h2 id="acquire-intro-heading" class="section-title" data-content="acquireIntroTitle">Acquisition Focus</h2>
+                        <p data-content="acquireIntroText">
+                            Agree Realty has acquired over $9 billion in retail net lease properties throughout the United States, with individual acquisitions ranging from $2 million to $50 million per asset. We focus on properties that offer stable, long-term cash flows with industry-leading tenants.
+                        </p>
+                        <p>
+                            Our experienced acquisitions team evaluates opportunities across the country, targeting properties with strong credit tenants, favorable lease terms, and desirable real estate fundamentals.
+                        </p>
+                    </div>
+                    <div class="content-block">
+                        <h3 data-content="acquireCriteriaTitle">Acquisition Criteria</h3>
+                        <ul>
+                            <li>Single-tenant and multi-tenant net lease properties</li>
+                            <li>Sale-leasebacks with industry-leading tenants</li>
+                            <li>Properties with short or long-term leases</li>
+                            <li>Individual acquisitions from $2M to $50M</li>
+                            <li>Portfolio transactions up to $500M+</li>
+                            <li>Freestanding retail with strong real estate fundamentals</li>
+                            <li>Ground leases with credit tenants</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tenant Focus Section -->
+        <section class="content-section alt reveal-section" aria-labelledby="tenant-heading">
+            <div class="container">
+                <span class="section-eyebrow">Tenant Focus</span>
+                <h2 id="tenant-heading" class="section-title">Industry-Leading Retailers</h2>
+                <div class="two-column-grid" style="margin-top: var(--space-8);">
+                    <div class="content-block">
+                        <p>
+                            We target properties leased to retailers that have demonstrated the ability to adapt to an evolving retail landscape. Our portfolio is heavily weighted toward tenants in essential retail categories that have proven resilient through various economic cycles.
+                        </p>
+                        <p>
+                            Key tenant categories include:
+                        </p>
+                        <ul>
+                            <li>Grocery and convenience stores</li>
+                            <li>Home improvement centers</li>
+                            <li>Quick-service restaurants</li>
+                            <li>Auto parts and service</li>
+                            <li>Dollar stores</li>
+                            <li>Pharmacy and healthcare</li>
+                            <li>Tire and auto service centers</li>
+                        </ul>
+                    </div>
+                    <div class="content-block">
+                        <p>
+                            Approximately 67% of our annualized base rent comes from tenants with investment-grade credit ratings or investment-grade profiles. This focus on credit quality helps ensure stable, predictable cash flows for our portfolio.
+                        </p>
+                        <p>
+                            We have long-standing relationships with the nation's leading retailers and have developed a reputation as a preferred counterparty for sale-leaseback transactions and acquisitions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Regional Contacts Section with Accordion -->
+        <section class="content-section reveal-section" aria-labelledby="contacts-heading">
+            <div class="container">
+                <span class="section-eyebrow">Get in Touch</span>
+                <h2 id="contacts-heading" class="section-title">Regional Contacts</h2>
+                <p style="margin-bottom: var(--space-8); max-width: 700px;">
+                    Our dedicated acquisitions team is organized by region to better serve property owners and brokers across the country. Contact the team member covering your area to discuss opportunities.
+                </p>
+
+                <div class="contact-cards" id="regional-contacts">
+                    <!-- Contact cards will be rendered by JavaScript -->
+                    <!-- Fallback content for non-JS -->
+                    <noscript>
+                        <div class="contact-card">
+                            <p class="contact-card-region">General Inquiries</p>
+                            <h4 class="contact-card-name">Acquisitions Team</h4>
+                            <p class="contact-card-title">Agree Realty Corporation</p>
+                            <div class="contact-card-links">
+                                <a href="mailto:acquisitions@agreerealty.com" class="contact-card-link">acquisitions@agreerealty.com</a>
+                                <a href="tel:+12487373980" class="contact-card-link">(248) 737-3980</a>
+                            </div>
+                        </div>
+                    </noscript>
+                </div>
+
+                <!-- Alternative: Accordion style for regions -->
+                <div class="accordion" style="margin-top: var(--space-8);">
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-northeast">
+                            <span>Northeast Region</span>
+                            <svg class="accordion-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="accordion-content" id="accordion-northeast">
+                            <div class="accordion-content-inner">
+                                <p><strong>Coverage:</strong> Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Delaware, Maryland, Washington D.C.</p>
+                                <p><strong>Contact:</strong> John Smith, Senior Vice President</p>
+                                <p><strong>Email:</strong> <a href="mailto:jsmith@agreerealty.com">jsmith@agreerealty.com</a></p>
+                                <p><strong>Phone:</strong> <a href="tel:+12487373980">(248) 737-3980</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-southeast">
+                            <span>Southeast Region</span>
+                            <svg class="accordion-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="accordion-content" id="accordion-southeast">
+                            <div class="accordion-content-inner">
+                                <p><strong>Coverage:</strong> Virginia, West Virginia, North Carolina, South Carolina, Georgia, Florida, Alabama, Mississippi, Tennessee, Kentucky</p>
+                                <p><strong>Contact:</strong> Jane Doe, Vice President</p>
+                                <p><strong>Email:</strong> <a href="mailto:jdoe@agreerealty.com">jdoe@agreerealty.com</a></p>
+                                <p><strong>Phone:</strong> <a href="tel:+12487373980">(248) 737-3980</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-midwest">
+                            <span>Midwest Region</span>
+                            <svg class="accordion-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="accordion-content" id="accordion-midwest">
+                            <div class="accordion-content-inner">
+                                <p><strong>Coverage:</strong> Ohio, Michigan, Indiana, Illinois, Wisconsin, Minnesota, Iowa, Missouri, North Dakota, South Dakota, Nebraska, Kansas</p>
+                                <p><strong>Contact:</strong> Bob Johnson, Vice President</p>
+                                <p><strong>Email:</strong> <a href="mailto:bjohnson@agreerealty.com">bjohnson@agreerealty.com</a></p>
+                                <p><strong>Phone:</strong> <a href="tel:+12487373980">(248) 737-3980</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-southwest">
+                            <span>Southwest Region</span>
+                            <svg class="accordion-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="accordion-content" id="accordion-southwest">
+                            <div class="accordion-content-inner">
+                                <p><strong>Coverage:</strong> Texas, Oklahoma, Arkansas, Louisiana, New Mexico, Arizona</p>
+                                <p><strong>Contact:</strong> Sarah Williams, Vice President</p>
+                                <p><strong>Email:</strong> <a href="mailto:swilliams@agreerealty.com">swilliams@agreerealty.com</a></p>
+                                <p><strong>Phone:</strong> <a href="tel:+12487373980">(248) 737-3980</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-west">
+                            <span>West Region</span>
+                            <svg class="accordion-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="accordion-content" id="accordion-west">
+                            <div class="accordion-content-inner">
+                                <p><strong>Coverage:</strong> California, Nevada, Utah, Colorado, Wyoming, Montana, Idaho, Oregon, Washington, Alaska, Hawaii</p>
+                                <p><strong>Contact:</strong> Mike Brown, Senior Vice President</p>
+                                <p><strong>Email:</strong> <a href="mailto:mbrown@agreerealty.com">mbrown@agreerealty.com</a></p>
+                                <p><strong>Phone:</strong> <a href="tel:+12487373980">(248) 737-3980</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-national">
+                            <span>National Accounts & Portfolios</span>
+                            <svg class="accordion-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="accordion-content" id="accordion-national">
+                            <div class="accordion-content-inner">
+                                <p><strong>Coverage:</strong> Large portfolio transactions, national tenant relationships, sale-leaseback programs</p>
+                                <p><strong>Contact:</strong> Chris Davis, Executive Vice President</p>
+                                <p><strong>Email:</strong> <a href="mailto:cdavis@agreerealty.com">cdavis@agreerealty.com</a></p>
+                                <p><strong>Phone:</strong> <a href="tel:+12487373980">(248) 737-3980</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section reveal-section" aria-labelledby="cta-heading">
+            <div class="cta-background">
+                <div class="cta-image"></div>
+                <div class="cta-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-heading" class="cta-title">Have a Property to Sell?</h2>
+                    <p class="cta-text">We move quickly and close with certainty. Let's discuss your property.</p>
+                    <div class="cta-buttons">
+                        <a href="mailto:acquisitions@agreerealty.com" class="btn btn-primary">
+                            Contact Our Team
+                            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="index.html#properties" class="btn btn-outline-light">
+                            View Our Portfolio
+                            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-contact">
+                    <a href="index.html" class="footer-logo" aria-label="Agree Realty Home">
+                        <svg class="logo-svg" viewBox="0 0 180 40" aria-hidden="true">
+                            <text x="0" y="28" class="logo-text">AGREE REALTY</text>
+                        </svg>
+                    </a>
+                    <address class="footer-address">
+                        <p>70 E. Long Lake Road</p>
+                        <p>Bloomfield Hills, MI 48304</p>
+                    </address>
+                    <div class="footer-contact-links">
+                        <a href="tel:+12487373980" class="footer-link">
+                            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            (248) 737-3980
+                        </a>
+                        <a href="mailto:info@agreerealty.com" class="footer-link">
+                            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="2,4 12,13 22,4" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            info@agreerealty.com
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Company</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#investors">Investor Relations</a></li>
+                            <li><a href="#sustainability">Sustainability</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Services</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="acquire.html">Acquire</a></li>
+                            <li><a href="develop.html">Develop</a></li>
+                            <li><a href="#fund">Fund</a></li>
+                            <li><a href="#properties">Properties</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Resources</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#for-lease">For Lease</a></li>
+                            <li><a href="#for-sale">For Sale</a></li>
+                            <li><a href="#news">News</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="footer-social">
+                    <h3 class="footer-nav-title">Connect</h3>
+                    <div class="social-links">
+                        <a href="#linkedin" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#twitter" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Agree Realty Corporation. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Use</a>
+                    <a href="#accessibility">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize regional contacts when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof window.AgreeRealty !== 'undefined') {
+                window.AgreeRealty.renderRegionalContacts();
+            }
+        });
+    </script>
+</body>
+</html>

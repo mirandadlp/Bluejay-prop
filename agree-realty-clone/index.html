@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agree Realty - A leading Real Estate Investment Trust (REIT) focused on net leased retail properties">
+    <title>Agree Realty | Net Lease REIT</title>
+
+    <!--
+        FONT NOTE: The reference site uses a clean sans-serif font similar to Helvetica Neue or Inter.
+        Using Inter from Google Fonts as a close, free alternative.
+        To change fonts, update the @import in styles.css
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header" id="site-header" role="banner">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo" aria-label="Agree Realty Home">
+                <!-- Placeholder logo - replace with actual logo -->
+                <svg class="logo-svg" viewBox="0 0 180 40" aria-hidden="true">
+                    <text x="0" y="28" class="logo-text">AGREE REALTY</text>
+                </svg>
+            </a>
+
+            <!-- Primary Navigation -->
+            <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+                <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li role="none"><a href="acquire.html" role="menuitem" class="nav-link" data-nav="acquire">ACQUIRE</a></li>
+                    <li role="none"><a href="develop.html" role="menuitem" class="nav-link" data-nav="develop">DEVELOP</a></li>
+                    <li role="none"><a href="#fund" role="menuitem" class="nav-link" data-nav="fund">FUND</a></li>
+                    <li role="none"><a href="#investors" role="menuitem" class="nav-link" data-nav="investors">INVESTORS</a></li>
+                    <li role="none"><a href="#sustainability" role="menuitem" class="nav-link" data-nav="sustainability">SUSTAINABILITY</a></li>
+                    <li role="none"><a href="about.html" role="menuitem" class="nav-link" data-nav="about">ABOUT</a></li>
+                    <li role="none"><a href="#properties" role="menuitem" class="nav-link" data-nav="properties">PROPERTIES</a></li>
+                    <li role="none"><a href="#careers" role="menuitem" class="nav-link" data-nav="careers">CAREERS</a></li>
+                </ul>
+            </nav>
+
+            <!-- Search Trigger -->
+            <button class="search-trigger" id="search-trigger" aria-label="Open search" aria-expanded="false" aria-controls="search-overlay">
+                <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Site search" hidden>
+        <div class="search-overlay-inner">
+            <button class="search-close" id="search-close" aria-label="Close search">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <form class="search-form" role="search" action="#" method="get">
+                <label for="site-search" class="visually-hidden">Search the site</label>
+                <input type="search" id="site-search" name="q" class="search-input" placeholder="Search..." autocomplete="off">
+                <button type="submit" class="search-submit" aria-label="Submit search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-labelledby="hero-headline">
+            <div class="hero-background">
+                <!-- Placeholder gradient background - replace with actual hero image -->
+                <div class="hero-image" role="img" aria-label="Aerial view of retail properties">
+                    <!--
+                        IMAGE PLACEHOLDER: Replace with actual hero image
+                        Recommended size: 1920x1080 or larger
+                        Add: <img src="assets/hero-image.jpg" alt="Description" loading="eager">
+                    -->
+                </div>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="container">
+                    <h1 id="hero-headline" class="hero-headline" data-content="heroHeadline">
+                        Net Lease REIT Excellence
+                    </h1>
+                    <p class="hero-subheadline" data-content="heroSubheadline">
+                        Industry-leading acquisition and development of retail properties
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#properties-section" class="btn btn-primary" data-content="heroCta">
+                            View Our Properties
+                            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats/Counters Section -->
+        <section class="stats-section" id="stats-section" aria-labelledby="stats-heading">
+            <h2 id="stats-heading" class="visually-hidden">Company Statistics</h2>
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item" data-stat="properties">
+                        <span class="stat-number" data-count="2603" data-suffix="">0</span>
+                        <span class="stat-label" data-content="statPropertiesLabel">Properties</span>
+                    </div>
+                    <div class="stat-item" data-stat="sqft">
+                        <span class="stat-number" data-count="54" data-suffix="M">0</span>
+                        <span class="stat-label" data-content="statSqftLabel">Square Feet</span>
+                    </div>
+                    <div class="stat-item" data-stat="states">
+                        <span class="stat-number" data-count="50" data-suffix="">0</span>
+                        <span class="stat-label" data-content="statStatesLabel">States</span>
+                    </div>
+                    <div class="stat-item" data-stat="grade">
+                        <span class="stat-number" data-count="67" data-suffix="%">0</span>
+                        <span class="stat-label" data-content="statGradeLabel">Investment Grade</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Properties Section -->
+        <section class="properties-section" id="properties-section" aria-labelledby="properties-heading">
+            <div class="container">
+                <div class="properties-header">
+                    <div class="properties-titles">
+                        <h2 id="properties-heading" class="section-title" data-content="propertiesTitle">View Our Properties</h2>
+                        <p class="section-subtitle" data-content="propertiesSubtitle">Acquisition Targets</p>
+                    </div>
+                    <div class="properties-search">
+                        <label for="property-search" class="visually-hidden">Search properties by tenant or city, state</label>
+                        <div class="search-input-wrapper">
+                            <svg class="search-input-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <input type="text" id="property-search" class="property-search-input" placeholder="Search by tenant or City, ST" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="properties-tabs" role="tablist" aria-label="Property categories">
+                    <button class="tab-btn active" id="tab-lease" role="tab" aria-selected="true" aria-controls="panel-lease" data-tab="lease">
+                        Properties for Lease
+                    </button>
+                    <button class="tab-btn" id="tab-sale" role="tab" aria-selected="false" aria-controls="panel-sale" data-tab="sale">
+                        Properties for Sale
+                    </button>
+                </div>
+
+                <div class="properties-list-container">
+                    <div id="panel-lease" class="properties-panel active" role="tabpanel" aria-labelledby="tab-lease">
+                        <ul class="properties-list" id="properties-list-lease" aria-label="Properties available for lease">
+                            <!-- Properties will be rendered by JavaScript -->
+                        </ul>
+                    </div>
+                    <div id="panel-sale" class="properties-panel" role="tabpanel" aria-labelledby="tab-sale" hidden>
+                        <ul class="properties-list" id="properties-list-sale" aria-label="Properties available for sale">
+                            <!-- Properties will be rendered by JavaScript -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="properties-footer">
+                    <button class="btn btn-secondary load-more" id="load-more" data-content="loadMore">
+                        Load More Properties
+                        <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                            <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <polyline points="6,14 12,20 18,14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Preview Section -->
+        <section class="about-preview reveal-section" id="about-preview" aria-labelledby="about-preview-heading">
+            <div class="container">
+                <div class="about-preview-grid">
+                    <div class="about-preview-content">
+                        <span class="section-eyebrow" data-content="aboutEyebrow">About Agree Realty</span>
+                        <h2 id="about-preview-heading" class="section-title" data-content="aboutPreviewTitle">Industry Leader in Net Lease</h2>
+                        <p class="about-preview-text" data-content="aboutPreviewText">
+                            For over 50 years, Agree Realty has been a trusted partner in the acquisition and development of properties net leased to industry-leading retailers throughout the United States.
+                        </p>
+                        <a href="about.html" class="btn btn-outline" data-content="aboutPreviewCta">
+                            Learn More About Us
+                            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="about-preview-image">
+                        <!--
+                            IMAGE PLACEHOLDER: Replace with actual about image
+                            Recommended size: 600x400
+                        -->
+                        <div class="image-placeholder" role="img" aria-label="Office building exterior"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section reveal-section" id="services-section" aria-labelledby="services-heading">
+            <div class="container">
+                <h2 id="services-heading" class="section-title centered" data-content="servicesTitle">What We Do</h2>
+                <div class="services-grid">
+                    <a href="acquire.html" class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <rect x="4" y="8" width="40" height="32" fill="none" stroke="currentColor" stroke-width="2" rx="2"/>
+                                <line x1="4" y1="16" x2="44" y2="16" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                                <circle cx="18" cy="12" r="2" fill="currentColor"/>
+                                <rect x="10" y="22" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect x="26" y="22" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-content="serviceAcquireTitle">Acquire</h3>
+                        <p class="service-desc" data-content="serviceAcquireDesc">$9B+ acquired throughout the United States</p>
+                        <span class="service-link">
+                            Learn More
+                            <svg class="btn-arrow-sm" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="4" y1="12" x2="18" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="12,6 18,12 12,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="develop.html" class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <polygon points="24,4 44,18 44,44 4,44 4,18" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect x="18" y="28" width="12" height="16" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="24" y1="4" x2="24" y2="18" stroke="currentColor" stroke-width="2"/>
+                                <rect x="10" y="22" width="6" height="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect x="32" y="22" width="6" height="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-content="serviceDevelopTitle">Develop</h3>
+                        <p class="service-desc" data-content="serviceDevelopDesc">50+ years as a preferred development partner</p>
+                        <span class="service-link">
+                            Learn More
+                            <svg class="btn-arrow-sm" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="4" y1="12" x2="18" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="12,6 18,12 12,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="#fund" class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <text x="24" y="30" text-anchor="middle" font-size="18" fill="currentColor" font-weight="600">$</text>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-content="serviceFundTitle">Fund</h3>
+                        <p class="service-desc" data-content="serviceFundDesc">Flexible capital solutions for sellers</p>
+                        <span class="service-link">
+                            Learn More
+                            <svg class="btn-arrow-sm" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="4" y1="12" x2="18" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="12,6 18,12 12,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section reveal-section" id="cta-section" aria-labelledby="cta-heading">
+            <div class="cta-background">
+                <div class="cta-image" role="img" aria-label="Modern retail development"></div>
+                <div class="cta-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-heading" class="cta-title" data-content="ctaTitle">Ready to Partner with Us?</h2>
+                    <p class="cta-text" data-content="ctaText">Contact our team to discuss acquisition opportunities or development partnerships.</p>
+                    <div class="cta-buttons">
+                        <a href="acquire.html" class="btn btn-primary" data-content="ctaBtnAcquire">
+                            Acquisition Inquiries
+                            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="develop.html" class="btn btn-outline-light" data-content="ctaBtnDevelop">
+                            Development Services
+                            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Contact Block -->
+                <div class="footer-contact">
+                    <a href="index.html" class="footer-logo" aria-label="Agree Realty Home">
+                        <svg class="logo-svg" viewBox="0 0 180 40" aria-hidden="true">
+                            <text x="0" y="28" class="logo-text">AGREE REALTY</text>
+                        </svg>
+                    </a>
+                    <address class="footer-address">
+                        <p data-content="footerAddress1">70 E. Long Lake Road</p>
+                        <p data-content="footerAddress2">Bloomfield Hills, MI 48304</p>
+                    </address>
+                    <div class="footer-contact-links">
+                        <a href="tel:+12487373980" class="footer-link" data-content="footerPhone">
+                            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            (248) 737-3980
+                        </a>
+                        <a href="mailto:info@agreerealty.com" class="footer-link" data-content="footerEmail">
+                            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="2,4 12,13 22,4" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            info@agreerealty.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Company</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#investors">Investor Relations</a></li>
+                            <li><a href="#sustainability">Sustainability</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Services</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="acquire.html">Acquire</a></li>
+                            <li><a href="develop.html">Develop</a></li>
+                            <li><a href="#fund">Fund</a></li>
+                            <li><a href="#properties">Properties</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Resources</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#for-lease">For Lease</a></li>
+                            <li><a href="#for-sale">For Sale</a></li>
+                            <li><a href="#news">News</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Social Links -->
+                <div class="footer-social">
+                    <h3 class="footer-nav-title">Connect</h3>
+                    <div class="social-links">
+                        <a href="#linkedin" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#twitter" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright" data-content="footerCopyright">&copy; 2024 Agree Realty Corporation. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Use</a>
+                    <a href="#accessibility">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
