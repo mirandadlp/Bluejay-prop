@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acquired Properties - View Bluejay Properties' portfolio of acquired real estate">
+    <meta name="description" content="Acquired Properties - View Bluejay Properties' complete portfolio of acquired real estate organized by state">
     <title>Acquired Properties | Bluejay Properties</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,265 +59,74 @@
     <!-- Main Content -->
     <main id="main-content">
         <!-- Page Hero -->
-        <section class="page-hero" aria-labelledby="page-title" style="min-height: 50vh;">
+        <section class="page-hero page-hero--compact" aria-labelledby="page-title">
             <div class="page-hero-background">
-                <div class="page-hero-image" role="img" aria-label="Construction site">
-                    <!--
-                        IMAGE PLACEHOLDER: Replace with actual hero image
-                        Recommended size: 1920x800
-                    -->
-                </div>
+                <div class="page-hero-image" role="img" aria-label="Portfolio of properties"></div>
                 <div class="page-hero-overlay"></div>
             </div>
             <div class="container">
                 <div class="page-hero-content">
-                    <h1 id="page-title" class="page-title" data-content="developPageTitle">Develop</h1>
-                    <p class="page-subtitle" data-content="developPageSubtitle">For over 50 years, we have been a preferred development partner for industry-leading retailers</p>
+                    <h1 id="page-title" class="page-title">Acquired Properties</h1>
+                    <p class="page-subtitle">Our complete portfolio of properties organized by state</p>
                 </div>
             </div>
         </section>
 
-        <!-- Development Excellence Section -->
-        <section class="content-section reveal-section" aria-labelledby="develop-intro-heading">
+        <!-- Acquired Properties Section -->
+        <section class="acquired-properties-section" aria-labelledby="properties-heading">
             <div class="container">
-                <div class="two-column-grid">
-                    <div class="content-block">
-                        <span class="section-eyebrow">What We Offer</span>
-                        <h2 id="develop-intro-heading" class="section-title" data-content="developIntroTitle">Development Excellence</h2>
-                        <p data-content="developIntroText">
-                            For over 50 years, Agree has been a preferred development partner for industry-leading retailers, priding ourselves on our ability to undertake all aspects of the development process from site identification to grand opening.
-                        </p>
-                        <p>
-                            Our vertically integrated platform enables us to control all aspects of the development process, ensuring quality, efficiency, and successful outcomes for our retail partners.
-                        </p>
+                <!-- Search and Stats Bar -->
+                <div class="properties-toolbar">
+                    <div class="properties-search">
+                        <label for="property-search" class="visually-hidden">Search properties</label>
+                        <div class="search-input-wrapper">
+                            <svg class="search-input-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="16" y1="16" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <input
+                                type="search"
+                                id="property-search"
+                                class="search-input-field"
+                                placeholder="Search tenant, city, or state..."
+                                autocomplete="off"
+                            >
+                            <button type="button" class="search-clear" id="search-clear" aria-label="Clear search" hidden>
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                    <div class="image-placeholder" role="img" aria-label="New retail development">
-                        <!--
-                            IMAGE PLACEHOLDER: Replace with actual image
-                            Recommended size: 600x450
-                        -->
+                    <div class="properties-stats">
+                        <span class="properties-count" id="properties-count">Loading properties...</span>
+                        <button type="button" class="expand-all-btn" id="expand-all-btn">
+                            <span class="expand-all-text">Collapse All</span>
+                            <svg class="expand-all-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <polyline points="6,9 12,15 18,9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Development Process Section -->
-        <section class="content-section alt reveal-section" aria-labelledby="process-heading">
-            <div class="container">
-                <span class="section-eyebrow">How We Work</span>
-                <h2 id="process-heading" class="section-title" data-content="developProcessTitle">Our Process</h2>
-                <p style="margin-bottom: var(--space-12); max-width: 700px;">
-                    Our experienced development team manages every phase of the development process, from initial site identification through construction and asset management.
-                </p>
-
-                <div class="process-list">
-                    <div class="process-item reveal-section">
-                        <div class="process-number"></div>
-                        <div class="process-content">
-                            <h4>Site Identification & Acquisition</h4>
-                            <p>Market feasibility and saturation evaluations to identify optimal locations that meet our retail partners' criteria and growth objectives.</p>
-                        </div>
-                    </div>
-
-                    <div class="process-item reveal-section">
-                        <div class="process-number"></div>
-                        <div class="process-content">
-                            <h4>Due Diligence & Entitlements</h4>
-                            <p>Comprehensive due diligence including environmental assessments, title review, and zoning analysis. We manage all entitlement processes and regulatory approvals.</p>
-                        </div>
-                    </div>
-
-                    <div class="process-item reveal-section">
-                        <div class="process-number"></div>
-                        <div class="process-content">
-                            <h4>Design & Engineering</h4>
-                            <p>Full architectural and engineering services coordinated with tenant specifications. We ensure designs meet local codes while optimizing functionality and aesthetics.</p>
-                        </div>
-                    </div>
-
-                    <div class="process-item reveal-section">
-                        <div class="process-number"></div>
-                        <div class="process-content">
-                            <h4>Permitting</h4>
-                            <p>Complete permit acquisition and management of the approval process with local municipalities. Our team has deep experience navigating complex permitting requirements.</p>
-                        </div>
-                    </div>
-
-                    <div class="process-item reveal-section">
-                        <div class="process-number"></div>
-                        <div class="process-content">
-                            <h4>Construction Management</h4>
-                            <p>Ground-up construction with rigorous quality control, timeline management, and budget oversight. We coordinate all aspects of construction to deliver on time and on budget.</p>
-                        </div>
-                    </div>
-
-                    <div class="process-item reveal-section">
-                        <div class="process-number"></div>
-                        <div class="process-content">
-                            <h4>Asset Management</h4>
-                            <p>Ongoing property management and lease administration. We maintain our properties to the highest standards, ensuring long-term value for both our company and our tenants.</p>
-                        </div>
+                <!-- Properties List Container -->
+                <div class="acquired-properties" id="acquired-properties" role="list" aria-label="Properties by state">
+                    <!-- State sections will be rendered by JavaScript -->
+                    <div class="properties-loading">
+                        <div class="loading-spinner"></div>
+                        <p>Loading properties...</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Development Services Section -->
-        <section class="content-section reveal-section" aria-labelledby="services-heading">
-            <div class="container">
-                <span class="section-eyebrow">Our Capabilities</span>
-                <h2 id="services-heading" class="section-title">Development Services</h2>
-                <div class="two-column-grid" style="margin-top: var(--space-8);">
-                    <div class="content-block">
-                        <h3>Build-to-Suit Development</h3>
-                        <p>
-                            We specialize in build-to-suit developments for industry-leading retailers. Our team works closely with tenants to deliver properties that meet their exact specifications, from site selection through construction and lease-up.
-                        </p>
-                        <ul>
-                            <li>Custom design and specifications</li>
-                            <li>Single-tenant retail buildings</li>
-                            <li>Multi-tenant retail centers</li>
-                            <li>Ground lease structures available</li>
-                        </ul>
-                    </div>
-                    <div class="content-block">
-                        <h3>Redevelopment</h3>
-                        <p>
-                            We also undertake redevelopment projects, transforming existing properties to meet the evolving needs of modern retailers. Our redevelopment expertise includes:
-                        </p>
-                        <ul>
-                            <li>Repositioning and adaptive reuse</li>
-                            <li>Façade improvements and modernization</li>
-                            <li>Parking and site improvements</li>
-                            <li>Building expansions and modifications</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Under Construction Section -->
-        <section class="content-section alt reveal-section" aria-labelledby="construction-heading">
-            <div class="container">
-                <span class="section-eyebrow">Current Projects</span>
-                <h2 id="construction-heading" class="section-title">Under Construction</h2>
-                <p style="margin-bottom: var(--space-8); max-width: 700px;">
-                    Our development pipeline includes projects for leading retailers across the country. Here's a selection of our current development activity.
-                </p>
-
-                <div class="property-cards" id="under-construction-list">
-                    <!-- Cards rendered by JavaScript -->
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">Starbucks</h4>
-                            <p class="property-card-location">Phoenix, AZ</p>
-                            <span class="property-card-status construction">Under Construction</span>
-                        </div>
-                    </div>
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">Chipotle</h4>
-                            <p class="property-card-location">Austin, TX</p>
-                            <span class="property-card-status construction">Under Construction</span>
-                        </div>
-                    </div>
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">7-Eleven</h4>
-                            <p class="property-card-location">Dallas, TX</p>
-                            <span class="property-card-status construction">Under Construction</span>
-                        </div>
-                    </div>
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">Wawa</h4>
-                            <p class="property-card-location">Tampa, FL</p>
-                            <span class="property-card-status construction">Under Construction</span>
-                        </div>
-                    </div>
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">Quick Quack Car Wash</h4>
-                            <p class="property-card-location">Houston, TX</p>
-                            <span class="property-card-status construction">Under Construction</span>
-                        </div>
-                    </div>
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">Tractor Supply</h4>
-                            <p class="property-card-location">Nashville, TN</p>
-                            <span class="property-card-status construction">Under Construction</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Recently Completed Section -->
-        <section class="content-section reveal-section" aria-labelledby="completed-heading">
-            <div class="container">
-                <span class="section-eyebrow">Recent Deliveries</span>
-                <h2 id="completed-heading" class="section-title">Recently Completed</h2>
-                <p style="margin-bottom: var(--space-8); max-width: 700px;">
-                    We've delivered numerous successful development projects for our retail partners. Here's a selection of our recently completed developments.
-                </p>
-
-                <div class="property-cards" id="completed-list">
-                    <!-- Cards rendered by JavaScript -->
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">McDonald's</h4>
-                            <p class="property-card-location">Charlotte, NC</p>
-                            <span class="property-card-status completed">Completed</span>
-                        </div>
-                    </div>
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">Chick-fil-A</h4>
-                            <p class="property-card-location">Atlanta, GA</p>
-                            <span class="property-card-status completed">Completed</span>
-                        </div>
-                    </div>
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">Dollar General</h4>
-                            <p class="property-card-location">Raleigh, NC</p>
-                            <span class="property-card-status completed">Completed</span>
-                        </div>
-                    </div>
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">Gerber Collision</h4>
-                            <p class="property-card-location">Denver, CO</p>
-                            <span class="property-card-status completed">Completed</span>
-                        </div>
-                    </div>
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">CAVA</h4>
-                            <p class="property-card-location">Scottsdale, AZ</p>
-                            <span class="property-card-status completed">Completed</span>
-                        </div>
-                    </div>
-                    <div class="property-card">
-                        <div class="property-card-image"></div>
-                        <div class="property-card-content">
-                            <h4 class="property-card-tenant">Dutch Bros</h4>
-                            <p class="property-card-location">San Antonio, TX</p>
-                            <span class="property-card-status completed">Completed</span>
-                        </div>
-                    </div>
+                <!-- No Results Message -->
+                <div class="no-results" id="no-results" hidden>
+                    <svg class="no-results-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <line x1="16" y1="16" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3 class="no-results-title">No properties found</h3>
+                    <p class="no-results-text">Try adjusting your search terms or <button type="button" class="link-btn" id="clear-search-btn">clear the search</button></p>
                 </div>
             </div>
         </section>
@@ -330,18 +139,18 @@
             </div>
             <div class="container">
                 <div class="cta-content">
-                    <h2 id="cta-heading" class="cta-title">Partner With Us</h2>
-                    <p class="cta-text">Let's discuss how our development capabilities can support your growth objectives.</p>
+                    <h2 id="cta-heading" class="cta-title">Have a Property to Sell?</h2>
+                    <p class="cta-text">We're actively acquiring properties across the United States. Let's discuss yours.</p>
                     <div class="cta-buttons">
-                        <a href="mailto:development@agreerealty.com" class="btn btn-primary">
-                            Contact Development Team
+                        <a href="criteria.html" class="btn btn-primary">
+                            View Acquisition Criteria
                             <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
                                 <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 <polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
-                        <a href="about.html" class="btn btn-outline-light">
-                            Learn About Us
+                        <a href="contact.html" class="btn btn-outline-light">
+                            Contact Us
                             <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
                                 <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 <polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -372,12 +181,12 @@
                             </svg>
                             (248) 737-3980
                         </a>
-                        <a href="mailto:info@agreerealty.com" class="footer-link">
+                        <a href="mailto:info@bluejayproperties.com" class="footer-link">
                             <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true">
                                 <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
                                 <polyline points="2,4 12,13 22,4" fill="none" stroke="currentColor" stroke-width="2"/>
                             </svg>
-                            info@agreerealty.com
+                            info@bluejayproperties.com
                         </a>
                     </div>
                 </div>
@@ -387,27 +196,9 @@
                         <h3 class="footer-nav-title">Company</h3>
                         <ul class="footer-nav-list">
                             <li><a href="about.html">About Us</a></li>
-                            <li><a href="#investors">Investor Relations</a></li>
-                            <li><a href="#sustainability">Sustainability</a></li>
-                            <li><a href="#careers">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-nav-column">
-                        <h3 class="footer-nav-title">Services</h3>
-                        <ul class="footer-nav-list">
-                            <li><a href="acquire.html">Acquire</a></li>
-                            <li><a href="develop.html">Develop</a></li>
-                            <li><a href="#fund">Fund</a></li>
-                            <li><a href="#properties">Properties</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-nav-column">
-                        <h3 class="footer-nav-title">Resources</h3>
-                        <ul class="footer-nav-list">
-                            <li><a href="#for-lease">For Lease</a></li>
-                            <li><a href="#for-sale">For Sale</a></li>
-                            <li><a href="#news">News</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="criteria.html">Acquisition Criteria</a></li>
+                            <li><a href="properties.html">Acquired Properties</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -432,7 +223,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2024 Agree Realty Corporation. All rights reserved.</p>
+                <p class="copyright">&copy; 2024 Bluejay Properties. All rights reserved.</p>
                 <div class="legal-links">
                     <a href="#privacy">Privacy Policy</a>
                     <a href="#terms">Terms of Use</a>
@@ -443,10 +234,10 @@
     </footer>
 
     <script>
-        // Initialize development projects when page loads
+        // Initialize acquired properties when page loads
         document.addEventListener('DOMContentLoaded', () => {
-            if (typeof window.AgreeRealty !== 'undefined') {
-                window.AgreeRealty.renderDevelopmentProjects();
+            if (typeof initAcquiredProperties === 'function') {
+                initAcquiredProperties();
             }
         });
     </script>
