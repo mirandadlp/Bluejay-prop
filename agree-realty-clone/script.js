@@ -248,19 +248,18 @@ function initHeader() {
     const header = document.getElementById('site-header');
     if (!header) return;
 
-    let lastScrollY = window.scrollY;
     let ticking = false;
+    const scrollThreshold = 20;
 
     function updateHeader() {
         const scrollY = window.scrollY;
 
-        if (scrollY > 50) {
+        if (scrollY > scrollThreshold) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
 
-        lastScrollY = scrollY;
         ticking = false;
     }
 
@@ -273,6 +272,47 @@ function initHeader() {
 
     // Initial check
     updateHeader();
+
+    // Set active nav link based on current page
+    setActiveNavLink();
+}
+
+/* ==========================================
+   ACTIVE NAV LINK DETECTION
+   ========================================== */
+function setActiveNavLink() {
+    const currentPath = window.location.pathname;
+    const pageName = currentPath.split('/').pop() || 'index.html';
+
+    // Map page names to nav data attributes
+    const pageNavMap = {
+        'about.html': 'about',
+        'criteria.html': 'criteria',
+        'properties.html': 'properties',
+        'contact.html': 'contact'
+    };
+
+    const activeKey = pageNavMap[pageName];
+
+    if (activeKey) {
+        // Desktop nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.dataset.nav === activeKey) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Mobile nav links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            if (link.dataset.nav === activeKey) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
 }
 
 /* ==========================================
@@ -280,33 +320,108 @@ function initHeader() {
    ========================================== */
 function initNavigation() {
     const toggle = document.getElementById('nav-toggle');
-    const menu = document.getElementById('nav-menu');
+    const overlay = document.getElementById('mobile-nav-overlay');
+    const mobileMenu = document.getElementById('mobile-nav-menu');
 
-    if (!toggle || !menu) return;
+    if (!toggle || !overlay) return;
 
+    let scrollPosition = 0;
+    let focusableElements = [];
+    let firstFocusable = null;
+    let lastFocusable = null;
+
+    function openMobileNav() {
+        // Store scroll position and lock body
+        scrollPosition = window.scrollY;
+        document.body.classList.add('mobile-nav-open');
+        document.body.style.top = `-${scrollPosition}px`;
+
+        // Show overlay
+        overlay.hidden = false;
+        // Force reflow for animation
+        overlay.offsetHeight;
+        overlay.classList.add('active');
+        toggle.setAttribute('aria-expanded', 'true');
+
+        // Set up focus trap
+        focusableElements = overlay.querySelectorAll(
+            'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+        );
+        firstFocusable = focusableElements[0];
+        lastFocusable = focusableElements[focusableElements.length - 1];
+
+        // Focus first menu item
+        if (firstFocusable) {
+            setTimeout(() => firstFocusable.focus(), 100);
+        }
+    }
+
+    function closeMobileNav() {
+        overlay.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+
+        // Restore body scroll
+        document.body.classList.remove('mobile-nav-open');
+        document.body.style.top = '';
+        window.scrollTo(0, scrollPosition);
+
+        // Hide overlay after animation
+        setTimeout(() => {
+            overlay.hidden = true;
+        }, 250);
+
+        // Return focus to toggle
+        toggle.focus();
+    }
+
+    function isNavOpen() {
+        return overlay.classList.contains('active');
+    }
+
+    // Toggle button click
     toggle.addEventListener('click', () => {
-        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', !isExpanded);
-        menu.classList.toggle('active');
-        document.body.classList.toggle('nav-open');
+        if (isNavOpen()) {
+            closeMobileNav();
+        } else {
+            openMobileNav();
+        }
     });
 
     // Close menu when clicking a link
-    menu.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            toggle.setAttribute('aria-expanded', 'false');
-            menu.classList.remove('active');
-            document.body.classList.remove('nav-open');
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', closeMobileNav);
         });
+    }
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isNavOpen()) {
+            closeMobileNav();
+        }
+
+        // Focus trap - Tab key handling
+        if (e.key === 'Tab' && isNavOpen()) {
+            if (e.shiftKey) {
+                // Shift + Tab
+                if (document.activeElement === firstFocusable || document.activeElement === toggle) {
+                    e.preventDefault();
+                    lastFocusable.focus();
+                }
+            } else {
+                // Tab
+                if (document.activeElement === lastFocusable) {
+                    e.preventDefault();
+                    toggle.focus();
+                }
+            }
+        }
     });
 
-    // Close menu on escape
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && menu.classList.contains('active')) {
-            toggle.setAttribute('aria-expanded', 'false');
-            menu.classList.remove('active');
-            document.body.classList.remove('nav-open');
-            toggle.focus();
+    // Close on click outside (on overlay background)
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeMobileNav();
         }
     });
 }

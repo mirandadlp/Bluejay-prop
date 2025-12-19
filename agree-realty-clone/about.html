@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Agree Realty - A leading Real Estate Investment Trust (REIT) focused on net leased retail properties">
-    <title>About Us | Agree Realty</title>
+    <meta name="description" content="About Bluejay Properties - Premium real estate investment and property acquisition">
+    <title>About Us | Bluejay Properties</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,61 +20,41 @@
     <!-- Global Header -->
     <header class="site-header" id="site-header" role="banner">
         <div class="header-container">
-            <a href="index.html" class="logo" aria-label="Agree Realty Home">
-                <svg class="logo-svg" viewBox="0 0 180 40" aria-hidden="true">
-                    <text x="0" y="28" class="logo-text">AGREE REALTY</text>
-                </svg>
+            <!-- Logo -->
+            <a href="index.html" class="logo" aria-label="Bluejay Properties Home">
+                <img src="assets/bluejay-properties.png" alt="Bluejay Properties" class="logo-img">
             </a>
 
+            <!-- Primary Navigation -->
             <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li role="none"><a href="about.html" role="menuitem" class="nav-link" data-nav="about">About Us</a></li>
+                    <li role="none"><a href="criteria.html" role="menuitem" class="nav-link" data-nav="criteria">Acquisition Criteria</a></li>
+                    <li role="none"><a href="properties.html" role="menuitem" class="nav-link" data-nav="properties">Acquired Properties</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem" class="nav-link" data-nav="contact">Contact Us</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle (hamburger) -->
                 <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
                     <span class="nav-toggle-bar"></span>
                     <span class="nav-toggle-bar"></span>
                     <span class="nav-toggle-bar"></span>
                 </button>
+            </nav>
+        </div>
 
-                <ul class="nav-menu" id="nav-menu" role="menubar">
-                    <li role="none"><a href="acquire.html" role="menuitem" class="nav-link" data-nav="acquire">ACQUIRE</a></li>
-                    <li role="none"><a href="develop.html" role="menuitem" class="nav-link" data-nav="develop">DEVELOP</a></li>
-                    <li role="none"><a href="#fund" role="menuitem" class="nav-link" data-nav="fund">FUND</a></li>
-                    <li role="none"><a href="#investors" role="menuitem" class="nav-link" data-nav="investors">INVESTORS</a></li>
-                    <li role="none"><a href="#sustainability" role="menuitem" class="nav-link" data-nav="sustainability">SUSTAINABILITY</a></li>
-                    <li role="none"><a href="about.html" role="menuitem" class="nav-link active" data-nav="about">ABOUT</a></li>
-                    <li role="none"><a href="#properties" role="menuitem" class="nav-link" data-nav="properties">PROPERTIES</a></li>
-                    <li role="none"><a href="#careers" role="menuitem" class="nav-link" data-nav="careers">CAREERS</a></li>
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay" hidden>
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+                <ul class="mobile-nav-menu" id="mobile-nav-menu">
+                    <li><a href="about.html" class="mobile-nav-link" data-nav="about">About Us</a></li>
+                    <li><a href="criteria.html" class="mobile-nav-link" data-nav="criteria">Acquisition Criteria</a></li>
+                    <li><a href="properties.html" class="mobile-nav-link" data-nav="properties">Acquired Properties</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link" data-nav="contact">Contact Us</a></li>
                 </ul>
             </nav>
-
-            <button class="search-trigger" id="search-trigger" aria-label="Open search" aria-expanded="false" aria-controls="search-overlay">
-                <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </button>
         </div>
     </header>
-
-    <!-- Search Overlay -->
-    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Site search" hidden>
-        <div class="search-overlay-inner">
-            <button class="search-close" id="search-close" aria-label="Close search">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </button>
-            <form class="search-form" role="search" action="#" method="get">
-                <label for="site-search" class="visually-hidden">Search the site</label>
-                <input type="search" id="site-search" name="q" class="search-input" placeholder="Search..." autocomplete="off">
-                <button type="submit" class="search-submit" aria-label="Submit search">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
-                        <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </form>
-        </div>
-    </div>
 
     <!-- Main Content -->
     <main id="main-content">
@@ -244,10 +224,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-contact">
-                    <a href="index.html" class="footer-logo" aria-label="Agree Realty Home">
-                        <svg class="logo-svg" viewBox="0 0 180 40" aria-hidden="true">
-                            <text x="0" y="28" class="logo-text">AGREE REALTY</text>
-                        </svg>
+                    <a href="index.html" class="footer-logo" aria-label="Bluejay Properties Home">
+                        <img src="assets/bluejay-properties.png" alt="Bluejay Properties" class="footer-logo-img">
                     </a>
                     <address class="footer-address">
                         <p>70 E. Long Lake Road</p>
