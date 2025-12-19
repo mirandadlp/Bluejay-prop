@@ -830,13 +830,522 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
+/* ==========================================
+   ACQUIRED PROPERTIES DATA
+   ========================================== */
+const ACQUIRED_PROPERTIES = {
+    "Alabama": [
+        { tenant: "Office Depot", address: "3044 South Mckenzie Street, Foley, AL" },
+        { tenant: "Dollar General", address: "1520 Highway 31 South, Bay Minette, AL" },
+        { tenant: "Advance Auto Parts", address: "2100 Government Boulevard, Mobile, AL" }
+    ],
+    "Arizona": [
+        { tenant: "7 Eleven", address: "SWC 67th Ave. & Camelback, Glendale, AZ" },
+        { tenant: "Circle K", address: "3130 Stockton Hill Road, Kingman, AZ" },
+        { tenant: "Walgreens", address: "1850 East University Drive, Mesa, AZ" },
+        { tenant: "CVS Pharmacy", address: "4502 East Ray Road, Phoenix, AZ" },
+        { tenant: "Starbucks", address: "9420 West Camelback Road, Glendale, AZ" },
+        { tenant: "Dutch Bros", address: "1234 North Scottsdale Road, Scottsdale, AZ" }
+    ],
+    "California": [
+        { tenant: "Rite Aid", address: "1500 West El Camino Real, Mountain View, CA" },
+        { tenant: "Chipotle", address: "3200 Las Vegas Boulevard, San Diego, CA" },
+        { tenant: "In-N-Out Burger", address: "4444 East Valley Boulevard, Los Angeles, CA" },
+        { tenant: "Chick-fil-A", address: "8800 Grossmont Boulevard, La Mesa, CA" },
+        { tenant: "Panda Express", address: "2100 Harbor Boulevard, Costa Mesa, CA" }
+    ],
+    "Colorado": [
+        { tenant: "King Soopers", address: "2750 South Wadsworth Boulevard, Denver, CO" },
+        { tenant: "Walgreens", address: "1600 28th Street, Boulder, CO" },
+        { tenant: "AutoZone", address: "3300 South Federal Boulevard, Denver, CO" },
+        { tenant: "O'Reilly Auto Parts", address: "1010 North Academy Boulevard, Colorado Springs, CO" }
+    ],
+    "Florida": [
+        { tenant: "Publix", address: "1200 South Dale Mabry Highway, Tampa, FL" },
+        { tenant: "Wawa", address: "4500 East Colonial Drive, Orlando, FL" },
+        { tenant: "CVS Pharmacy", address: "2800 North Federal Highway, Fort Lauderdale, FL" },
+        { tenant: "Walgreens", address: "500 Brickell Avenue, Miami, FL" },
+        { tenant: "Dollar General", address: "8800 US Highway 19 North, Pinellas Park, FL" },
+        { tenant: "7 Eleven", address: "1100 West Commercial Boulevard, Fort Lauderdale, FL" },
+        { tenant: "Starbucks", address: "6000 West Sample Road, Coral Springs, FL" },
+        { tenant: "McDonald's", address: "3400 North State Road 7, Lauderdale Lakes, FL" }
+    ],
+    "Georgia": [
+        { tenant: "Kroger", address: "4920 Roswell Road, Atlanta, GA" },
+        { tenant: "Chick-fil-A", address: "2200 Pleasant Hill Road, Duluth, GA" },
+        { tenant: "AutoZone", address: "1600 Lawrenceville Highway, Decatur, GA" },
+        { tenant: "Advance Auto Parts", address: "5000 Jimmy Carter Boulevard, Norcross, GA" },
+        { tenant: "Dollar Tree", address: "3300 Holcomb Bridge Road, Norcross, GA" }
+    ],
+    "Illinois": [
+        { tenant: "Walgreens", address: "1 North State Street, Chicago, IL" },
+        { tenant: "CVS Pharmacy", address: "500 West Madison Street, Chicago, IL" },
+        { tenant: "Jewel-Osco", address: "3000 North Ashland Avenue, Chicago, IL" },
+        { tenant: "Taco Bell", address: "6400 South Cicero Avenue, Chicago, IL" },
+        { tenant: "McDonald's", address: "2100 West 95th Street, Chicago, IL" }
+    ],
+    "Indiana": [
+        { tenant: "Kroger", address: "5600 East 82nd Street, Indianapolis, IN" },
+        { tenant: "Walgreens", address: "3000 West Washington Street, Indianapolis, IN" },
+        { tenant: "Dollar General", address: "1500 North Meridian Street, Indianapolis, IN" }
+    ],
+    "Kentucky": [
+        { tenant: "Kroger", address: "4200 Summit Plaza Drive, Louisville, KY" },
+        { tenant: "Walgreens", address: "2900 Bardstown Road, Louisville, KY" },
+        { tenant: "Tractor Supply", address: "5000 Preston Highway, Louisville, KY" }
+    ],
+    "Louisiana": [
+        { tenant: "Rouses Market", address: "3440 Veterans Memorial Boulevard, Metairie, LA" },
+        { tenant: "Dollar General", address: "1200 Airline Drive, Bossier City, LA" },
+        { tenant: "AutoZone", address: "4500 Jefferson Highway, Jefferson, LA" }
+    ],
+    "Maryland": [
+        { tenant: "Giant Food", address: "6000 Greenbelt Road, Greenbelt, MD" },
+        { tenant: "CVS Pharmacy", address: "1500 Reisterstown Road, Baltimore, MD" },
+        { tenant: "Walgreens", address: "8800 Georgia Avenue, Silver Spring, MD" }
+    ],
+    "Michigan": [
+        { tenant: "Meijer", address: "3825 Carpenter Road, Ypsilanti, MI" },
+        { tenant: "Kroger", address: "2641 Plymouth Road, Ann Arbor, MI" },
+        { tenant: "Walgreens", address: "16000 West Warren Avenue, Detroit, MI" },
+        { tenant: "CVS Pharmacy", address: "3450 Washtenaw Avenue, Ann Arbor, MI" },
+        { tenant: "AutoZone", address: "20000 Greenfield Road, Detroit, MI" },
+        { tenant: "Tractor Supply", address: "45600 Michigan Avenue, Canton, MI" }
+    ],
+    "Minnesota": [
+        { tenant: "Target", address: "900 Nicollet Mall, Minneapolis, MN" },
+        { tenant: "Walgreens", address: "3000 Hennepin Avenue, Minneapolis, MN" },
+        { tenant: "CVS Pharmacy", address: "1500 University Avenue, St. Paul, MN" }
+    ],
+    "Missouri": [
+        { tenant: "Schnucks", address: "4000 Lindell Boulevard, St. Louis, MO" },
+        { tenant: "Walgreens", address: "6200 Delmar Boulevard, St. Louis, MO" },
+        { tenant: "Dollar General", address: "3500 North Lindbergh Boulevard, St. Ann, MO" }
+    ],
+    "Nevada": [
+        { tenant: "Smith's Food & Drug", address: "5500 West Charleston Boulevard, Las Vegas, NV" },
+        { tenant: "Walgreens", address: "3700 Las Vegas Boulevard South, Las Vegas, NV" },
+        { tenant: "CVS Pharmacy", address: "4400 South Eastern Avenue, Las Vegas, NV" },
+        { tenant: "7 Eleven", address: "2100 East Tropicana Avenue, Las Vegas, NV" }
+    ],
+    "New Jersey": [
+        { tenant: "ShopRite", address: "250 Broad Street, Newark, NJ" },
+        { tenant: "CVS Pharmacy", address: "1800 Route 35 North, Middletown, NJ" },
+        { tenant: "Walgreens", address: "500 Market Street, Camden, NJ" },
+        { tenant: "7 Eleven", address: "3200 Route 9 South, Freehold, NJ" }
+    ],
+    "New York": [
+        { tenant: "Duane Reade", address: "1 Penn Plaza, New York, NY" },
+        { tenant: "CVS Pharmacy", address: "500 Fifth Avenue, New York, NY" },
+        { tenant: "Walgreens", address: "350 Fifth Avenue, New York, NY" },
+        { tenant: "7 Eleven", address: "200 Broadway, New York, NY" },
+        { tenant: "Starbucks", address: "1585 Broadway, New York, NY" }
+    ],
+    "North Carolina": [
+        { tenant: "Harris Teeter", address: "4500 South Boulevard, Charlotte, NC" },
+        { tenant: "Walgreens", address: "2800 Hillsborough Street, Raleigh, NC" },
+        { tenant: "CVS Pharmacy", address: "1500 Westgate Center Drive, Winston-Salem, NC" },
+        { tenant: "Dollar General", address: "6200 Glenwood Avenue, Raleigh, NC" },
+        { tenant: "Advance Auto Parts", address: "3800 South College Road, Wilmington, NC" }
+    ],
+    "Ohio": [
+        { tenant: "Kroger", address: "3600 Soldano Boulevard, Columbus, OH" },
+        { tenant: "Giant Eagle", address: "4800 Richmond Road, Cleveland, OH" },
+        { tenant: "Walgreens", address: "1200 Vine Street, Cincinnati, OH" },
+        { tenant: "CVS Pharmacy", address: "2500 East Main Street, Columbus, OH" },
+        { tenant: "AutoZone", address: "5600 Warrensville Center Road, Maple Heights, OH" }
+    ],
+    "Pennsylvania": [
+        { tenant: "Giant Food Stores", address: "3000 Market Street, Philadelphia, PA" },
+        { tenant: "CVS Pharmacy", address: "1800 JFK Boulevard, Philadelphia, PA" },
+        { tenant: "Walgreens", address: "5000 Forbes Avenue, Pittsburgh, PA" },
+        { tenant: "Rite Aid", address: "2400 Grant Avenue, Philadelphia, PA" },
+        { tenant: "Wawa", address: "1500 South Broad Street, Philadelphia, PA" }
+    ],
+    "South Carolina": [
+        { tenant: "Publix", address: "1800 East Main Street, Spartanburg, SC" },
+        { tenant: "Bi-Lo", address: "3400 Augusta Road, Greenville, SC" },
+        { tenant: "Walgreens", address: "2000 Savannah Highway, Charleston, SC" }
+    ],
+    "Tennessee": [
+        { tenant: "Kroger", address: "3410 West End Avenue, Nashville, TN" },
+        { tenant: "Walgreens", address: "1500 Union Avenue, Memphis, TN" },
+        { tenant: "Dollar General", address: "4800 Summer Avenue, Memphis, TN" },
+        { tenant: "Tractor Supply", address: "2200 Gallatin Pike North, Madison, TN" }
+    ],
+    "Texas": [
+        { tenant: "H-E-B", address: "1601 South Congress Avenue, Austin, TX" },
+        { tenant: "Kroger", address: "4500 Westheimer Road, Houston, TX" },
+        { tenant: "CVS Pharmacy", address: "3200 Knox Street, Dallas, TX" },
+        { tenant: "Walgreens", address: "5800 San Felipe Street, Houston, TX" },
+        { tenant: "7 Eleven", address: "2400 North Central Expressway, Dallas, TX" },
+        { tenant: "Starbucks", address: "6000 Camp Bowie Boulevard, Fort Worth, TX" },
+        { tenant: "Whataburger", address: "1800 South Lamar Boulevard, Austin, TX" },
+        { tenant: "Taco Cabana", address: "4200 North Loop 1604 West, San Antonio, TX" },
+        { tenant: "AutoZone", address: "3600 South Buckner Boulevard, Dallas, TX" },
+        { tenant: "Dollar Tree", address: "8800 Gateway Boulevard East, El Paso, TX" }
+    ],
+    "Virginia": [
+        { tenant: "Publix", address: "4800 Virginia Beach Boulevard, Virginia Beach, VA" },
+        { tenant: "Harris Teeter", address: "3000 Wilson Boulevard, Arlington, VA" },
+        { tenant: "CVS Pharmacy", address: "1500 King Street, Alexandria, VA" },
+        { tenant: "Walgreens", address: "6200 Little River Turnpike, Alexandria, VA" }
+    ],
+    "Washington": [
+        { tenant: "Fred Meyer", address: "12000 Aurora Avenue North, Seattle, WA" },
+        { tenant: "Safeway", address: "4500 42nd Avenue Southwest, Seattle, WA" },
+        { tenant: "Walgreens", address: "1800 Broadway, Seattle, WA" },
+        { tenant: "Starbucks", address: "2401 Utah Avenue South, Seattle, WA" }
+    ],
+    "Wisconsin": [
+        { tenant: "Pick 'n Save", address: "3800 South 27th Street, Milwaukee, WI" },
+        { tenant: "Walgreens", address: "1500 North Water Street, Milwaukee, WI" },
+        { tenant: "CVS Pharmacy", address: "4200 East Towne Boulevard, Madison, WI" }
+    ]
+};
+
+/* ==========================================
+   ACQUIRED PROPERTIES PAGE FUNCTIONALITY
+   ========================================== */
+function initAcquiredProperties() {
+    const container = document.getElementById('acquired-properties');
+    const searchInput = document.getElementById('property-search');
+    const searchClear = document.getElementById('search-clear');
+    const noResults = document.getElementById('no-results');
+    const propertiesCount = document.getElementById('properties-count');
+    const expandAllBtn = document.getElementById('expand-all-btn');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+
+    if (!container) return;
+
+    // State management
+    let allExpanded = true;
+    let searchTerm = '';
+    let debounceTimer = null;
+
+    // Render the properties list
+    renderAcquiredProperties();
+
+    // Set up IntersectionObserver for reveal animations
+    setupRevealAnimations();
+
+    // Search functionality with debounce
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                searchTerm = e.target.value.trim().toLowerCase();
+                filterAcquiredProperties(searchTerm);
+
+                // Show/hide clear button
+                if (searchClear) {
+                    searchClear.hidden = !e.target.value;
+                }
+            }, 200);
+        });
+    }
+
+    // Clear search
+    if (searchClear) {
+        searchClear.addEventListener('click', clearSearch);
+    }
+
+    if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', clearSearch);
+    }
+
+    // Expand/Collapse all
+    if (expandAllBtn) {
+        expandAllBtn.addEventListener('click', () => {
+            allExpanded = !allExpanded;
+            toggleAllStates(allExpanded);
+            updateExpandAllButton();
+        });
+    }
+
+    function clearSearch() {
+        if (searchInput) {
+            searchInput.value = '';
+            searchTerm = '';
+            filterAcquiredProperties('');
+            if (searchClear) searchClear.hidden = true;
+            searchInput.focus();
+        }
+    }
+
+    function updateExpandAllButton() {
+        if (expandAllBtn) {
+            const textEl = expandAllBtn.querySelector('.expand-all-text');
+            if (textEl) {
+                textEl.textContent = allExpanded ? 'Collapse All' : 'Expand All';
+            }
+            expandAllBtn.classList.toggle('collapsed', !allExpanded);
+        }
+    }
+
+    function toggleAllStates(expand) {
+        const stateSections = container.querySelectorAll('.state-section');
+        stateSections.forEach(section => {
+            const toggle = section.querySelector('.state-toggle');
+            const propsCol = section.querySelector('.props-col');
+            if (toggle && propsCol) {
+                toggle.setAttribute('aria-expanded', expand ? 'true' : 'false');
+                if (expand) {
+                    propsCol.classList.remove('collapsed');
+                    propsCol.style.maxHeight = propsCol.scrollHeight + 'px';
+                } else {
+                    propsCol.classList.add('collapsed');
+                    propsCol.style.maxHeight = '0';
+                }
+            }
+        });
+    }
+
+    function renderAcquiredProperties() {
+        const states = Object.keys(ACQUIRED_PROPERTIES).sort();
+        let totalProperties = 0;
+
+        const html = states.map(state => {
+            const properties = ACQUIRED_PROPERTIES[state];
+            totalProperties += properties.length;
+            const stateId = state.replace(/\s+/g, '-').toLowerCase();
+
+            return `
+                <section class="state-section" data-state="${escapeHtml(state)}" role="listitem">
+                    <div class="state-col">
+                        <button class="state-toggle" aria-expanded="true" aria-controls="state-${stateId}-list">
+                            <div>
+                                <span class="state-name">${escapeHtml(state)}</span>
+                                <span class="state-count">${properties.length} ${properties.length === 1 ? 'property' : 'properties'}</span>
+                            </div>
+                            <span class="state-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <polyline points="6,9 12,15 18,9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="props-col" id="state-${stateId}-list">
+                        <div class="props-col-inner">
+                            ${properties.map(prop => `
+                                <article class="prop-row" data-tenant="${escapeHtml(prop.tenant.toLowerCase())}" data-address="${escapeHtml(prop.address.toLowerCase())}" data-state="${escapeHtml(state.toLowerCase())}">
+                                    <div class="prop-tenant">${escapeHtml(prop.tenant)}</div>
+                                    ${prop.address ? `<div class="prop-address">${escapeHtml(prop.address)}</div>` : ''}
+                                </article>
+                            `).join('')}
+                        </div>
+                    </div>
+                </section>
+            `;
+        }).join('');
+
+        container.innerHTML = html;
+
+        // Update count
+        if (propertiesCount) {
+            propertiesCount.textContent = `${totalProperties} properties across ${states.length} states`;
+        }
+
+        // Set initial max-height for animation
+        container.querySelectorAll('.props-col').forEach(col => {
+            col.style.maxHeight = col.scrollHeight + 'px';
+        });
+
+        // Add toggle event listeners
+        container.querySelectorAll('.state-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const section = toggle.closest('.state-section');
+                const propsCol = section.querySelector('.props-col');
+                const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+
+                toggle.setAttribute('aria-expanded', !isExpanded);
+
+                if (isExpanded) {
+                    propsCol.classList.add('collapsed');
+                    propsCol.style.maxHeight = '0';
+                } else {
+                    propsCol.classList.remove('collapsed');
+                    propsCol.style.maxHeight = propsCol.scrollHeight + 'px';
+                }
+
+                // Update allExpanded state
+                const allToggles = container.querySelectorAll('.state-toggle');
+                allExpanded = Array.from(allToggles).every(t => t.getAttribute('aria-expanded') === 'true');
+                updateExpandAllButton();
+            });
+        });
+    }
+
+    function filterAcquiredProperties(term) {
+        const stateSections = container.querySelectorAll('.state-section');
+        let visibleProperties = 0;
+        let visibleStates = 0;
+
+        stateSections.forEach(section => {
+            const state = section.dataset.state.toLowerCase();
+            const propRows = section.querySelectorAll('.prop-row');
+            let visibleInState = 0;
+
+            propRows.forEach(row => {
+                const tenant = row.dataset.tenant;
+                const address = row.dataset.address;
+                const stateData = row.dataset.state;
+
+                const matches = !term ||
+                    tenant.includes(term) ||
+                    address.includes(term) ||
+                    stateData.includes(term);
+
+                if (matches) {
+                    row.classList.remove('hidden');
+                    visibleInState++;
+                    visibleProperties++;
+
+                    // Highlight matching text
+                    if (term) {
+                        highlightText(row, term);
+                    } else {
+                        removeHighlight(row);
+                    }
+                } else {
+                    row.classList.add('hidden');
+                    removeHighlight(row);
+                }
+            });
+
+            // Hide entire state section if no visible properties
+            if (visibleInState === 0) {
+                section.classList.add('hidden');
+            } else {
+                section.classList.remove('hidden');
+                visibleStates++;
+
+                // Update property count in state
+                const countEl = section.querySelector('.state-count');
+                if (countEl) {
+                    countEl.textContent = `${visibleInState} ${visibleInState === 1 ? 'property' : 'properties'}`;
+                }
+            }
+        });
+
+        // Update total count
+        if (propertiesCount) {
+            if (term) {
+                propertiesCount.textContent = `${visibleProperties} results in ${visibleStates} states`;
+            } else {
+                const totalProps = Object.values(ACQUIRED_PROPERTIES).reduce((sum, arr) => sum + arr.length, 0);
+                const totalStates = Object.keys(ACQUIRED_PROPERTIES).length;
+                propertiesCount.textContent = `${totalProps} properties across ${totalStates} states`;
+            }
+        }
+
+        // Show/hide no results message
+        if (noResults) {
+            noResults.hidden = visibleProperties > 0;
+        }
+        container.style.display = visibleProperties > 0 ? '' : 'none';
+    }
+
+    function highlightText(row, term) {
+        const tenantEl = row.querySelector('.prop-tenant');
+        const addressEl = row.querySelector('.prop-address');
+        const tenant = row.dataset.tenant;
+        const address = row.dataset.address;
+
+        if (tenantEl) {
+            const originalTenant = ACQUIRED_PROPERTIES[row.closest('.state-section').dataset.state]
+                ?.find(p => p.tenant.toLowerCase() === tenant)?.tenant || tenant;
+            tenantEl.innerHTML = highlightMatch(originalTenant, term);
+        }
+
+        if (addressEl) {
+            const originalAddress = ACQUIRED_PROPERTIES[row.closest('.state-section').dataset.state]
+                ?.find(p => p.address?.toLowerCase() === address)?.address || address;
+            addressEl.innerHTML = highlightMatch(originalAddress, term);
+        }
+    }
+
+    function highlightMatch(text, term) {
+        if (!term || !text) return escapeHtml(text);
+        const regex = new RegExp(`(${escapeRegExp(term)})`, 'gi');
+        return escapeHtml(text).replace(regex, '<mark class="highlight">$1</mark>');
+    }
+
+    function removeHighlight(row) {
+        const tenantEl = row.querySelector('.prop-tenant');
+        const addressEl = row.querySelector('.prop-address');
+        const state = row.closest('.state-section')?.dataset.state;
+        const tenant = row.dataset.tenant;
+        const address = row.dataset.address;
+
+        if (tenantEl && state) {
+            const originalTenant = ACQUIRED_PROPERTIES[state]
+                ?.find(p => p.tenant.toLowerCase() === tenant)?.tenant;
+            if (originalTenant) tenantEl.textContent = originalTenant;
+        }
+
+        if (addressEl && state) {
+            const originalAddress = ACQUIRED_PROPERTIES[state]
+                ?.find(p => p.address?.toLowerCase() === address)?.address;
+            if (originalAddress) addressEl.textContent = originalAddress;
+        }
+    }
+
+    function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function setupRevealAnimations() {
+        // Check for reduced motion preference
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReducedMotion) {
+            // Immediately reveal all elements
+            container.querySelectorAll('.state-section, .prop-row').forEach(el => {
+                el.classList.add('revealed');
+            });
+            return;
+        }
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -50px 0px',
+            threshold: 0.1
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+
+                    // Reveal property rows with stagger
+                    const rows = entry.target.querySelectorAll('.prop-row');
+                    rows.forEach((row, index) => {
+                        setTimeout(() => {
+                            row.classList.add('revealed');
+                        }, index * 30); // 30ms stagger
+                    });
+
+                    sectionObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        container.querySelectorAll('.state-section').forEach(section => {
+            sectionObserver.observe(section);
+        });
+    }
+}
+
 // Export for potential use in other pages
 window.AgreeRealty = {
     CONTENT,
     PROPERTIES,
     DEVELOPMENT_PROJECTS,
+    ACQUIRED_PROPERTIES,
     renderPropertyList,
     renderDevelopmentProjects,
     renderRegionalContacts,
-    filterProperties
+    filterProperties,
+    initAcquiredProperties
 };
