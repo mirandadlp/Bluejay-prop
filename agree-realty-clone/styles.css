@@ -832,10 +832,88 @@ h1, h2, h3, h4, h5, h6 {
     line-height: var(--lh-tight);
     color: var(--text-inverse);
     margin-bottom: var(--space-6);
+}
+
+/* Animated Hero Headline */
+.hero-headline--animated {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    opacity: 1;
+    transform: none;
+    animation: none;
+}
+
+.headline-line {
+    display: block;
+    overflow: hidden;
+}
+
+.headline-word {
+    display: inline-block;
     opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease forwards;
-    animation-delay: 0.2s;
+    transform: translateY(100%);
+    animation: wordReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Staggered word animations - Line 1 */
+.headline-line--1 .headline-word:nth-child(1) { animation-delay: 0.1s; }
+.headline-line--1 .headline-word:nth-child(2) { animation-delay: 0.2s; }
+.headline-line--1 .headline-word:nth-child(3) { animation-delay: 0.3s; }
+
+/* Staggered word animations - Line 2 */
+.headline-line--2 .headline-word:nth-child(1) { animation-delay: 0.5s; }
+.headline-line--2 .headline-word:nth-child(2) { animation-delay: 0.6s; }
+.headline-line--2 .headline-word:nth-child(3) { animation-delay: 0.7s; }
+
+/* Word reveal keyframes */
+@keyframes wordReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add subtle glow effect on final words */
+.headline-word:last-child {
+    position: relative;
+}
+
+.headline-line--1 .headline-word:last-child,
+.headline-line--2 .headline-word:last-child {
+    animation: wordRevealGlow 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.headline-line--1 .headline-word:last-child { animation-delay: 0.3s; }
+.headline-line--2 .headline-word:last-child { animation-delay: 0.7s; }
+
+@keyframes wordRevealGlow {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        text-shadow: none;
+    }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .headline-word {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
 }
 
 .hero-subheadline {
