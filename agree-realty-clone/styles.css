@@ -1232,14 +1232,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .us-map .state-path.has-properties:hover {
-    fill: var(--color-accent);
+    fill: var(--color-primary-light);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
     transform: scale(1.02);
 }
 
 .us-map .state-path.has-properties.active {
-    fill: var(--color-accent);
-    filter: drop-shadow(0 4px 12px rgba(74, 124, 89, 0.4));
+    fill: var(--color-primary-light);
+    filter: drop-shadow(0 4px 12px rgba(26, 39, 68, 0.4));
 }
 
 .us-map .state-path:not(.has-properties) {
