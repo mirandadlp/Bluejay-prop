@@ -1244,6 +1244,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .us-map .state-path:not(.has-properties) {
     cursor: default;
+    pointer-events: none;
+}
+
+.us-map .state-path:not(.has-properties):hover {
+    fill: var(--color-gray-200);
+    transform: none;
+    filter: none;
+}
+
+.us-map:hover,
+.us-map-wrapper:hover {
+    background: var(--surface);
 }
 
 /* Pulse animation for states with properties */
