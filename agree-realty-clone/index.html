@@ -132,55 +132,58 @@
         </section>
 
         <!-- Properties Section -->
-        <section class="properties-section" id="properties-section" aria-labelledby="properties-heading">
+        <section class="properties-section properties-section--map" id="properties-section" aria-labelledby="properties-heading">
             <div class="container">
-                <div class="properties-header">
-                    <div class="properties-titles">
-                        <h2 id="properties-heading" class="section-title" data-content="propertiesTitle">View Our Properties</h2>
-                        <p class="section-subtitle" data-content="propertiesSubtitle">Acquisition Targets</p>
+                <div class="properties-header properties-header--centered">
+                    <span class="section-eyebrow">Our Portfolio</span>
+                    <h2 id="properties-heading" class="section-title">Nationwide Presence</h2>
+                    <p class="section-subtitle">Click a state to explore our acquired properties</p>
+                </div>
+
+                <div class="properties-map-container">
+                    <!-- Interactive US Map -->
+                    <div class="us-map-wrapper" id="us-map-wrapper">
+                        <svg class="us-map" id="us-map" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet" aria-label="Interactive map of United States showing property locations">
+                            <!-- State paths will be inserted by JavaScript -->
+                        </svg>
+                        <!-- State hover tooltip -->
+                        <div class="map-tooltip" id="map-tooltip" aria-hidden="true">
+                            <span class="map-tooltip-state"></span>
+                            <span class="map-tooltip-count"></span>
+                        </div>
                     </div>
-                    <div class="properties-search">
-                        <label for="property-search" class="visually-hidden">Search properties by tenant or city, state</label>
-                        <div class="search-input-wrapper">
-                            <svg class="search-input-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
-                                <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                            <input type="text" id="property-search" class="property-search-input" placeholder="Search by tenant or City, ST" autocomplete="off">
+
+                    <!-- Properties Preview Panel -->
+                    <div class="properties-preview" id="properties-preview">
+                        <div class="preview-header">
+                            <h3 class="preview-title">Featured Properties</h3>
+                            <span class="preview-subtitle" id="preview-subtitle">Recent acquisitions across the nation</span>
+                        </div>
+                        <ul class="preview-list" id="preview-list" aria-label="Featured acquired properties">
+                            <!-- Properties will be rendered by JavaScript -->
+                        </ul>
+                        <div class="preview-footer">
+                            <a href="properties.html" class="btn btn-primary see-all-btn">
+                                See All Properties
+                                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="properties-tabs" role="tablist" aria-label="Property categories">
-                    <button class="tab-btn active" id="tab-lease" role="tab" aria-selected="true" aria-controls="panel-lease" data-tab="lease">
-                        Properties for Lease
-                    </button>
-                    <button class="tab-btn" id="tab-sale" role="tab" aria-selected="false" aria-controls="panel-sale" data-tab="sale">
-                        Properties for Sale
-                    </button>
-                </div>
-
-                <div class="properties-list-container">
-                    <div id="panel-lease" class="properties-panel active" role="tabpanel" aria-labelledby="tab-lease">
-                        <ul class="properties-list" id="properties-list-lease" aria-label="Properties available for lease">
-                            <!-- Properties will be rendered by JavaScript -->
-                        </ul>
+                <!-- Map Legend -->
+                <div class="map-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot legend-dot--active"></span>
+                        <span class="legend-label">States with properties</span>
                     </div>
-                    <div id="panel-sale" class="properties-panel" role="tabpanel" aria-labelledby="tab-sale" hidden>
-                        <ul class="properties-list" id="properties-list-sale" aria-label="Properties available for sale">
-                            <!-- Properties will be rendered by JavaScript -->
-                        </ul>
+                    <div class="legend-item">
+                        <span class="legend-dot legend-dot--inactive"></span>
+                        <span class="legend-label">Coming soon</span>
                     </div>
-                </div>
-
-                <div class="properties-footer">
-                    <button class="btn btn-secondary load-more" id="load-more" data-content="loadMore">
-                        Load More Properties
-                        <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
-                            <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <polyline points="6,14 12,20 18,14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
                 </div>
             </div>
         </section>
