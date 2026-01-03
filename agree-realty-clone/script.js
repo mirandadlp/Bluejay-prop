@@ -53,9 +53,9 @@ const CONTENT = {
     noResults: 'No properties found matching your search.',
 
     // About Preview
-    aboutEyebrow: 'About Agree Realty',
+    aboutEyebrow: 'About BlueJay Properties',
     aboutPreviewTitle: 'Industry Leader in Net Lease',
-    aboutPreviewText: 'For over 50 years, Agree Realty has been a trusted partner in the acquisition and development of properties net leased to industry-leading retailers throughout the United States. Today, we own and operate a portfolio of over 2,600 properties spanning all 50 states.',
+    aboutPreviewText: 'Driven by vision and built on results, we specialize in acquiring and managing high-performing commercial properties across the nation creating long-term value for our partners, tenants, and communities.',
     aboutPreviewCta: 'Learn More About Us',
 
     // Services

@@ -946,25 +946,51 @@ h1, h2, h3, h4, h5, h6 {
    ========================================== */
 .stats-section {
     background-color: var(--color-primary);
-    padding: var(--space-16) 0;
+    padding: var(--space-12) 0;
 }
 
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-12);
     text-align: center;
+    flex-wrap: wrap;
 }
 
 @media (min-width: 768px) {
     .stats-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: var(--space-4);
+        gap: var(--space-20);
     }
 }
 
 .stat-item {
-    padding: var(--space-4);
+    padding: var(--space-4) var(--space-8);
+    position: relative;
+}
+
+/* Add divider between stats */
+.stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: calc(-1 * var(--space-6));
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+    .stat-item:not(:last-child)::after {
+        right: calc(-1 * var(--space-10));
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-item:not(:last-child)::after {
+        display: none;
+    }
 }
 
 .stat-number {
@@ -974,6 +1000,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     color: var(--text-inverse);
     margin-bottom: var(--space-2);
+}
+
+@media (min-width: 768px) {
+    .stat-number {
+        font-size: clamp(3rem, 6vw, 4.5rem);
+    }
 }
 
 .stat-label {
