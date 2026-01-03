@@ -37,21 +37,17 @@ const CONTENT = {
 
     // Stats/Counters
     statsCounters: [
-        { value: 2603, suffix: '', label: 'Properties' },
-        { value: 54, suffix: 'M', label: 'Square Feet' },
-        { value: 50, suffix: '', label: 'States' },
-        { value: 67, suffix: '%', label: 'Investment Grade' }
+        { value: 247, suffix: '', label: 'Properties' },
+        { value: 31, suffix: '', label: 'States' }
     ],
 
     // Stats Labels (for data attributes)
     statPropertiesLabel: 'Properties',
-    statSqftLabel: 'Square Feet',
     statStatesLabel: 'States',
-    statGradeLabel: 'Investment Grade',
 
     // Properties Section
     propertiesTitle: 'View Our Properties',
-    propertiesSubtitle: 'Acquisition Targets',
+    propertiesSubtitle: 'Acquired Properties',
     searchPlaceholder: 'Search by tenant or City, ST',
     loadMore: 'Load More Properties',
     noResults: 'No properties found matching your search.',
