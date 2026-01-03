@@ -1056,175 +1056,393 @@ function escapeHtml(text) {
    ACQUIRED PROPERTIES DATA
    ========================================== */
 const ACQUIRED_PROPERTIES = {
-    "Alabama": [
-        { tenant: "Office Depot", address: "3044 South Mckenzie Street, Foley, AL" },
-        { tenant: "Dollar General", address: "1520 Highway 31 South, Bay Minette, AL" },
-        { tenant: "Advance Auto Parts", address: "2100 Government Boulevard, Mobile, AL" }
-    ],
-    "Arizona": [
-        { tenant: "7 Eleven", address: "SWC 67th Ave. & Camelback, Glendale, AZ" },
-        { tenant: "Circle K", address: "3130 Stockton Hill Road, Kingman, AZ" },
-        { tenant: "Walgreens", address: "1850 East University Drive, Mesa, AZ" },
-        { tenant: "CVS Pharmacy", address: "4502 East Ray Road, Phoenix, AZ" },
-        { tenant: "Starbucks", address: "9420 West Camelback Road, Glendale, AZ" },
-        { tenant: "Dutch Bros", address: "1234 North Scottsdale Road, Scottsdale, AZ" }
-    ],
-    "California": [
-        { tenant: "Rite Aid", address: "1500 West El Camino Real, Mountain View, CA" },
-        { tenant: "Chipotle", address: "3200 Las Vegas Boulevard, San Diego, CA" },
-        { tenant: "In-N-Out Burger", address: "4444 East Valley Boulevard, Los Angeles, CA" },
-        { tenant: "Chick-fil-A", address: "8800 Grossmont Boulevard, La Mesa, CA" },
-        { tenant: "Panda Express", address: "2100 Harbor Boulevard, Costa Mesa, CA" }
-    ],
-    "Colorado": [
-        { tenant: "King Soopers", address: "2750 South Wadsworth Boulevard, Denver, CO" },
-        { tenant: "Walgreens", address: "1600 28th Street, Boulder, CO" },
-        { tenant: "AutoZone", address: "3300 South Federal Boulevard, Denver, CO" },
-        { tenant: "O'Reilly Auto Parts", address: "1010 North Academy Boulevard, Colorado Springs, CO" }
-    ],
-    "Florida": [
-        { tenant: "Publix", address: "1200 South Dale Mabry Highway, Tampa, FL" },
-        { tenant: "Wawa", address: "4500 East Colonial Drive, Orlando, FL" },
-        { tenant: "CVS Pharmacy", address: "2800 North Federal Highway, Fort Lauderdale, FL" },
-        { tenant: "Walgreens", address: "500 Brickell Avenue, Miami, FL" },
-        { tenant: "Dollar General", address: "8800 US Highway 19 North, Pinellas Park, FL" },
-        { tenant: "7 Eleven", address: "1100 West Commercial Boulevard, Fort Lauderdale, FL" },
-        { tenant: "Starbucks", address: "6000 West Sample Road, Coral Springs, FL" },
-        { tenant: "McDonald's", address: "3400 North State Road 7, Lauderdale Lakes, FL" }
-    ],
-    "Georgia": [
-        { tenant: "Kroger", address: "4920 Roswell Road, Atlanta, GA" },
-        { tenant: "Chick-fil-A", address: "2200 Pleasant Hill Road, Duluth, GA" },
-        { tenant: "AutoZone", address: "1600 Lawrenceville Highway, Decatur, GA" },
-        { tenant: "Advance Auto Parts", address: "5000 Jimmy Carter Boulevard, Norcross, GA" },
-        { tenant: "Dollar Tree", address: "3300 Holcomb Bridge Road, Norcross, GA" }
-    ],
-    "Illinois": [
-        { tenant: "Walgreens", address: "1 North State Street, Chicago, IL" },
-        { tenant: "CVS Pharmacy", address: "500 West Madison Street, Chicago, IL" },
-        { tenant: "Jewel-Osco", address: "3000 North Ashland Avenue, Chicago, IL" },
-        { tenant: "Taco Bell", address: "6400 South Cicero Avenue, Chicago, IL" },
-        { tenant: "McDonald's", address: "2100 West 95th Street, Chicago, IL" }
-    ],
-    "Indiana": [
-        { tenant: "Kroger", address: "5600 East 82nd Street, Indianapolis, IN" },
-        { tenant: "Walgreens", address: "3000 West Washington Street, Indianapolis, IN" },
-        { tenant: "Dollar General", address: "1500 North Meridian Street, Indianapolis, IN" }
-    ],
-    "Kentucky": [
-        { tenant: "Kroger", address: "4200 Summit Plaza Drive, Louisville, KY" },
-        { tenant: "Walgreens", address: "2900 Bardstown Road, Louisville, KY" },
-        { tenant: "Tractor Supply", address: "5000 Preston Highway, Louisville, KY" }
-    ],
-    "Louisiana": [
-        { tenant: "Rouses Market", address: "3440 Veterans Memorial Boulevard, Metairie, LA" },
-        { tenant: "Dollar General", address: "1200 Airline Drive, Bossier City, LA" },
-        { tenant: "AutoZone", address: "4500 Jefferson Highway, Jefferson, LA" }
-    ],
-    "Maryland": [
-        { tenant: "Giant Food", address: "6000 Greenbelt Road, Greenbelt, MD" },
-        { tenant: "CVS Pharmacy", address: "1500 Reisterstown Road, Baltimore, MD" },
-        { tenant: "Walgreens", address: "8800 Georgia Avenue, Silver Spring, MD" }
-    ],
-    "Michigan": [
-        { tenant: "Meijer", address: "3825 Carpenter Road, Ypsilanti, MI" },
-        { tenant: "Kroger", address: "2641 Plymouth Road, Ann Arbor, MI" },
-        { tenant: "Walgreens", address: "16000 West Warren Avenue, Detroit, MI" },
-        { tenant: "CVS Pharmacy", address: "3450 Washtenaw Avenue, Ann Arbor, MI" },
-        { tenant: "AutoZone", address: "20000 Greenfield Road, Detroit, MI" },
-        { tenant: "Tractor Supply", address: "45600 Michigan Avenue, Canton, MI" }
-    ],
-    "Minnesota": [
-        { tenant: "Target", address: "900 Nicollet Mall, Minneapolis, MN" },
-        { tenant: "Walgreens", address: "3000 Hennepin Avenue, Minneapolis, MN" },
-        { tenant: "CVS Pharmacy", address: "1500 University Avenue, St. Paul, MN" }
-    ],
-    "Missouri": [
-        { tenant: "Schnucks", address: "4000 Lindell Boulevard, St. Louis, MO" },
-        { tenant: "Walgreens", address: "6200 Delmar Boulevard, St. Louis, MO" },
-        { tenant: "Dollar General", address: "3500 North Lindbergh Boulevard, St. Ann, MO" }
-    ],
-    "Nevada": [
-        { tenant: "Smith's Food & Drug", address: "5500 West Charleston Boulevard, Las Vegas, NV" },
-        { tenant: "Walgreens", address: "3700 Las Vegas Boulevard South, Las Vegas, NV" },
-        { tenant: "CVS Pharmacy", address: "4400 South Eastern Avenue, Las Vegas, NV" },
-        { tenant: "7 Eleven", address: "2100 East Tropicana Avenue, Las Vegas, NV" }
-    ],
-    "New Jersey": [
-        { tenant: "ShopRite", address: "250 Broad Street, Newark, NJ" },
-        { tenant: "CVS Pharmacy", address: "1800 Route 35 North, Middletown, NJ" },
-        { tenant: "Walgreens", address: "500 Market Street, Camden, NJ" },
-        { tenant: "7 Eleven", address: "3200 Route 9 South, Freehold, NJ" }
-    ],
-    "New York": [
-        { tenant: "Duane Reade", address: "1 Penn Plaza, New York, NY" },
-        { tenant: "CVS Pharmacy", address: "500 Fifth Avenue, New York, NY" },
-        { tenant: "Walgreens", address: "350 Fifth Avenue, New York, NY" },
-        { tenant: "7 Eleven", address: "200 Broadway, New York, NY" },
-        { tenant: "Starbucks", address: "1585 Broadway, New York, NY" }
-    ],
-    "North Carolina": [
-        { tenant: "Harris Teeter", address: "4500 South Boulevard, Charlotte, NC" },
-        { tenant: "Walgreens", address: "2800 Hillsborough Street, Raleigh, NC" },
-        { tenant: "CVS Pharmacy", address: "1500 Westgate Center Drive, Winston-Salem, NC" },
-        { tenant: "Dollar General", address: "6200 Glenwood Avenue, Raleigh, NC" },
-        { tenant: "Advance Auto Parts", address: "3800 South College Road, Wilmington, NC" }
-    ],
-    "Ohio": [
-        { tenant: "Kroger", address: "3600 Soldano Boulevard, Columbus, OH" },
-        { tenant: "Giant Eagle", address: "4800 Richmond Road, Cleveland, OH" },
-        { tenant: "Walgreens", address: "1200 Vine Street, Cincinnati, OH" },
-        { tenant: "CVS Pharmacy", address: "2500 East Main Street, Columbus, OH" },
-        { tenant: "AutoZone", address: "5600 Warrensville Center Road, Maple Heights, OH" }
-    ],
-    "Pennsylvania": [
-        { tenant: "Giant Food Stores", address: "3000 Market Street, Philadelphia, PA" },
-        { tenant: "CVS Pharmacy", address: "1800 JFK Boulevard, Philadelphia, PA" },
-        { tenant: "Walgreens", address: "5000 Forbes Avenue, Pittsburgh, PA" },
-        { tenant: "Rite Aid", address: "2400 Grant Avenue, Philadelphia, PA" },
-        { tenant: "Wawa", address: "1500 South Broad Street, Philadelphia, PA" }
-    ],
-    "South Carolina": [
-        { tenant: "Publix", address: "1800 East Main Street, Spartanburg, SC" },
-        { tenant: "Bi-Lo", address: "3400 Augusta Road, Greenville, SC" },
-        { tenant: "Walgreens", address: "2000 Savannah Highway, Charleston, SC" }
-    ],
-    "Tennessee": [
-        { tenant: "Kroger", address: "3410 West End Avenue, Nashville, TN" },
-        { tenant: "Walgreens", address: "1500 Union Avenue, Memphis, TN" },
-        { tenant: "Dollar General", address: "4800 Summer Avenue, Memphis, TN" },
-        { tenant: "Tractor Supply", address: "2200 Gallatin Pike North, Madison, TN" }
-    ],
-    "Texas": [
-        { tenant: "H-E-B", address: "1601 South Congress Avenue, Austin, TX" },
-        { tenant: "Kroger", address: "4500 Westheimer Road, Houston, TX" },
-        { tenant: "CVS Pharmacy", address: "3200 Knox Street, Dallas, TX" },
-        { tenant: "Walgreens", address: "5800 San Felipe Street, Houston, TX" },
-        { tenant: "7 Eleven", address: "2400 North Central Expressway, Dallas, TX" },
-        { tenant: "Starbucks", address: "6000 Camp Bowie Boulevard, Fort Worth, TX" },
-        { tenant: "Whataburger", address: "1800 South Lamar Boulevard, Austin, TX" },
-        { tenant: "Taco Cabana", address: "4200 North Loop 1604 West, San Antonio, TX" },
-        { tenant: "AutoZone", address: "3600 South Buckner Boulevard, Dallas, TX" },
-        { tenant: "Dollar Tree", address: "8800 Gateway Boulevard East, El Paso, TX" }
-    ],
-    "Virginia": [
-        { tenant: "Publix", address: "4800 Virginia Beach Boulevard, Virginia Beach, VA" },
-        { tenant: "Harris Teeter", address: "3000 Wilson Boulevard, Arlington, VA" },
-        { tenant: "CVS Pharmacy", address: "1500 King Street, Alexandria, VA" },
-        { tenant: "Walgreens", address: "6200 Little River Turnpike, Alexandria, VA" }
-    ],
-    "Washington": [
-        { tenant: "Fred Meyer", address: "12000 Aurora Avenue North, Seattle, WA" },
-        { tenant: "Safeway", address: "4500 42nd Avenue Southwest, Seattle, WA" },
-        { tenant: "Walgreens", address: "1800 Broadway, Seattle, WA" },
-        { tenant: "Starbucks", address: "2401 Utah Avenue South, Seattle, WA" }
-    ],
-    "Wisconsin": [
-        { tenant: "Pick 'n Save", address: "3800 South 27th Street, Milwaukee, WI" },
-        { tenant: "Walgreens", address: "1500 North Water Street, Milwaukee, WI" },
-        { tenant: "CVS Pharmacy", address: "4200 East Towne Boulevard, Madison, WI" }
-    ]
+  "Alabama": [
+    { tenant: "Office Depot", address: "3044 South Mckenzie Street, Foley, AL" }
+  ],
+
+  "Arizona": [
+    { tenant: "7 Eleven", address: "SWC 67th Ave. & Camelback, Glendale, AZ" },
+    { tenant: "Church’s Chicken", address: "12045 N 32nd St, Phoenix, AZ" },
+    { tenant: "Circle K", address: "SEC Grand Ave. & Court St. Nogales, AZ" },
+    { tenant: "Circle K", address: "11025 W Buckeye Rd, Avondale, AZ" },
+    { tenant: "Circle K", address: "SWC Chandler Blvd & McQueen Chandler, AZ" },
+    { tenant: "Circle K", address: "SEC Highway 89 & Smokerise, Flagstaff, AZ" },
+    { tenant: "Circle K", address: "3130 Stockton Hill Road, Kingman, AZ" },
+    { tenant: "Circle K", address: "10068 W Hwy 69, Mayer, AZ" },
+    { tenant: "Chase Bank", address: "SEC Greenfield and McKellips, Mesa, AZ" },
+    { tenant: "Circle K", address: "7510 W Peoria Ave, Peoria, AZ" },
+    { tenant: "Circle K", address: "SEC 83rd Ave. & Camelback, Phoenix, AZ" },
+    { tenant: "Circle K", address: "SEC 67th Ave. & Thomas, Phoenix, AZ" },
+    { tenant: "Circle K", address: "NEC 59th Ave. & Indian School, Phoenix, AZ" },
+    { tenant: "Circle K", address: "SEC 35th ave & Union Hills, Phoenix, AZ" },
+    { tenant: "Circle K", address: "NWC 40th St. & Greenway, Phoenix, AZ" },
+    { tenant: "Circle K", address: "NEC 75th Ave. & McDowell, Phoenix, AZ" },
+    { tenant: "Circle K", address: "NEC 67th Ave. & McDowell, Phoenix, AZ" },
+    { tenant: "Circle K", address: "NEC 59th Ave. & Indian School, Phoenix, AZ" },
+    { tenant: "Circle K", address: "SEC 48th st. & Thomas, Phoenix, AZ" },
+    { tenant: "Circle K", address: "SEC 35th Ave. and Bethany Home, Phoenix, AZ" },
+    { tenant: "Circle K", address: "NEC 67th Ave. & McDowell, Phoenix, AZ" },
+    { tenant: "Circle K", address: "SWC Parkside & Baseline, Tempe, AZ" },
+    { tenant: "Circle K", address: "NEC 12th Ave. & Ajo Way, Tucson, AZ" },
+    { tenant: "Circle K", address: "NWC 12th Ave. & Drexel, Tucson, AZ" },
+    { tenant: "Circle K", address: "NEC Park & Irvington, Tucson, AZ" },
+    { tenant: "Circle K", address: "655 W 22nd St, Tucson, AZ" },
+    { tenant: "Fresh & Easy Anchored Shopping Center", address: "SWC 12th st. & Northern,Phoenix, AZ" },
+    { tenant: "Jack in the Box", address: "208 N Grand Ave, Nogales, AZ" },
+    { tenant: "Strip Shopping Center", address: "SWC Gilbert & Guadalupe, Gilbert, AZ" },
+    { tenant: "Target", address: "SWC Dobson and Main, Mesa, AZ" },
+    { tenant: "Title Max", address: "NWC 51st Ave. & Thomas, Phoenix, AZ" },
+    { tenant: "Vacant Building", address: "SWC Cave Creek and Bell, Phoenix, AZ" },
+    { tenant: "Vacant CVS", address: "NNEC Frank Loyd Wright & Shea, Scottsdale, AZ" },
+    { tenant: "Vacant CVS", address: "WSWC Brown & Recker, Mesa, AZ" },
+    { tenant: "Vacant Dry Cleaners", address: "ESEC 32nd st & Thomas, Phoenix, AZ" },
+    { tenant: "Vacant Gas Station", address: "NWC Baseline & Alma School, Mesa, AZ" },
+    { tenant: "Vacant Gas Station", address: "NEC 35th Ave. & Peoria, Phoenix, AZ" },
+    { tenant: "Vacant Gas Station", address: "SWC 75th Ave. & Thomas, Phoenix, AZ" },
+    { tenant: "Vacant Gas Station", address: "NWC Rural & Southern, Tempe, AZ" },
+    { tenant: "Vacant KFC", address: "NNEC 67th Ave. & Camelback, Glendale, AZ" },
+    { tenant: "Vacant KFC", address: "WNWC 35th Ave. & Peoria, Peoria, AZ" },
+    { tenant: "Vacant Land", address: "NWC 19th Ave. & Glendale, Phoenix, AZ" },
+    { tenant: "Vacant Long John Silvers", address: "NWC Squaw Peak & Bell, Phoenix, AZ" },
+    { tenant: "Vacant Osco", address: "NWC Alma School & Elliot, Chandler, AZ" },
+    { tenant: "Vacant Osco Drug", address: "NEC Dobson & Baseline, Mesa, AZ" },
+    { tenant: "Big 5", address: "19th Ave And Bell Rd, Phoenix, AZ" },
+    { tenant: "Burger King", address: "2207 West Happy Valley Road, Phoenix, AZ" }
+  ],
+
+  "California": [
+    { tenant: "7 Eleven", address: "NWC Wilcox & Pomona, Monterey Park, CA" },
+    { tenant: "7 Eleven", address: "711 Oceanside Blvd., Oceanside, CA" },
+    { tenant: "7 Eleven", address: "1104 S Blosser Road, Santa Maria, CA" },
+    { tenant: "7 Eleven", address: "6625 Lankershim Blvd, North Hollywood, CA" },
+    { tenant: "7 Eleven", address: "5203 Olive Drive, Bakersfield, CA" },
+    { tenant: "7 Eleven and Autozone", address: "301 S Atlantic Blvd, Alhambra, CA" },
+    { tenant: "Bob’s Big Boy", address: "North of NWC PCH & Hawthorne, Torrance, CA" },
+    { tenant: "Burger King", address: "82 W Las Tunas Dr, Arcadia, CA" },
+    { tenant: "Burger King", address: "1011 N. Western Ave, Los Angeles, CA" },
+    { tenant: "Burger King", address: "8295 E Santa Ana Canyon Rd, Anaheim Hills, CA" },
+    { tenant: "Carls Jr", address: "85 S Tower Square, Tulare, CA" },
+    { tenant: "Carls Jr", address: "21532 Brookhurst St., Huntington Beach, CA" },
+    { tenant: "Carrows Restaurant", address: "Imperial Hwy & Beach, La Habra, CA" },
+    { tenant: "Cocos", address: "27750 Crown Valley Parkway, Mission Viejo, CA" },
+    { tenant: "Enterprise Rental Car", address: "1325 Industrial Park Ave, Redlands, CA" },
+    { tenant: "Fast Food Drive Thru", address: "13621 Francisquito Ave., Baldwin Park, CA" },
+    { tenant: "Islands", address: "26582 Towne Centre Dr, Foothill Ranch, CA" },
+    { tenant: "Jack in the Box", address: "11400 S Figueroa St, Los Angeles, CA" },
+    { tenant: "Long John Silvers", address: "6740 N Blackstone Ave, Fresno, CA" },
+    { tenant: "Outback Steakhouse", address: "26652 Portola Pkwy, Foothill Ranch, CA" },
+    { tenant: "Taco Bell", address: "12786 Van Nuys Blvd, Pacoima, CA" },
+    { tenant: "Titlemax", address: "2800 W Florida Ave, Hemet, CA" },
+    { tenant: "Vacant Conroys Flowers", address: "NEC Beach & Artesia, Buena Park, CA" },
+    { tenant: "Vacant KFC", address: "SEC Washington Pl & Centinela, Culver City, CA" },
+    { tenant: "Vacant Land", address: "SWC Colima & Whittier, Whittier, CA" },
+    { tenant: "Vacant Retail Building", address: "NWC Valley & Garvey, El Monte, CA" },
+    { tenant: "Vacant Gas Station", address: "3550 Florin Rd., Sacramento, CA" },
+    { tenant: "Vacant Walmart", address: "Hwy 65 & Five Star, Rocklin, CA" },
+    { tenant: "7 Eleven", address: "301 s Atlantic Blvd, Alhambra, CA" },
+    { tenant: "El Pollo Loco", address: "18402 Yorba Linda Boulevard, Yorba Linda, CA" },
+    { tenant: "Circle K", address: "540 West Big Bear Blvd, Big Bear City, CA" },
+    { tenant: "7 Eleven", address: "3868 Delaware Street, Fremont, CA" },
+    { tenant: "Del Taco", address: "18600 South Western Avenue, Gardena, CA" },
+    { tenant: "New Restaurant Development", address: "200 S State College Blvd, Brea, CA" },
+    { tenant: "Del Taco", address: "2525 Watt Ave, Sacramento, CA" },
+    { tenant: "7 Eleven", address: "730 E Foothill Blvd, Pomona, CA" },
+    { tenant: "Del Taco", address: "22349 El Toro Rd, Lake Forest, CA" },
+    { tenant: "7 Eleven", address: "636 N Vine Ave, Ontario, CA" },
+    { tenant: "7 Eleven", address: "194 W Napa St, Sonoma, CA" },
+    { tenant: "7 Eleven", address: "140 Beach Road, Marina, CA" }
+  ],
+
+  "Colorado": [
+    { tenant: "7 Eleven", address: "SWC Dartmouth & Broadway, Englewood, CO" },
+    { tenant: "7 Eleven", address: "607 E. Alameda Ave, Denver, CO" },
+    { tenant: "7 Eleven", address: "NWC Uintah & 19th St. Colorado Springs, CO" },
+    { tenant: "7 Eleven", address: "402 West 3rd, Wray, CO" },
+    { tenant: "7 Eleven", address: "14490 E. Colfax Ave., Aurora, CO" },
+    { tenant: "O’Riley Auto", address: "SSWC Townsend Ave & Columbia Way, Montrose, CO" },
+    { tenant: "Safeway Anchored Shopping Center", address: "SEC Mexico & Buckley, Aurora, CO" },
+    { tenant: "7 Eleven", address: "1600 W 92nd Ave, Federal Heights, CO" },
+    { tenant: "7 Eleven", address: "1690 Pearl St, Denver, CO" }
+  ],
+
+  "Connecticut": [
+    { tenant: "Aspen Dental", address: "1128 Farmington Ave, Bristol, CT" }
+  ],
+
+  "Florida": [
+    { tenant: "7 Eleven", address: "SWC Aloma Ave. & Forsyth Ave., Winter Park, FL" },
+    { tenant: "7 Eleven", address: "NWC 15th & Whitfield, Sarasota, FL" },
+    { tenant: "7 Eleven", address: "SEC US-19 & New York, Hudson, FL" },
+    { tenant: "7 Eleven", address: "8400 N. Atlantic Ave., Cape Canaveral, FL" },
+    { tenant: "7 Eleven", address: "NEC Park & John Young Parkway, Orlando, FL" },
+    { tenant: "7 Eleven", address: "290 Lakeland Park Blvd, Lakeland, FL" },
+    { tenant: "7 Eleven", address: "2011 Cortez Blvd, Bradenton, FL" },
+    { tenant: "Churchs", address: "SEC 32nd and Hillsborough, Tampa, FL" },
+    { tenant: "Hardees", address: "11769 Panama City Beach Pkwy, Panama City Beach, FL" },
+    { tenant: "Hooters", address: "7222 Augusta National Dr, Orlando, FL" },
+    { tenant: "Wendys", address: "280 Lakeland Park Blvd, Lakeland, FL" },
+    { tenant: "7 Eleven", address: "7525 Osceola Polk Line Road, Davenport, FL" },
+    { tenant: "Burger King", address: "9675 Bird Rd, Miami, FL" },
+    { tenant: "Einstein Bagels", address: "4639 Kirkman Rd, Orlando, FL" }
+  ],
+
+  "Illinois": [
+    { tenant: "7 Eleven", address: "SWC Harlem & 26th, Riverside, IL" },
+    { tenant: "7 Eleven", address: "1156 S York Rd, Bensenville, IL" },
+    { tenant: "Autozone", address: "NWC State St. & 27th, East Saint Louis, IL" },
+    { tenant: "Autozone", address: "NWC US 6 & US 5, Minooka, IL" },
+    { tenant: "Autozone", address: "5509 Main St, Lisle, IL" },
+    { tenant: "Burger King", address: "311 N Poplar St, Centralia, IL" },
+    { tenant: "Long John Silvers", address: "1208 Charleston Ave, Mattoon, IL" },
+    { tenant: "Aspen Dental", address: "17725 Halsted Street, Homewood, IL" },
+    { tenant: "7 Eleven", address: "31 Alexander Cir., Romeoville, IL" },
+    { tenant: "7 Eleven Strip Center", address: "1636 38th St, Rock Island, IL" },
+    { tenant: "White Castle", address: "15801 S Harlem Av, Orland Park, IL" },
+    { tenant: "White Castle", address: "6646 S Halsted St, Chicago, IL" },
+    { tenant: "7 Eleven", address: "1230 W Spring St, South Elgin, IL" }
+  ],
+
+  "Indiana": [
+    { tenant: "Arby's", address: "2101 N Calumet Ave, Valpraraiso, IN" },
+    { tenant: "Autozone", address: "SSEC Coliseum & Lake, Fort Wayne, IN" },
+    { tenant: "Autozone", address: "SWC Hghwy 66 & 1st Ave, Evansville, IN" },
+    { tenant: "O’reilly Auto", address: "SWC Hghwy 66 & 1st Ave, Evansville, IN" },
+    { tenant: "Wendys", address: "900 W Main St., Peru, IN" },
+    { tenant: "White Castle", address: "8740 Michigan Rd, Indianapolis, IN" },
+    { tenant: "Burger King", address: "4360 National Rd E, Richmond, IN" },
+    { tenant: "Burger King", address: "11741 Pendleton Pike, Indianapolis, IN" }
+  ],
+
+  "Iowa": [
+    { tenant: "Advance Auto", address: "2519 Easton Blvd, Des Moines, IA" },
+    { tenant: "KFC", address: "509 Lincoln Way, Ames, IA" }
+  ],
+
+  "Kansas": [
+    { tenant: "Vacant KFC", address: "135th St. & Ridgeview, Olathe, KS" },
+    { tenant: "Arby’s", address: "15021 Metcalf Ave, Overland Park, KS" },
+    { tenant: "Fazoli’s", address: "3553 N Rock Rd, Wichita, KS" }
+  ],
+
+  "Louisiana": [
+    { tenant: "Popeyes", address: "3565 Greenwood Road, Shreveport, LA" }
+  ],
+
+  "Maine": [
+    { tenant: "7 Eleven", address: "52 Maine St, Brunswick, ME" }
+  ],
+
+  "Maryland": [
+    { tenant: "7 Eleven", address: "NEC Pulaski Hwy & Joppa Rd., Joppa, MD" },
+    { tenant: "7 Eleven", address: "2326 Sparrows Point Rd, Sparrows Point, MD" },
+    { tenant: "7 Eleven", address: "19412 Walter Johnson Drive, Germantown, MD" },
+    { tenant: "7 Eleven", address: "4213 Ridge Rd, Westminster, MD" }
+  ],
+
+  "Massachusetts": [
+    { tenant: "7 Eleven", address: "76 Franklin St, Quincy, MA" },
+    { tenant: "7 Eleven", address: "97 Union Street, East Hampton, MA" },
+    { tenant: "Speedway", address: "354 Main St, Gloucester, MA" }
+  ],
+
+  "Michigan": [
+    { tenant: "7 Eleven", address: "NWC Ellsworth & Hewitt, Ypsilanti, MI" },
+    { tenant: "7 Eleven", address: "3136 Shattuck Road, Saginaw, MI" },
+    { tenant: "7 Eleven", address: "35350 Jefferson Ave, Harrison Charter Township, MI" },
+    { tenant: "Burger King", address: "3015 S. Westnedge Ave, Kalamazoo, MI" },
+    { tenant: "Aspen Dental", address: "1817 M-139, Benton Harbor, MI" },
+    { tenant: "Family Dollar", address: "481 Pipestone St, Benton Harbor, MI" }
+  ],
+
+  "Minnesota": [
+    { tenant: "Arby’s", address: "120 12th Street SW, Forest Lake, MN" },
+    { tenant: "Hardees", address: "1250 S. Pokegama Ave., Grand Rapids, MN" },
+    { tenant: "White Castle", address: "9330 Baltimore St NE, Blaine, MN" },
+    { tenant: "White Castle", address: "3465 124th Ave NW, Coon Rapids, MN" },
+    { tenant: "Arby's", address: "1279 Town Centre Dr, Eagan, MN" }
+  ],
+
+  "Mississippi": [
+    { tenant: "O’reilly Auto", address: "1937 Jerry Clower Blvd N, Yazoo City, MS" }
+  ],
+
+  "Missouri": [
+    { tenant: "7 Eleven", address: "SWC Link & Midland, St. Louis, MO" },
+    { tenant: "7 Eleven", address: "NWC Bates St. & Virginia, St. Louis, MO" },
+    { tenant: "7 Eleven", address: "703 Union Rd, Saint Louis, MO" },
+    { tenant: "Hardees", address: "NEC Hwy 30 & Gravois, House Springs, MO" },
+    { tenant: "Hardees", address: "NWC Little Hill Expy & Missouri 94, St. Charles, MO" },
+    { tenant: "Vacant Taco Bell", address: "Independence, MO" },
+    { tenant: "Vacant KFC", address: "7017 N. Oak, Gladstone, MO" },
+    { tenant: "7 Eleven", address: "1301 Veterans Blvd, Festus, MO" }
+  ],
+
+  "Montana": [
+    { tenant: "O’reilly Auto", address: "406 Pike Ave, Columbus, MT" }
+  ],
+
+  "Nevada": [
+    { tenant: "Albertsons", address: "NEC Spring Mountain & Rainbow, Las Vegas, NV" },
+    { tenant: "7 Eleven", address: "1100 Las Vegas Blvd S, Las Vegas, NV" }
+  ],
+
+  "New Jersey": [
+    { tenant: "Autozone", address: "340 W Landis Ave., Vineland, NJ" },
+    { tenant: "Popeyes", address: "275 N Delsea Dr, Vineland, NJ" },
+    { tenant: "7 Eleven", address: "357 Market St, Elmwood Park, NJ" }
+  ],
+
+  "New Mexico": [
+    { tenant: "7 Eleven", address: "NEC Lomas Blvd NW & 12th St. NW, Albuquerque, NM" },
+    { tenant: "Office Depot", address: "2755 N Main St., Roswell, NM" },
+    { tenant: "Taco Bell", address: "1518 E Santa Fe Ave, Grants, NM" },
+    { tenant: "Family Dollar", address: "248 NM-50, Pecos, NM" },
+    { tenant: "Speedway", address: "507 East Broadway, Farmington, NM" },
+    { tenant: "Arby's", address: "3270 Coors Blvd NW, Albuquerque, NM" }
+  ],
+
+  "New York": [
+    { tenant: "7 Eleven", address: "NEC Salina & Danfort, Syracuse, NY" },
+    { tenant: "7 Eleven", address: "SWC Niagara & Hertel, Buffalo, NY" },
+    { tenant: "7 Eleven", address: "NWC Park & Lake, Hamburg, NY" },
+    { tenant: "7 Eleven", address: "SWC Olean & Emery, South Wales, NY" },
+    { tenant: "7 Eleven", address: "358 Mooney Pond Rd., Brookhaven, NY" },
+    { tenant: "7 Eleven", address: "154 Oak St, Copiague, NY" },
+    { tenant: "Autozone", address: "852 N Clinton Ave, Rochester, NY" },
+    { tenant: "Speedway", address: "229 S Brandywine Ave, Schenectady, NY" }
+  ],
+
+  "North Carolina": [
+    { tenant: "Family Dollar", address: "1545 South Main Street, China Grove, NC" },
+    { tenant: "Taco Bell", address: "1329 E Franklin Blvd, Gastonia, NC" },
+    { tenant: "Krispy Kreme", address: "3706 W Gate City Blvd, Greensboro, NC" },
+    { tenant: "Jack in the Box", address: "1600 E. Roosevelt Blvd., Monroe, NC" }
+  ],
+
+  "Ohio": [
+    { tenant: "Arby’s", address: "1636 W Market St, Akron, OH" },
+    { tenant: "Autozone", address: "NEC Byrne Rd. & Schneider, Toledo, OH" },
+    { tenant: "Circle K", address: "3871 Noble St, Bellaire, OH" },
+    { tenant: "Wendy’s", address: "421 Wagner Ave, Greenville, OH" },
+    { tenant: "Circle K", address: "1830 E Waterloo Road, Akron, OH" },
+    { tenant: "Fazoli's", address: "1048 N Lexington-Springmill Rd, Mansfield, OH" }
+  ],
+
+  "Oregon": [
+    { tenant: "7 Eleven", address: "SSWC Garden Home Rd & Oleson Rd, Portland, OR" },
+    { tenant: "7 Eleven", address: "6303 SE Harmony Rd., Milwaukie, OR" },
+    { tenant: "7 Eleven", address: "1430 NE 181st Ave., Portland, OR" },
+    { tenant: "7 Eleven", address: "9111 Southeast Division St, Portland, OR" },
+    { tenant: "Wendy’s", address: "641 Lancaster Dr NE., Salem, OR" },
+    { tenant: "Jack in the Box", address: "550 NE Circle Blvd, Corvallis, OR" }
+  ],
+
+  "Pennsylvania": [
+    { tenant: "7 Eleven", address: "SEC Main St. & Hanover, Biglersville, PA" },
+    { tenant: "7 Eleven", address: "NEC New Rodgers Rd and New Falls Rd, Levittown, PA" },
+    { tenant: "7 Eleven", address: "SWC 70th & Grovers, Philadelphia, PA" },
+    { tenant: "7 Eleven", address: "2269 Noblestown Rd, Pittsburg, PA" },
+    { tenant: "Autozone", address: "NWC of Pike & Broad, Philadelphia, PA" },
+    { tenant: "KFC", address: "313 Lowther St., Lemoyne, PA" },
+    { tenant: "McDonalds", address: "897 W Broadway, Red Lion, PA" },
+    { tenant: "Pizza Hut", address: "675 E Main St, Hummelstown, PA" },
+    { tenant: "7 Eleven", address: "651 W. Main Street, Lansdale, PA" }
+  ],
+
+  "South Carolina": [
+    { tenant: "Advance Auto", address: "NEC Columbia Ave and North Carolina Ave, Batesburg, SC" },
+    { tenant: "KFC", address: "602 US-17, North Myrtle Beach, SC" },
+    { tenant: "Waffle House", address: "604 Hwy 17 S, North Myrtle Beach, SC" }
+  ],
+
+  "Tennessee": [
+    { tenant: "Circle K", address: "1725 N Germantown Pkwy, Cordova, TN" },
+    { tenant: "Dollar Tree", address: "3060 Thomas St, Memphis, TN" }
+  ],
+
+  "Texas": [
+    { tenant: "7 Eleven", address: "SWC County Rd W and 8th St, Odessa, TX" },
+    { tenant: "7 Eleven", address: "SWC 4th St and Dixie Blvd, Odessa, TX" },
+    { tenant: "7 Eleven", address: "WNWC University Blvd and Parkway Blvd, Odessa, TX" },
+    { tenant: "7 Eleven", address: "1302 S 14th St, Abilene, TX" },
+    { tenant: "Autozone", address: "SEC Nacogdoches Rd. & Judson Rd., San Antonio, TX" },
+    { tenant: "Burger King", address: "605 N. Main Street, Vidor, TX" },
+    { tenant: "Circle K", address: "SEC Sarah Anne & McCombs, El Paso, TX" },
+    { tenant: "Jack in the Box", address: "901 Dairy Ashford Road, Houston, TX" },
+    { tenant: "Jack In the Box", address: "1329 S. Jackson Street, Jacksonville, TX" },
+    { tenant: "Jack in the Box", address: "3701 West Expressway 83, Palmview, TX" },
+    { tenant: "Vacant Home Depot", address: "35E & Fortworth Dr., Denton, TX" },
+    { tenant: "Vacant Gas Station", address: "SWC Beltline & Northgate, Irving, TX" },
+    { tenant: "Jack in the Box", address: "3701 West Expressway 83, Palmview, TX" },
+    { tenant: "Churchs", address: "234 Valley Hi Drive, San Antonio, TX" },
+    { tenant: "Shipley Do Nuts", address: "1739 W 7th Ave, Corsicana, TX" },
+    { tenant: "7 Eleven", address: "2417 Jupiter Rd, Plano, TX" }
+  ],
+
+  "Utah": [
+    { tenant: "7 Eleven", address: "385 W 200 N, Kaysville, UT" },
+    { tenant: "7 Eleven", address: "405 N Main St, Logan, UT" },
+    { tenant: "7 Eleven", address: "704 E. 3300 S., Millcreek, UT" },
+    { tenant: "7 Eleven", address: "5203 W. Daybreak Parkway, South Jordan, UT" },
+    { tenant: "7 Eleven", address: "310 N 2000 W, West Point, UT" },
+    { tenant: "Del Taco", address: "142 West Bulldog Blvd, Provo, UT" },
+    { tenant: "Zaxby’s", address: "1781 N. 2000 W, Clinton, UT 84015" },
+    { tenant: "Zaxby’s", address: "141 W 12th St., Ogden, UT 84404" },
+    { tenant: "Zaxby’s", address: "9400 Highland Dr, Sandy, UT 84093" },
+    { tenant: "Zaxby’s", address: "2683 South High Commons Way, West Valley City, UT" },
+    { tenant: "7 Eleven", address: "1515 S 500 W, Woods Cross, UT" }
+  ],
+
+  "Virginia": [
+    { tenant: "7 Eleven", address: "NEC Bayview & Chesapeake, Norfolk, VA" },
+    { tenant: "7 Eleven", address: "SWC Princess Anne & Colonial, Norfolk, VA" },
+    { tenant: "7 Eleven", address: "10185 Warwick Blvd, Newport News, VA" },
+    { tenant: "7 Eleven", address: "NEC Redgate & Orapax, Norfolk, VA" },
+    { tenant: "7 Eleven", address: "NWC Greenwich & Witchduck, Virginia Beach, VA" },
+    { tenant: "7 Eleven", address: "SEC Old Buckroe & Nickerson, Hampton, VA" },
+    { tenant: "7 Eleven", address: "SWC Warwick Blvd. & Youngs Mill, Newport News, VA" },
+    { tenant: "7 Eleven", address: "NWC Washington & Massanutten, Strasburg, VA" },
+    { tenant: "7 Eleven", address: "SWC General Puller Hwy & 1102, Deltaville, VA" },
+    { tenant: "7 Eleven", address: "SSWC University City & Toms Creek, Blacksburg, VA" },
+    { tenant: "7 Eleven", address: "SWC Tiffany & Princess Anne, Virginia Beach, VA" },
+    { tenant: "7 Eleven", address: "SEC Longhill and Devon, Williamsburg, VA" },
+    { tenant: "7 Eleven", address: "7535 Crab Thicket Rd, Gloucester Courthouse, VA" },
+    { tenant: "7 Eleven", address: "3600 Washington Avenue, Newport News, VA" },
+    { tenant: "7 Eleven", address: "290 S Main St., Broadway, VA" },
+    { tenant: "7 Eleven", address: "13307 Warwick Blvd, Newport News, VA" },
+    { tenant: "7 Eleven", address: "1160 Portsmouth Blvd., Suffolk, VA" },
+    { tenant: "7 Eleven", address: "834 J Clyde Morris Blvd, Newport News, VA" },
+    { tenant: "7 Eleven", address: "203 S Stuart Ave, Elkton, VA" },
+    { tenant: "7 Eleven", address: "3963 George Washington Memorial Hwy, Hayes, VA" },
+    { tenant: "7 Eleven", address: "30 S Reynolds St, Alexandria, VA" },
+    { tenant: "7 Eleven", address: "800 Franklin St, Alexandria, VA" }
+  ],
+
+  "Washington": [
+    { tenant: "7 Eleven", address: "SWC 15th Ave. & 125th st., Seattle, WA" },
+    { tenant: "7 Eleven", address: "32740 SR 20, Oak Harbor, WA" },
+    { tenant: "Jack in the Box", address: "100 W South Hill Rd, Sunnyside, WA" },
+    { tenant: "Jack in the Box", address: "4305 Kitsap Way, Bremerton, WA" },
+    { tenant: "7 Eleven", address: "31300 State Route 20, Oak Harbor, WA" },
+    { tenant: "31300 State Route 20", address: "Oak Harbor, WA" }
+  ],
+
+  "West Virginia": [
+    { tenant: "Hardees", address: "1506 Bigley Avenue, Charleston, WV" },
+    { tenant: "Speedway", address: "524 Campbells Creek Drive, Charleston, WV" }
+  ],
+
+  "Wisconsin": [
+    { tenant: "Autozone", address: "SWC Prairie & Mason, Beloit, WI" },
+    { tenant: "Boston Market", address: "2678 S 108th St, West Allis, WI" },
+    { tenant: "Dollar Tree", address: "3555 S Howell Ave St, Milwaukee, WI" },
+    { tenant: "KFC", address: "2860 S. 108th St., West Allis, WI" },
+    { tenant: "Famous Daves", address: "3030 Milton Ave, Janesville, WI" },
+    { tenant: "Dairy Queen", address: "6520 W North Ave, Wauwatosa, WI" },
+    { tenant: "Arby's", address: "2601 N. 20th Ave, Wausau, WI" }
+  ]
 };
+
 
 /* ==========================================
    ACQUIRED PROPERTIES PAGE FUNCTIONALITY
