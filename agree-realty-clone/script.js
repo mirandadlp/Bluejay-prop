@@ -222,9 +222,84 @@ const DEVELOPMENT_PROJECTS = {
 };
 
 /* ==========================================
+   LOADING OVERLAY - Typewriter intro animation
+   ========================================== */
+function initLoadingOverlay() {
+    const overlay = document.getElementById('loading-overlay');
+    const textElement = document.getElementById('loading-text');
+    const caretElement = document.getElementById('loading-caret');
+
+    // If elements don't exist (not on home page), exit
+    if (!overlay || !textElement) return;
+
+    const STORAGE_KEY = 'bluejay_intro_shown';
+    const LOADING_TEXT = 'Commercial Expertise. Simplified.';
+
+    // Check if intro was already shown this session
+    if (sessionStorage.getItem(STORAGE_KEY)) {
+        overlay.classList.add('hidden');
+        return;
+    }
+
+    // Add loading-active class to prevent scroll
+    document.body.classList.add('loading-active');
+
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+        // Show full text immediately, then fade out
+        textElement.textContent = LOADING_TEXT;
+        if (caretElement) caretElement.classList.add('hidden');
+
+        setTimeout(() => {
+            finishLoading();
+        }, 1500);
+        return;
+    }
+
+    // Typewriter effect
+    let charIndex = 0;
+    const typingSpeed = 50; // milliseconds per character
+
+    function typeNextChar() {
+        if (charIndex < LOADING_TEXT.length) {
+            textElement.textContent += LOADING_TEXT.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeNextChar, typingSpeed);
+        } else {
+            // Typing complete - hold for a beat, then fade out
+            setTimeout(() => {
+                if (caretElement) caretElement.classList.add('hidden');
+                setTimeout(finishLoading, 300);
+            }, 800);
+        }
+    }
+
+    function finishLoading() {
+        overlay.classList.add('fade-out');
+        document.body.classList.remove('loading-active');
+
+        // Mark as shown for this session
+        sessionStorage.setItem(STORAGE_KEY, 'true');
+
+        // Remove from DOM after transition
+        overlay.addEventListener('transitionend', () => {
+            overlay.classList.add('hidden');
+        }, { once: true });
+    }
+
+    // Start typing after a brief initial delay
+    setTimeout(typeNextChar, 400);
+}
+
+/* ==========================================
    INITIALIZATION
    ========================================== */
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize loading overlay first (for home page)
+    initLoadingOverlay();
+
     // Initialize all features
     initHeader();
     initNavigation();

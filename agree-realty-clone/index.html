@@ -19,6 +19,15 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Loading Overlay - Shows once per session -->
+    <div class="loading-overlay" id="loading-overlay" aria-live="polite" aria-label="Loading">
+        <div class="loading-content">
+            <h1 class="loading-text" id="loading-text" aria-hidden="true"></h1>
+            <span class="loading-caret" id="loading-caret"></span>
+            <span class="visually-hidden" id="loading-sr-text">Commercial Expertise. Simplified.</span>
+        </div>
+    </div>
+
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
