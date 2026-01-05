@@ -74,15 +74,29 @@
         <!-- Hero Section -->
         <section class="hero" id="hero" aria-labelledby="hero-headline">
             <div class="hero-background">
-                <!-- Placeholder gradient background - replace with actual hero image -->
-                <div class="hero-image" role="img" aria-label="Aerial view of retail properties">
-                    <!--
-                        IMAGE PLACEHOLDER: Replace with actual hero image
-                        Recommended size: 1920x1080 or larger
-                        Add: <img src="assets/hero-image.jpg" alt="Description" loading="eager">
-                    -->
+                <!-- Hero Carousel -->
+                <div class="hero-carousel" id="hero-carousel" aria-hidden="true">
+                    <div class="hero-slide active" data-slide="0">
+                        <img src="assets/cvs-pharmacy.jpg" alt="" loading="eager" class="hero-slide-img">
+                    </div>
+                    <div class="hero-slide" data-slide="1">
+                        <img src="assets/einstein-bagel-jpg.jpg" alt="" loading="lazy" class="hero-slide-img">
+                    </div>
+                    <div class="hero-slide" data-slide="2">
+                        <img src="assets/Shipleys.jpg" alt="" loading="lazy" class="hero-slide-img">
+                    </div>
+                    <div class="hero-slide" data-slide="3">
+                        <img src="assets/o_reilly-auto-parts.jpg" alt="" loading="lazy" class="hero-slide-img">
+                    </div>
                 </div>
                 <div class="hero-overlay"></div>
+                <!-- Carousel Indicators -->
+                <div class="hero-carousel-dots" id="hero-carousel-dots" role="tablist" aria-label="Carousel navigation">
+                    <button class="carousel-dot active" data-slide="0" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+                    <button class="carousel-dot" data-slide="1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+                    <button class="carousel-dot" data-slide="2" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+                    <button class="carousel-dot" data-slide="3" role="tab" aria-selected="false" aria-label="Slide 4"></button>
+                </div>
             </div>
             <div class="hero-content">
                 <div class="container">

@@ -318,6 +318,145 @@ function initLoadingOverlay() {
 }
 
 /* ==========================================
+   HERO CAROUSEL - Crossfade image slideshow
+   ==========================================
+   Configuration:
+   - SLIDE_DURATION: Time each slide displays (ms)
+   - FADE_DURATION: Crossfade transition time (ms) - also set in CSS
+   - To change images: Update the HTML in index.html hero-carousel section
+   - To adjust overlay darkness: Edit .hero-overlay in styles.css
+*/
+function initHeroCarousel() {
+    const carousel = document.getElementById('hero-carousel');
+    const dotsContainer = document.getElementById('hero-carousel-dots');
+
+    if (!carousel) return;
+
+    const slides = carousel.querySelectorAll('.hero-slide');
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
+
+    if (slides.length <= 1) return;
+
+    // Configuration
+    const SLIDE_DURATION = 6000; // Time per slide (6 seconds)
+    const FADE_DURATION = 1200;  // Matches CSS transition (1.2s)
+
+    let currentIndex = 0;
+    let autoplayInterval = null;
+    let isTransitioning = false;
+
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Go to a specific slide
+    function goToSlide(index, skipAnimation = false) {
+        if (isTransitioning && !skipAnimation) return;
+        if (index === currentIndex) return;
+
+        isTransitioning = true;
+
+        const currentSlide = slides[currentIndex];
+        const nextSlide = slides[index];
+
+        // Update slides
+        if (skipAnimation || prefersReducedMotion) {
+            currentSlide.classList.remove('active');
+            nextSlide.classList.add('active');
+            isTransitioning = false;
+        } else {
+            // Crossfade: both visible briefly during transition
+            nextSlide.classList.add('active');
+
+            // After fade completes, remove active from old slide
+            setTimeout(() => {
+                currentSlide.classList.remove('active');
+                isTransitioning = false;
+            }, FADE_DURATION);
+        }
+
+        // Update dots
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+            dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+        });
+
+        currentIndex = index;
+    }
+
+    // Go to next slide
+    function nextSlide() {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        goToSlide(nextIndex);
+    }
+
+    // Start autoplay
+    function startAutoplay() {
+        if (prefersReducedMotion) return; // Respect reduced motion
+        stopAutoplay();
+        autoplayInterval = setInterval(nextSlide, SLIDE_DURATION);
+    }
+
+    // Stop autoplay
+    function stopAutoplay() {
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
+        }
+    }
+
+    // Dot click handlers
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+            // Reset autoplay timer on manual navigation
+            if (!prefersReducedMotion) {
+                startAutoplay();
+            }
+        });
+    });
+
+    // Page Visibility API - pause when tab not visible
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            stopAutoplay();
+        } else {
+            startAutoplay();
+        }
+    });
+
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const SWIPE_THRESHOLD = 50;
+
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > SWIPE_THRESHOLD) {
+            if (diff > 0) {
+                // Swipe left - next slide
+                goToSlide((currentIndex + 1) % slides.length);
+            } else {
+                // Swipe right - previous slide
+                goToSlide((currentIndex - 1 + slides.length) % slides.length);
+            }
+            startAutoplay(); // Reset timer after swipe
+        }
+    }
+
+    // Start the carousel
+    startAutoplay();
+}
+
+/* ==========================================
    INITIALIZATION
    ========================================== */
 document.addEventListener('DOMContentLoaded', () => {
@@ -325,6 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initLoadingOverlay();
 
     // Initialize all features
+    initHeroCarousel();
     initHeader();
     initNavigation();
     initSearch();

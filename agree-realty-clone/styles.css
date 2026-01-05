@@ -780,28 +780,97 @@ h1, h2, h3, h4, h5, h6 {
     z-index: -1;
 }
 
-.hero-image {
+/* Hero Carousel */
+.hero-carousel {
     position: absolute;
     inset: 0;
-    /* Placeholder gradient - replace with actual image */
-    background: linear-gradient(135deg, #1a2744 0%, #2a3d5f 50%, #4a7c59 100%);
-    background-size: cover;
-    background-position: center;
-    animation: heroZoom 20s ease-in-out infinite alternate;
 }
 
-@keyframes heroZoom {
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    /* Fallback gradient while images load */
+    background: linear-gradient(135deg, #1a2744 0%, #2a3d5f 50%, #4a7c59 100%);
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hero-slide.fade-out {
+    opacity: 0;
+    z-index: 0;
+}
+
+.hero-slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Subtle zoom animation on active slide */
+.hero-slide.active .hero-slide-img {
+    animation: heroSlideZoom 8s ease-out forwards;
+}
+
+@keyframes heroSlideZoom {
     0% {
         transform: scale(1);
     }
     100% {
-        transform: scale(1.05);
+        transform: scale(1.08);
     }
 }
 
+/* Carousel Dots */
+.hero-carousel-dots {
+    position: absolute;
+    bottom: var(--space-8);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: var(--space-3);
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-dot:hover {
+    border-color: var(--text-inverse);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-dot.active {
+    background: var(--text-inverse);
+    border-color: var(--text-inverse);
+}
+
+/* Reduced motion: disable animations and autoplay indicator */
 @media (prefers-reduced-motion: reduce) {
-    .hero-image {
+    .hero-slide {
+        transition: opacity 0.1s ease;
+    }
+
+    .hero-slide.active .hero-slide-img {
         animation: none;
+    }
+
+    /* Hide dots when reduced motion - manual nav only */
+    .hero-carousel-dots {
+        display: flex; /* Still allow manual navigation */
     }
 }
 
