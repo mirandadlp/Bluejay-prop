@@ -233,7 +233,10 @@ function initLoadingOverlay() {
     if (!overlay || !textElement) return;
 
     const STORAGE_KEY = 'bluejay_intro_shown';
-    const LOADING_TEXT = 'Commercial Expertise. Simplified.';
+    // Text parts: regular text and hollow text
+    const TEXT_PART_1 = 'Commercial Expertise. ';
+    const TEXT_PART_2 = 'Simplified.';
+    const FULL_TEXT = TEXT_PART_1 + TEXT_PART_2;
 
     // Check if intro was already shown this session
     if (sessionStorage.getItem(STORAGE_KEY)) {
@@ -247,9 +250,14 @@ function initLoadingOverlay() {
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // Helper to build final HTML with hollow styling
+    function buildFinalHTML() {
+        return TEXT_PART_1 + '<span class="loading-text-hollow">' + TEXT_PART_2 + '</span>';
+    }
+
     if (prefersReducedMotion) {
-        // Show full text immediately, then fade out
-        textElement.textContent = LOADING_TEXT;
+        // Show full text immediately with styling, then fade out
+        textElement.innerHTML = buildFinalHTML();
         if (caretElement) caretElement.classList.add('hidden');
 
         setTimeout(() => {
@@ -261,10 +269,26 @@ function initLoadingOverlay() {
     // Typewriter effect
     let charIndex = 0;
     const typingSpeed = 50; // milliseconds per character
+    let currentText = '';
 
     function typeNextChar() {
-        if (charIndex < LOADING_TEXT.length) {
-            textElement.textContent += LOADING_TEXT.charAt(charIndex);
+        if (charIndex < FULL_TEXT.length) {
+            currentText += FULL_TEXT.charAt(charIndex);
+
+            // Check if we've reached the "Simplified." part
+            if (charIndex >= TEXT_PART_1.length - 1) {
+                // Render with hollow styling for the Simplified part
+                const part1 = currentText.substring(0, TEXT_PART_1.length);
+                const part2 = currentText.substring(TEXT_PART_1.length);
+                if (part2.length > 0) {
+                    textElement.innerHTML = part1 + '<span class="loading-text-hollow">' + part2 + '</span>';
+                } else {
+                    textElement.textContent = currentText;
+                }
+            } else {
+                textElement.textContent = currentText;
+            }
+
             charIndex++;
             setTimeout(typeNextChar, typingSpeed);
         } else {
