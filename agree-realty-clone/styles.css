@@ -428,8 +428,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    height: 30px;
-    max-height: 34px;
+    height: 50px;
     width: auto;
     display: block;
     transition: opacity var(--transition-base), transform var(--transition-base);
@@ -650,7 +649,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer Logo */
 .footer-logo-img {
-    height: 28px;
+    height: 50px;
     width: auto;
     display: block;
     opacity: 0.9;
