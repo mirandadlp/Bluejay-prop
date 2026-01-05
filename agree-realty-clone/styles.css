@@ -767,11 +767,17 @@ h1, h2, h3, h4, h5, h6 {
    ========================================== */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        min-height: 80vh;
+    }
 }
 
 .hero-background {
@@ -879,17 +885,27 @@ h1, h2, h3, h4, h5, h6 {
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(26, 39, 68, 0.4) 0%,
-        rgba(26, 39, 68, 0.6) 50%,
-        rgba(26, 39, 68, 0.8) 100%
+        rgba(26, 39, 68, 0.1) 0%,
+        rgba(26, 39, 68, 0.2) 100%
     );
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
+/* ==========================================
+   HERO HEADLINE SECTION (below carousel)
+   ========================================== */
+.hero-headline-section {
+    background-color: var(--color-primary);
+    padding: var(--space-16) 0;
     text-align: center;
-    padding: var(--space-20) var(--container-padding);
+}
+
+@media (min-width: 768px) {
+    .hero-headline-section {
+        padding: var(--space-20) 0;
+    }
+}
+
+.hero-headline-section .container {
     max-width: 900px;
 }
 
