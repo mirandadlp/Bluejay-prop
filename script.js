@@ -1441,11 +1441,13 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Arby's", address: "2101 N Calumet Ave, Valpraraiso, IN" },
     { tenant: "Autozone", address: "SSEC Coliseum & Lake, Fort Wayne, IN" },
     { tenant: "Autozone", address: "SWC Hghwy 66 & 1st Ave, Evansville, IN" },
-    { tenant: "O’reilly Auto", address: "SWC Hghwy 66 & 1st Ave, Evansville, IN" },
+    { tenant: "O'reilly Auto", address: "SWC Hghwy 66 & 1st Ave, Evansville, IN" },
     { tenant: "Wendys", address: "900 W Main St., Peru, IN" },
     { tenant: "White Castle", address: "8740 Michigan Rd, Indianapolis, IN" },
     { tenant: "Burger King", address: "4360 National Rd E, Richmond, IN" },
-    { tenant: "Burger King", address: "11741 Pendleton Pike, Indianapolis, IN" }
+    { tenant: "Burger King", address: "11741 Pendleton Pike, Indianapolis, IN" },
+    { tenant: "Speedway", address: "1706 South Bend Ave, South Bend, IN" },
+    { tenant: "7 Eleven", address: "54543 County Rd 17, Elkhart, IN" }
   ],
 
   "Iowa": [
@@ -1471,7 +1473,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "7 Eleven", address: "NEC Pulaski Hwy & Joppa Rd., Joppa, MD" },
     { tenant: "7 Eleven", address: "2326 Sparrows Point Rd, Sparrows Point, MD" },
     { tenant: "7 Eleven", address: "19412 Walter Johnson Drive, Germantown, MD" },
-    { tenant: "7 Eleven", address: "4213 Ridge Rd, Westminster, MD" }
+    { tenant: "7 Eleven", address: "4213 Ridge Rd, Westminster, MD" },
+    { tenant: "7 Eleven", address: "7501 Dunmanway, Baltimore, MD" }
   ],
 
   "Massachusetts": [
@@ -1486,15 +1489,17 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "7 Eleven", address: "35350 Jefferson Ave, Harrison Charter Township, MI" },
     { tenant: "Burger King", address: "3015 S. Westnedge Ave, Kalamazoo, MI" },
     { tenant: "Aspen Dental", address: "1817 M-139, Benton Harbor, MI" },
-    { tenant: "Family Dollar", address: "481 Pipestone St, Benton Harbor, MI" }
+    { tenant: "Family Dollar", address: "481 Pipestone St, Benton Harbor, MI" },
+    { tenant: "7 Eleven", address: "27010 Dequindre Rd, Warren, MI" }
   ],
 
   "Minnesota": [
-    { tenant: "Arby’s", address: "120 12th Street SW, Forest Lake, MN" },
+    { tenant: "Arby's", address: "120 12th Street SW, Forest Lake, MN" },
     { tenant: "Hardees", address: "1250 S. Pokegama Ave., Grand Rapids, MN" },
     { tenant: "White Castle", address: "9330 Baltimore St NE, Blaine, MN" },
     { tenant: "White Castle", address: "3465 124th Ave NW, Coon Rapids, MN" },
-    { tenant: "Arby's", address: "1279 Town Centre Dr, Eagan, MN" }
+    { tenant: "Arby's", address: "1279 Town Centre Dr, Eagan, MN" },
+    { tenant: "Taco Johns", address: "5910 Neal Ave N, Oak Park Heights, MN" }
   ],
 
   "Mississippi": [
@@ -1611,7 +1616,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Jack in the Box", address: "3701 West Expressway 83, Palmview, TX" },
     { tenant: "Churchs", address: "234 Valley Hi Drive, San Antonio, TX" },
     { tenant: "Shipley Do Nuts", address: "1739 W 7th Ave, Corsicana, TX" },
-    { tenant: "7 Eleven", address: "2417 Jupiter Rd, Plano, TX" }
+    { tenant: "7 Eleven", address: "2417 Jupiter Rd, Plano, TX" },
+    { tenant: "Jack In The Box", address: "742 SW Military Dr, San Antonio, TX" }
   ],
 
   "Utah": [
@@ -1650,7 +1656,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "7 Eleven", address: "203 S Stuart Ave, Elkton, VA" },
     { tenant: "7 Eleven", address: "3963 George Washington Memorial Hwy, Hayes, VA" },
     { tenant: "7 Eleven", address: "30 S Reynolds St, Alexandria, VA" },
-    { tenant: "7 Eleven", address: "800 Franklin St, Alexandria, VA" }
+    { tenant: "7 Eleven", address: "800 Franklin St, Alexandria, VA" },
+    { tenant: "7 Eleven", address: "211 N Main St, Bridgewater, VA" }
   ],
 
   "Washington": [
@@ -1659,7 +1666,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Jack in the Box", address: "100 W South Hill Rd, Sunnyside, WA" },
     { tenant: "Jack in the Box", address: "4305 Kitsap Way, Bremerton, WA" },
     { tenant: "7 Eleven", address: "31300 State Route 20, Oak Harbor, WA" },
-    { tenant: "31300 State Route 20", address: "Oak Harbor, WA" }
+    { tenant: "31300 State Route 20", address: "Oak Harbor, WA" },
+    { tenant: "7 Eleven", address: "3115 6th Ave, Tacoma, WA" }
   ],
 
   "West Virginia": [
@@ -1674,7 +1682,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "KFC", address: "2860 S. 108th St., West Allis, WI" },
     { tenant: "Famous Daves", address: "3030 Milton Ave, Janesville, WI" },
     { tenant: "Dairy Queen", address: "6520 W North Ave, Wauwatosa, WI" },
-    { tenant: "Arby's", address: "2601 N. 20th Ave, Wausau, WI" }
+    { tenant: "Arby's", address: "2601 N. 20th Ave, Wausau, WI" },
+    { tenant: "Ihop", address: "5800 Durand Ave, Racine, WI" }
   ]
 };
 
