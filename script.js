@@ -38,7 +38,7 @@ const CONTENT = {
     // Stats/Counters
     statsCounters: [
         { value: 247, suffix: '', label: 'Properties' },
-        { value: 31, suffix: '', label: 'States' }
+        { value: 36, suffix: '+', label: 'States' }
     ],
 
     // Stats Labels (for data attributes)
@@ -55,7 +55,7 @@ const CONTENT = {
     // About Preview
     aboutEyebrow: 'About BlueJay Properties',
     aboutPreviewTitle: 'Industry Leader in Net Lease',
-    aboutPreviewText: 'Driven by vision and built on results, we specialize in acquiring and managing high-performing commercial properties across the nation creating long-term value for our partners, tenants, and communities.',
+    aboutPreviewText: 'Driven by vision, hard work and efficiency we specialize in acquiring and managing high-performing commercial properties across the nation creating long-term value for our partners, tenants, and communities.',
     aboutPreviewCta: 'Learn More About Us',
 
     // Services
@@ -68,10 +68,10 @@ const CONTENT = {
     serviceFundDesc: 'Flexible capital solutions for sellers',
 
     // CTA Section
-    ctaTitle: 'Ready to Partner with Us?',
-    ctaText: 'Contact our team to discuss acquisition opportunities or development partnerships.',
-    ctaBtnAcquire: 'Acquisition Inquiries',
-    ctaBtnDevelop: 'Development Services',
+    ctaTitle: 'Ready to Do Business with Us?',
+    ctaText: 'Contact our team to discuss our disposition opportunities or our acquisition criteria',
+    ctaBtnAcquire: 'Contact Us',
+    ctaBtnDevelop: 'View Acquisition Criteria',
 
     // Footer
     footerAddress1: '70 E. Long Lake Road',
@@ -198,6 +198,76 @@ const PROPERTIES = [
     { tenant: 'GNC', city: 'Pittsburgh', state: 'PA', type: 'sale' },
     { tenant: 'Vitamin Shoppe', city: 'Secaucus', state: 'NJ', type: 'sale' }
 ];
+
+/* ==========================================
+   RECENT ACQUISITIONS DATA
+   ========================================== */
+/* PLACEHOLDER: Replace these with your most recent acquisitions */
+const RECENT_ACQUISITIONS = [
+    { tenant: "7 Eleven", address: "3115 6th Ave, Tacoma, WA", state: "Washington" },
+    { tenant: "7 Eleven", address: "7501 Dunmanway, Baltimore, MD", state: "Maryland" },
+    { tenant: "Taco Johns", address: "5910 Neal Ave N, Oak Park Heights, MN", state: "Minnesota" },
+    { tenant: "7 Eleven", address: "211 N Main St, Bridgewater, VA", state: "Virginia" },
+    { tenant: "Ihop", address: "5800 Durand Ave, Racine, WI", state: "Wisconsin" },
+    { tenant: "Speedway", address: "1706 South Bend Ave, South Bend, IN", state: "Indiana" }
+];
+
+/* ==========================================
+   STATE ABBREVIATIONS & LABEL POSITIONS
+   ========================================== */
+const STATE_LABELS = {
+    "Alabama": { abbr: "AL", x: 645, y: 390 },
+    "Alaska": { abbr: "AK", x: 170, y: 475 },
+    "Arizona": { abbr: "AZ", x: 210, y: 360 },
+    "Arkansas": { abbr: "AR", x: 530, y: 360 },
+    "California": { abbr: "CA", x: 105, y: 295 },
+    "Colorado": { abbr: "CO", x: 305, y: 280 },
+    "Connecticut": { abbr: "CT", x: 870, y: 185 },
+    "Delaware": { abbr: "DE", x: 830, y: 255 },
+    "Florida": { abbr: "FL", x: 730, y: 450 },
+    "Georgia": { abbr: "GA", x: 700, y: 385 },
+    "Hawaii": { abbr: "HI", x: 310, y: 510 },
+    "Idaho": { abbr: "ID", x: 185, y: 165 },
+    "Illinois": { abbr: "IL", x: 590, y: 275 },
+    "Indiana": { abbr: "IN", x: 630, y: 275 },
+    "Iowa": { abbr: "IA", x: 520, y: 220 },
+    "Kansas": { abbr: "KS", x: 420, y: 295 },
+    "Kentucky": { abbr: "KY", x: 670, y: 305 },
+    "Louisiana": { abbr: "LA", x: 545, y: 420 },
+    "Maine": { abbr: "ME", x: 890, y: 110 },
+    "Maryland": { abbr: "MD", x: 815, y: 265 },
+    "Massachusetts": { abbr: "MA", x: 880, y: 170 },
+    "Michigan": { abbr: "MI", x: 640, y: 185 },
+    "Minnesota": { abbr: "MN", x: 510, y: 140 },
+    "Mississippi": { abbr: "MS", x: 590, y: 390 },
+    "Missouri": { abbr: "MO", x: 530, y: 300 },
+    "Montana": { abbr: "MT", x: 260, y: 110 },
+    "Nebraska": { abbr: "NE", x: 410, y: 225 },
+    "Nevada": { abbr: "NV", x: 145, y: 250 },
+    "New Hampshire": { abbr: "NH", x: 880, y: 145 },
+    "New Jersey": { abbr: "NJ", x: 845, y: 230 },
+    "New Mexico": { abbr: "NM", x: 290, y: 365 },
+    "New York": { abbr: "NY", x: 820, y: 180 },
+    "North Carolina": { abbr: "NC", x: 760, y: 330 },
+    "North Dakota": { abbr: "ND", x: 400, y: 115 },
+    "Ohio": { abbr: "OH", x: 690, y: 260 },
+    "Oklahoma": { abbr: "OK", x: 430, y: 345 },
+    "Oregon": { abbr: "OR", x: 115, y: 140 },
+    "Pennsylvania": { abbr: "PA", x: 780, y: 220 },
+    "Rhode Island": { abbr: "RI", x: 885, y: 185 },
+    "South Carolina": { abbr: "SC", x: 735, y: 365 },
+    "South Dakota": { abbr: "SD", x: 405, y: 165 },
+    "Tennessee": { abbr: "TN", x: 650, y: 335 },
+    "Texas": { abbr: "TX", x: 400, y: 415 },
+    "Utah": { abbr: "UT", x: 220, y: 260 },
+    "Vermont": { abbr: "VT", x: 860, y: 135 },
+    "Virginia": { abbr: "VA", x: 775, y: 295 },
+    "Washington": { abbr: "WA", x: 130, y: 70 },
+    "West Virginia": { abbr: "WV", x: 740, y: 280 },
+    "Wisconsin": { abbr: "WI", x: 565, y: 175 },
+    "Wyoming": { abbr: "WY", x: 305, y: 190 },
+    "District of Columbia": { abbr: "DC", x: 815, y: 265 }
+};
 
 /* ==========================================
    DEVELOPMENT PROJECTS DATA
@@ -1067,6 +1137,25 @@ function initUSMap() {
         mapSvg.appendChild(path);
     });
 
+    // Add state labels (abbreviations) to the map
+    Object.entries(STATE_LABELS).forEach(([stateName, labelData]) => {
+        // Skip if no path data exists for this state
+        if (!US_STATES_PATHS[stateName]) return;
+
+        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        text.setAttribute('x', labelData.x);
+        text.setAttribute('y', labelData.y);
+        text.setAttribute('class', 'state-label');
+        text.textContent = labelData.abbr;
+
+        // Add has-properties class if state has properties
+        if (statesWithProperties.includes(stateName)) {
+            text.classList.add('has-properties');
+        }
+
+        mapSvg.appendChild(text);
+    });
+
     // Tooltip handling
     const showTooltip = (e, statePath) => {
         const stateName = statePath.dataset.state;
@@ -1137,24 +1226,18 @@ function initUSMap() {
         if (!previewList) return;
 
         let properties = [];
-        let subtitle = 'Recent acquisitions across the nation';
+        let subtitle = 'Our latest property acquisitions';
 
         if (stateName && ACQUIRED_PROPERTIES[stateName]) {
             properties = ACQUIRED_PROPERTIES[stateName].slice(0, 6);
             subtitle = `Properties in ${stateName}`;
         } else {
-            // Show random sampling from different states
-            const allStates = Object.keys(ACQUIRED_PROPERTIES);
-            const shuffled = allStates.sort(() => 0.5 - Math.random());
-
-            for (let i = 0; i < Math.min(6, shuffled.length); i++) {
-                const state = shuffled[i];
-                const stateProps = ACQUIRED_PROPERTIES[state];
-                if (stateProps && stateProps.length > 0) {
-                    const randomProp = stateProps[Math.floor(Math.random() * stateProps.length)];
-                    properties.push({ ...randomProp, stateName: state });
-                }
-            }
+            // Show recent acquisitions from the RECENT_ACQUISITIONS array
+            properties = RECENT_ACQUISITIONS.slice(0, 6).map(prop => ({
+                tenant: prop.tenant,
+                address: prop.address,
+                stateName: prop.state
+            }));
         }
 
         if (previewSubtitle) {
