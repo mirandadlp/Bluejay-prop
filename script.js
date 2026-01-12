@@ -408,7 +408,7 @@ function initHeroCarousel() {
     if (slides.length <= 1) return;
 
     // Configuration
-    const SLIDE_DURATION = 6000; // Time per slide (6 seconds)
+    const SLIDE_DURATION = 2000; // Time per slide (2 seconds)
     const FADE_DURATION = 1200;  // Matches CSS transition (1.2s)
 
     let currentIndex = 0;
