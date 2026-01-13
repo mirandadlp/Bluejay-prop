@@ -1612,6 +1612,119 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================
+   LOGO SLIDER SECTION - Tenant logos ticker
+   ========================================== */
+.logo-slider-section {
+    /* Compact section: ~100-140px total height */
+    padding: var(--space-4) 0;
+    background-color: var(--color-gray-50);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    overflow: hidden;
+}
+
+.logo-slider-label {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wider);
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: var(--space-3);
+}
+
+.logo-slider-wrapper {
+    /* Full width for seamless scroll effect */
+    width: 100%;
+    overflow: hidden;
+    /* Fade edges for polished look */
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 5%, black 95%, transparent);
+    mask-image: linear-gradient(90deg, transparent, black 5%, black 95%, transparent);
+}
+
+.logo-slider-track {
+    display: flex;
+    align-items: center;
+    gap: var(--space-10);
+    width: max-content;
+    /* Animation set by JS based on content width for consistent speed */
+    animation: logoSliderScroll var(--logo-slider-duration, 30s) linear infinite;
+}
+
+/* Pause on hover (desktop) */
+.logo-slider-wrapper:hover .logo-slider-track {
+    animation-play-state: paused;
+}
+
+.logo-slider-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px; /* Logo height: 40-60px range */
+}
+
+.logo-slider-item img {
+    max-height: 50px;
+    max-width: 120px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.7;
+    filter: grayscale(100%);
+    transition: opacity var(--transition-base), filter var(--transition-base);
+}
+
+.logo-slider-item img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Infinite scroll animation - scrolls left by half (the original set width) */
+@keyframes logoSliderScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Translate by exactly half (original content width) for seamless loop */
+        transform: translateX(calc(-50%));
+    }
+}
+
+/* Reduced motion: stop animation, allow manual horizontal scroll */
+@media (prefers-reduced-motion: reduce) {
+    .logo-slider-track {
+        animation: none;
+    }
+
+    .logo-slider-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+}
+
+/* Mobile: slightly smaller logos and tighter spacing */
+@media (max-width: 767px) {
+    .logo-slider-section {
+        padding: var(--space-3) 0;
+    }
+
+    .logo-slider-item {
+        height: 40px;
+    }
+
+    .logo-slider-item img {
+        max-height: 40px;
+        max-width: 100px;
+    }
+
+    .logo-slider-track {
+        gap: var(--space-8);
+    }
+}
+
+/* ==========================================
    ABOUT PREVIEW SECTION
    ========================================== */
 .about-preview {

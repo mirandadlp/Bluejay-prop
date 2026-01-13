@@ -527,6 +527,95 @@ function initHeroCarousel() {
 }
 
 /* ==========================================
+   LOGO SLIDER - Infinite scrolling tenant logos
+   ========================================== */
+function initLogoSlider() {
+    const track = document.getElementById('logo-slider-track');
+    if (!track) return;
+
+    // ========================================
+    // SPEED CONFIGURATION
+    // Adjust this value to change scroll speed
+    // Higher = faster, Lower = slower
+    // ========================================
+    const PIXELS_PER_SECOND = 50; // Speed: 50 pixels per second
+
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+        // Don't animate, allow manual scroll (handled in CSS)
+        return;
+    }
+
+    // Clone all items to create seamless loop
+    // The track will contain: [original items] + [cloned items]
+    // Animation moves by 50% (original width) then resets seamlessly
+    const items = track.querySelectorAll('.logo-slider-item');
+    items.forEach(item => {
+        const clone = item.cloneNode(true);
+        track.appendChild(clone);
+    });
+
+    // Calculate animation duration based on content width and desired speed
+    // Wait for images to potentially load, then calculate
+    function setAnimationDuration() {
+        const trackWidth = track.scrollWidth / 2; // Original content width (before duplication)
+        const duration = trackWidth / PIXELS_PER_SECOND; // seconds
+        track.style.setProperty('--logo-slider-duration', `${duration}s`);
+    }
+
+    // Set initial duration
+    setAnimationDuration();
+
+    // Recalculate on window resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(setAnimationDuration, 200);
+    });
+
+    // ========================================
+    // TOUCH/DRAG SUPPORT FOR MOBILE
+    // ========================================
+    const wrapper = track.parentElement;
+    let isDragging = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let animationWasPaused = false;
+
+    // Pause animation during drag
+    function pauseAnimation() {
+        track.style.animationPlayState = 'paused';
+    }
+
+    function resumeAnimation() {
+        track.style.animationPlayState = 'running';
+    }
+
+    wrapper.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startX = e.touches[0].pageX;
+        animationWasPaused = getComputedStyle(track).animationPlayState === 'paused';
+        pauseAnimation();
+    }, { passive: true });
+
+    wrapper.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const x = e.touches[0].pageX;
+        const walk = (startX - x) * 1.5; // Scroll speed multiplier
+        wrapper.scrollLeft = scrollLeft + walk;
+    }, { passive: true });
+
+    wrapper.addEventListener('touchend', () => {
+        isDragging = false;
+        if (!animationWasPaused) {
+            resumeAnimation();
+        }
+    }, { passive: true });
+}
+
+/* ==========================================
    INITIALIZATION
    ========================================== */
 document.addEventListener('DOMContentLoaded', () => {
@@ -535,6 +624,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize all features
     initHeroCarousel();
+    initLogoSlider();
     initHeader();
     initNavigation();
     initSearch();
