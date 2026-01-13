@@ -538,7 +538,7 @@ function initLogoSlider() {
     // Adjust this value to change scroll speed
     // Higher = faster, Lower = slower
     // ========================================
-    const PIXELS_PER_SECOND = 50; // Speed: 50 pixels per second
+    const PIXELS_PER_SECOND = 25; // Speed: 25 pixels per second
 
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
