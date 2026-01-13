@@ -1615,8 +1615,8 @@ h1, h2, h3, h4, h5, h6 {
    LOGO SLIDER SECTION - Tenant logos ticker
    ========================================== */
 .logo-slider-section {
-    /* Compact section: ~100-140px total height */
-    padding: var(--space-4) 0;
+    /* Section height doubled */
+    padding: var(--space-8) 0;
     background-color: var(--color-gray-50);
     border-top: 1px solid var(--border-light);
     border-bottom: 1px solid var(--border-light);
@@ -1661,12 +1661,12 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px; /* Logo height: 40-60px range */
+    height: 100px; /* Logo height doubled */
 }
 
 .logo-slider-item img {
-    max-height: 50px;
-    max-width: 120px;
+    max-height: 100px;
+    max-width: 240px;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -1707,16 +1707,16 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile: slightly smaller logos and tighter spacing */
 @media (max-width: 767px) {
     .logo-slider-section {
-        padding: var(--space-3) 0;
+        padding: var(--space-6) 0;
     }
 
     .logo-slider-item {
-        height: 40px;
+        height: 80px;
     }
 
     .logo-slider-item img {
-        max-height: 40px;
-        max-width: 100px;
+        max-height: 80px;
+        max-width: 200px;
     }
 
     .logo-slider-track {
