@@ -616,6 +616,61 @@ function initLogoSlider() {
 }
 
 /* ==========================================
+   STAFF REVEAL ANIMATIONS - Scroll-triggered
+   with alternating left/right directions
+   ========================================== */
+function initStaffReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+
+    if (!reveals.length) return;
+
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+        // Skip animations - show all content immediately
+        reveals.forEach(el => el.classList.add('is-visible'));
+        return;
+    }
+
+    // Get staff cards for stagger delay calculation
+    const staffCards = document.querySelectorAll('.staff-card.reveal');
+
+    // Create IntersectionObserver for reveal animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -50px 0px', // Trigger slightly before element enters viewport
+        threshold: 0.1
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+
+                // Add stagger delay for staff cards
+                if (element.classList.contains('staff-card')) {
+                    const cardIndex = Array.from(staffCards).indexOf(element);
+                    const delay = cardIndex * 100; // 100ms stagger between cards
+                    element.style.setProperty('--delay', `${delay}ms`);
+                }
+
+                // Add visible class after a tiny delay to ensure CSS transition catches
+                requestAnimationFrame(() => {
+                    element.classList.add('is-visible');
+                });
+
+                // Stop observing once revealed
+                observer.unobserve(element);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all reveal elements
+    reveals.forEach(el => revealObserver.observe(el));
+}
+
+/* ==========================================
    INITIALIZATION
    ========================================== */
 document.addEventListener('DOMContentLoaded', () => {
@@ -630,6 +685,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSearch();
     initCounters();
     initScrollReveal();
+    initStaffReveal();
     initPropertyList();
     initTabs();
     initAccordions();

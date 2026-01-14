@@ -2645,6 +2645,122 @@ body.mobile-nav-open {
 }
 
 /* ==========================================
+   PROFESSIONAL STAFF SECTION (Contact page)
+   ========================================== */
+.staff-section {
+    padding: var(--space-16) 0;
+    background-color: var(--bg-alt);
+}
+
+.staff-title {
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-semibold);
+    text-align: center;
+    margin-bottom: var(--space-10);
+    color: var(--text);
+}
+
+.staff-grid {
+    display: grid;
+    gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
+    }
+}
+
+.staff-card {
+    padding: var(--space-6);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    /* Stagger delay set by JS */
+    transition-delay: var(--delay, 0ms);
+}
+
+/* Hover micro-interaction - desktop only (pointer: fine) */
+@media (hover: hover) and (pointer: fine) {
+    .staff-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+    }
+}
+
+.staff-name {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
+    color: var(--text);
+    margin-bottom: var(--space-1);
+}
+
+.staff-role {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--space-3);
+}
+
+.staff-email {
+    display: inline-block;
+    font-size: var(--fs-sm);
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: opacity 0.2s ease, text-decoration 0.2s ease;
+}
+
+.staff-email:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   REVEAL ANIMATIONS (scroll-triggered)
+   ========================================== */
+
+/* Base reveal state - hidden */
+.reveal {
+    opacity: 0;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition-delay: var(--delay, 0ms);
+}
+
+/* Direction modifiers */
+.reveal--up {
+    transform: translateY(16px);
+}
+
+.reveal--left {
+    transform: translateX(-24px);
+}
+
+.reveal--right {
+    transform: translateX(24px);
+}
+
+/* Visible state - applied by JS */
+.reveal.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .staff-card {
+        transition: none;
+    }
+}
+
+/* ==========================================
    ACQUIRED PROPERTIES PAGE
    ========================================== */
 
