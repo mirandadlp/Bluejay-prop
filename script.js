@@ -1,5 +1,5 @@
 /**
- * Agree Realty Recreation - JavaScript
+ * Bluejay Properties - JavaScript
  *
  * This file contains all interactive functionality and content management.
  * Edit the CONTENT object below to change text throughout the site.
@@ -16,7 +16,7 @@
 */
 const CONTENT = {
     // Site
-    siteName: 'Agree Realty',
+    siteName: 'Bluejay Properties',
 
     // Navigation Labels
     navLinks: [
@@ -77,16 +77,16 @@ const CONTENT = {
     footerAddress1: '70 E. Long Lake Road',
     footerAddress2: 'Bloomfield Hills, MI 48304',
     footerPhone: '(248) 737-3980',
-    footerEmail: 'info@agreerealty.com',
-    footerCopyright: '© 2024 Agree Realty Corporation. All rights reserved.',
+    footerEmail: 'info@bluejayproperties.com',
+    footerCopyright: '© 2024 Bluejay Properties. All rights reserved.',
 
     // About Page
     aboutPageTitle: 'About Us',
     aboutPageSubtitle: 'A leading Real Estate Investment Trust focused on net leased retail properties',
     aboutIntroTitle: 'Our Story',
-    aboutIntroText: 'Agree Realty Corporation is a fully integrated, self-administered, and self-managed real estate investment trust (REIT) focused on the acquisition and development of properties net leased to industry leading, omni-channel retail tenants throughout the United States.',
+    aboutIntroText: 'Bluejay Properties is a fully integrated, self-administered, and self-managed real estate investment company focused on the acquisition and development of properties net leased to industry leading, omni-channel retail tenants throughout the United States.',
     aboutHistoryTitle: 'Our History',
-    aboutHistoryText: 'Founded in 1971 as Agree Development Company, we have grown from a regional developer to a national leader in the net lease sector. Today, Agree Realty is a $12B+ industry leader with a portfolio spanning all 50 states.',
+    aboutHistoryText: 'Founded in 1971 as Agree Development Company, we have grown from a regional developer to a national leader in the net lease sector. Today, Bluejay Properties is a $12B+ industry leader with a portfolio spanning all 50 states.',
     aboutMissionTitle: 'Our Mission',
     aboutMissionText: 'To be the premier net lease REIT, delivering consistent growth and value for our shareholders through disciplined acquisitions, strategic development, and operational excellence.',
 
@@ -96,7 +96,7 @@ const CONTENT = {
     acquireStatValue: '$9B+',
     acquireStatLabel: 'Acquired Throughout the United States',
     acquireIntroTitle: 'Acquisition Focus',
-    acquireIntroText: 'Agree Realty has acquired over $9 billion in retail net lease properties throughout the United States, with individual acquisitions ranging from $2 million to $50 million per asset. We focus on properties that offer stable, long-term cash flows with industry-leading tenants.',
+    acquireIntroText: 'Bluejay Properties has acquired over $9 billion in retail net lease properties throughout the United States, with individual acquisitions ranging from $2 million to $50 million per asset. We focus on properties that offer stable, long-term cash flows with industry-leading tenants.',
     acquireCriteriaTitle: 'Acquisition Criteria',
     acquireCriteria: [
         'Single-tenant and multi-tenant net lease properties',
@@ -122,12 +122,12 @@ const CONTENT = {
 
     // Regional Contacts
     regionalContacts: [
-        { region: 'Northeast', name: 'John Smith', title: 'Senior Vice President', email: 'jsmith@agreerealty.com', phone: '(248) 737-3980' },
-        { region: 'Southeast', name: 'Jane Doe', title: 'Vice President', email: 'jdoe@agreerealty.com', phone: '(248) 737-3980' },
-        { region: 'Midwest', name: 'Bob Johnson', title: 'Vice President', email: 'bjohnson@agreerealty.com', phone: '(248) 737-3980' },
-        { region: 'Southwest', name: 'Sarah Williams', title: 'Vice President', email: 'swilliams@agreerealty.com', phone: '(248) 737-3980' },
-        { region: 'West', name: 'Mike Brown', title: 'Senior Vice President', email: 'mbrown@agreerealty.com', phone: '(248) 737-3980' },
-        { region: 'National Accounts', name: 'Chris Davis', title: 'Executive Vice President', email: 'cdavis@agreerealty.com', phone: '(248) 737-3980' }
+        { region: 'Northeast', name: 'John Smith', title: 'Senior Vice President', email: 'jsmith@bluejayproperties.com', phone: '(248) 737-3980' },
+        { region: 'Southeast', name: 'Jane Doe', title: 'Vice President', email: 'jdoe@bluejayproperties.com', phone: '(248) 737-3980' },
+        { region: 'Midwest', name: 'Bob Johnson', title: 'Vice President', email: 'bjohnson@bluejayproperties.com', phone: '(248) 737-3980' },
+        { region: 'Southwest', name: 'Sarah Williams', title: 'Vice President', email: 'swilliams@bluejayproperties.com', phone: '(248) 737-3980' },
+        { region: 'West', name: 'Mike Brown', title: 'Senior Vice President', email: 'mbrown@bluejayproperties.com', phone: '(248) 737-3980' },
+        { region: 'National Accounts', name: 'Chris Davis', title: 'Executive Vice President', email: 'cdavis@bluejayproperties.com', phone: '(248) 737-3980' }
     ]
 };
 
@@ -2251,7 +2251,7 @@ function initAcquiredProperties() {
 }
 
 // Export for potential use in other pages
-window.AgreeRealty = {
+window.BluejayProperties = {
     CONTENT,
     PROPERTIES,
     DEVELOPMENT_PROJECTS,
