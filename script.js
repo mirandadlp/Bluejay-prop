@@ -61,7 +61,7 @@ const CONTENT = {
     // Services
     servicesTitle: 'What We Do',
     serviceAcquireTitle: 'Acquire',
-    serviceAcquireDesc: '$9B+ acquired throughout the United States',
+    serviceAcquireDesc: '$500M+ acquired throughout the United States',
     serviceDevelopTitle: 'Develop',
     serviceDevelopDesc: '50+ years as a preferred development partner',
     serviceFundTitle: 'Fund',
@@ -93,10 +93,10 @@ const CONTENT = {
     // Acquire Page
     acquirePageTitle: 'Acquire',
     acquirePageSubtitle: 'We acquire high-quality net lease properties throughout the United States',
-    acquireStatValue: '$9B+',
+    acquireStatValue: '$500M+',
     acquireStatLabel: 'Acquired Throughout the United States',
     acquireIntroTitle: 'Acquisition Focus',
-    acquireIntroText: 'Bluejay Properties has acquired over $9 billion in retail net lease properties throughout the United States, with individual acquisitions ranging from $2 million to $50 million per asset. We focus on properties that offer stable, long-term cash flows with industry-leading tenants.',
+    acquireIntroText: 'Bluejay Properties has acquired over $500 million in retail net lease properties throughout the United States, with individual acquisitions ranging from $100,000 to $10 million per asset. We focus on properties that offer stable, long-term cash flows with industry-leading tenants.',
     acquireCriteriaTitle: 'Acquisition Criteria',
     acquireCriteria: [
         'Single-tenant and multi-tenant net lease properties',
