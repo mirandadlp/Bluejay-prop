@@ -1650,6 +1650,10 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Einstein Bagels", address: "4639 Kirkman Rd, Orlando, FL" }
   ],
 
+  "Georgia": [
+    { tenant: "Burger King", address: "2495 Dallas HWY, Marietta, GA" }
+  ],
+
   "Illinois": [
     { tenant: "7 Eleven", address: "SWC Harlem & 26th, Riverside, IL" },
     { tenant: "7 Eleven", address: "1156 S York Rd, Bensenville, IL" },
@@ -1687,7 +1691,12 @@ const ACQUIRED_PROPERTIES = {
   "Kansas": [
     { tenant: "Vacant KFC", address: "135th St. & Ridgeview, Olathe, KS" },
     { tenant: "Arby’s", address: "15021 Metcalf Ave, Overland Park, KS" },
-    { tenant: "Fazoli’s", address: "3553 N Rock Rd, Wichita, KS" }
+    { tenant: "Fazoli's", address: "3553 N Rock Rd, Wichita, KS" }
+  ],
+
+  "Kentucky": [
+    { tenant: "Arby's", address: "527 W Dixie Hwy, Elizabethtown, KY" },
+    { tenant: "Taco Bell", address: "4304 Outer Loop, Louisville, KY" }
   ],
 
   "Louisiana": [
@@ -1795,6 +1804,10 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Wendy’s", address: "421 Wagner Ave, Greenville, OH" },
     { tenant: "Circle K", address: "1830 E Waterloo Road, Akron, OH" },
     { tenant: "Fazoli's", address: "1048 N Lexington-Springmill Rd, Mansfield, OH" }
+  ],
+
+  "Oklahoma": [
+    { tenant: "KFC", address: "7304 E Admiral Pl, Tulsa, OK" }
   ],
 
   "Oregon": [
