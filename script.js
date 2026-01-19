@@ -38,7 +38,7 @@ const CONTENT = {
     // Stats/Counters
     statsCounters: [
         { value: 247, suffix: '', label: 'Properties' },
-        { value: 36, suffix: '+', label: 'States' }
+        { value: 40, suffix: '+', label: 'States' }
     ],
 
     // Stats Labels (for data attributes)
