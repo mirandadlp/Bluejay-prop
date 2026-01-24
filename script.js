@@ -103,7 +103,7 @@ const CONTENT = {
         'Sale-leasebacks with industry-leading tenants',
         'Properties with short or long-term leases',
         'Individual acquisitions from $2M to $50M',
-        'Portfolio transactions up to $10M+'
+        'Portfolio transactions up to $10M'
     ],
 
     // Develop Page
