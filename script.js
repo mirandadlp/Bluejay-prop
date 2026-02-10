@@ -616,6 +616,22 @@ function initLogoSlider() {
 }
 
 /* ==========================================
+   CORE VALUES MARQUEE - Premium animated values slider
+   ========================================== */
+function initValuesMarquee() {
+    const track = document.getElementById('prime-values-track');
+    if (!track) return;
+
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    // Clone all items to create seamless infinite loop
+    const items = track.innerHTML;
+    track.innerHTML = items + items; // Duplicate content for seamless loop
+}
+
+/* ==========================================
    STAFF REVEAL ANIMATIONS - Scroll-triggered
    with alternating left/right directions
    ========================================== */
@@ -680,6 +696,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize all features
     initHeroCarousel();
     initLogoSlider();
+    initValuesMarquee();
     initHeader();
     initNavigation();
     initSearch();
