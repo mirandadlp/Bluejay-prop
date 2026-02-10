@@ -2803,6 +2803,41 @@ body.mobile-nav-open {
 }
 
 /* ==========================================
+   CHARITY LIST (Bluejay Gives Back page)
+   ========================================== */
+.charity-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-6) 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+    .charity-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+    }
+}
+
+.charity-list li {
+    padding: var(--space-4) var(--space-5);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .charity-list li:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+/* ==========================================
    ACQUIRED PROPERTIES PAGE
    ========================================== */
 
