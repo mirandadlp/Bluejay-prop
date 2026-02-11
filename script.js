@@ -237,7 +237,7 @@ const STATE_LABELS = {
     "Maine": { abbr: "ME", x: 895, y: 100 },
     "Maryland": { abbr: "MD", x: 810, y: 265 },
     "Massachusetts": { abbr: "MA", x: 888, y: 169 },
-    "Michigan": { abbr: "MI", x: 670, y: 245 },
+    "Michigan": { abbr: "MI", x: 670, y: 220 },
     "Minnesota": { abbr: "MN", x: 530, y: 155 },
     "Mississippi": { abbr: "MS", x: 605, y: 420 },
     "Missouri": { abbr: "MO", x: 553, y: 307 },
