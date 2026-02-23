@@ -1568,7 +1568,7 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Circle K", address: "NWC 12th Ave. & Drexel, Tucson, AZ" },
     { tenant: "Circle K", address: "NEC Park & Irvington, Tucson, AZ" },
     { tenant: "Circle K", address: "655 W 22nd St, Tucson, AZ" },
-    { tenant: "Fresh & Easy Anchored Shopping Center", address: "SWC 12th st. & Northern,Phoenix, AZ" },
+    { tenant: "Fresh & Easy Anchored Shopping Center", address: "SWC 12th St. & Northern, Phoenix, AZ" },
     { tenant: "Jack in the Box", address: "208 N Grand Ave, Nogales, AZ" },
     { tenant: "Strip Shopping Center", address: "SWC Gilbert & Guadalupe, Gilbert, AZ" },
     { tenant: "Target", address: "SWC Dobson and Main, Mesa, AZ" },
