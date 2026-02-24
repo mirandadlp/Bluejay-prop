@@ -77,7 +77,7 @@ const CONTENT = {
     footerAddress1: '70 E. Long Lake Road',
     footerAddress2: 'Bloomfield Hills, MI 48304',
     footerPhone: '(248) 737-3980',
-    footerEmail: 'info@bluejayproperties.com',
+    footerEmail: 'info@bluejayacquisitions.com',
     footerCopyright: '© 2024 Bluejay Acquisitions LLC. All rights reserved.',
 
     // About Page
@@ -122,12 +122,12 @@ const CONTENT = {
 
     // Regional Contacts
     regionalContacts: [
-        { region: 'Northeast', name: 'John Smith', title: 'Senior Vice President', email: 'jsmith@bluejayproperties.com', phone: '(248) 737-3980' },
-        { region: 'Southeast', name: 'Jane Doe', title: 'Vice President', email: 'jdoe@bluejayproperties.com', phone: '(248) 737-3980' },
-        { region: 'Midwest', name: 'Bob Johnson', title: 'Vice President', email: 'bjohnson@bluejayproperties.com', phone: '(248) 737-3980' },
-        { region: 'Southwest', name: 'Sarah Williams', title: 'Vice President', email: 'swilliams@bluejayproperties.com', phone: '(248) 737-3980' },
-        { region: 'West', name: 'Mike Brown', title: 'Senior Vice President', email: 'mbrown@bluejayproperties.com', phone: '(248) 737-3980' },
-        { region: 'National Accounts', name: 'Chris Davis', title: 'Executive Vice President', email: 'cdavis@bluejayproperties.com', phone: '(248) 737-3980' }
+        { region: 'Northeast', name: 'John Smith', title: 'Senior Vice President', email: 'jsmith@bluejayacquisitions.com', phone: '(248) 737-3980' },
+        { region: 'Southeast', name: 'Jane Doe', title: 'Vice President', email: 'jdoe@bluejayacquisitions.com', phone: '(248) 737-3980' },
+        { region: 'Midwest', name: 'Bob Johnson', title: 'Vice President', email: 'bjohnson@bluejayacquisitions.com', phone: '(248) 737-3980' },
+        { region: 'Southwest', name: 'Sarah Williams', title: 'Vice President', email: 'swilliams@bluejayacquisitions.com', phone: '(248) 737-3980' },
+        { region: 'West', name: 'Mike Brown', title: 'Senior Vice President', email: 'mbrown@bluejayacquisitions.com', phone: '(248) 737-3980' },
+        { region: 'National Accounts', name: 'Chris Davis', title: 'Executive Vice President', email: 'cdavis@bluejayacquisitions.com', phone: '(248) 737-3980' }
     ]
 };
 
