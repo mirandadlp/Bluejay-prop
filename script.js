@@ -122,12 +122,11 @@ const CONTENT = {
 
     // Regional Contacts
     regionalContacts: [
-        { region: 'Northeast', name: 'John Smith', title: 'Senior Vice President', email: 'jsmith@bluejayacquisitions.com', phone: '(248) 737-3980' },
-        { region: 'Southeast', name: 'Jane Doe', title: 'Vice President', email: 'jdoe@bluejayacquisitions.com', phone: '(248) 737-3980' },
-        { region: 'Midwest', name: 'Bob Johnson', title: 'Vice President', email: 'bjohnson@bluejayacquisitions.com', phone: '(248) 737-3980' },
-        { region: 'Southwest', name: 'Sarah Williams', title: 'Vice President', email: 'swilliams@bluejayacquisitions.com', phone: '(248) 737-3980' },
-        { region: 'West', name: 'Mike Brown', title: 'Senior Vice President', email: 'mbrown@bluejayacquisitions.com', phone: '(248) 737-3980' },
-        { region: 'National Accounts', name: 'Chris Davis', title: 'Executive Vice President', email: 'cdavis@bluejayacquisitions.com', phone: '(248) 737-3980' }
+        { region: 'Principal', name: 'Sam Librizzi', title: 'Principal', email: 'sam@bluejayacquisitions.com', phone: '(248) 737-3980' },
+        { region: 'Acquisitions', name: 'Tyler Soderberg', title: 'Acquisitions', email: 'tyler@bluejayacquisitions.com', phone: '(248) 737-3980' },
+        { region: 'Acquisitions', name: 'Rob Ginsberg', title: 'Acquisitions', email: 'rob@bluejayacquisitions.com', phone: '(248) 737-3980' },
+        { region: 'Asset Management', name: 'Steve Mastros', title: 'Asset Management', email: 'steve@bluejayacquisitions.com', phone: '(248) 737-3980' },
+        { region: 'Accounting', name: 'Susan Crabtree', title: 'Accounting', email: 'susan@bluejayacquisitions.com', phone: '(248) 737-3980' }
     ]
 };
 
