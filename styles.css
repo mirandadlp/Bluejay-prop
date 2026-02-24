@@ -649,7 +649,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer Logo */
 .footer-logo-img {
-    height: 50px;
+    height: 100px;
     width: auto;
     display: block;
     opacity: 0.9;
@@ -1960,7 +1960,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-content-centered .footer-logo-img {
-    max-height: 40px;
+    max-height: 80px;
     width: auto;
 }
 
