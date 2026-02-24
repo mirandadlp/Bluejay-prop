@@ -16,7 +16,7 @@
 */
 const CONTENT = {
     // Site
-    siteName: 'Bluejay Properties',
+    siteName: 'Bluejay Acquisitions LLC',
 
     // Navigation Labels
     navLinks: [
@@ -53,7 +53,7 @@ const CONTENT = {
     noResults: 'No properties found matching your search.',
 
     // About Preview
-    aboutEyebrow: 'About BlueJay Properties',
+    aboutEyebrow: 'About BlueJay Acquisitions LLC',
     aboutPreviewTitle: 'Industry Leader in Net Lease',
     aboutPreviewText: 'Driven by vision, hard work and efficiency we specialize in acquiring and managing high-performing commercial properties across the nation creating long-term value for our partners, tenants, and communities.',
     aboutPreviewCta: 'Learn More About Us',
@@ -78,15 +78,15 @@ const CONTENT = {
     footerAddress2: 'Bloomfield Hills, MI 48304',
     footerPhone: '(248) 737-3980',
     footerEmail: 'info@bluejayproperties.com',
-    footerCopyright: '© 2024 Bluejay Properties. All rights reserved.',
+    footerCopyright: '© 2024 Bluejay Acquisitions LLC. All rights reserved.',
 
     // About Page
     aboutPageTitle: 'About Us',
     aboutPageSubtitle: 'A leading Real Estate Investment Trust focused on net leased retail properties',
     aboutIntroTitle: 'Our Story',
-    aboutIntroText: 'Bluejay Properties is a fully integrated, self-administered, and self-managed real estate investment company focused on the acquisition and development of properties net leased to industry leading, omni-channel retail tenants throughout the United States.',
+    aboutIntroText: 'Bluejay Acquisitoins LLC is a fully integrated, self-administered, and self-managed real estate investment company focused on the acquisition and development of properties net leased to industry leading, omni-channel retail tenants throughout the United States.',
     aboutHistoryTitle: 'Our History',
-    aboutHistoryText: 'Founded in 1971 as Agree Development Company, we have grown from a regional developer to a national leader in the net lease sector. Today, Bluejay Properties is a $12B+ industry leader with a portfolio spanning all 50 states.',
+    aboutHistoryText: 'Founded in 1971 as Agree Development Company, we have grown from a regional developer to a national leader in the net lease sector. Today, Bluejay Acquisitions LLC is a $12B+ industry leader with a portfolio spanning all 50 states.',
     aboutMissionTitle: 'Our Mission',
     aboutMissionText: 'To be the premier net lease REIT, delivering consistent growth and value for our shareholders through disciplined acquisitions, strategic development, and operational excellence.',
 
@@ -96,7 +96,7 @@ const CONTENT = {
     acquireStatValue: '$360M+',
     acquireStatLabel: 'Acquired Throughout the United States',
     acquireIntroTitle: 'Acquisition Focus',
-    acquireIntroText: 'Bluejay Properties has acquired over $360 million in retail net lease properties throughout the United States, with individual acquisitions ranging from $100,000 to $10 million per asset. We focus on properties that offer stable, long-term cash flows with industry-leading tenants.',
+    acquireIntroText: 'Bluejay Acquisitions LLC has acquired over $360 million in retail net lease properties throughout the United States, with individual acquisitions ranging from $100,000 to $10 million per asset. We focus on properties that offer stable, long-term cash flows with industry-leading tenants.',
     acquireCriteriaTitle: 'Acquisition Criteria',
     acquireCriteria: [
         'Single-tenant and multi-tenant net lease properties',
