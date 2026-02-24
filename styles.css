@@ -428,7 +428,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    height: 50px;
+    height: 100px;
     width: auto;
     display: block;
     transition: opacity var(--transition-base), transform var(--transition-base);
@@ -2255,8 +2255,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .logo-img {
-        height: 24px;
-        max-height: 28px;
+        height: 48px;
+        max-height: 56px;
     }
 
     .primary-nav {
