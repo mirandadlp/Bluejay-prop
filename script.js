@@ -1587,7 +1587,9 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Vacant Osco", address: "NWC Alma School & Elliot, Chandler, AZ" },
     { tenant: "Vacant Osco Drug", address: "NEC Dobson & Baseline, Mesa, AZ" },
     { tenant: "Big 5", address: "19th Ave And Bell Rd, Phoenix, AZ" },
-    { tenant: "Burger King", address: "2207 West Happy Valley Road, Phoenix, AZ" }
+    { tenant: "Burger King", address: "2207 West Happy Valley Road, Phoenix, AZ" },
+    { tenant: "Circle K", address: "11271 E Tanque Verde Rd, Tucson, AZ" },
+    { tenant: "Arby's", address: "119 E Baseline Rd, Phoenix, AZ" }
   ],
 
   "California": [
@@ -1630,7 +1632,9 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Del Taco", address: "22349 El Toro Rd, Lake Forest, CA" },
     { tenant: "7 Eleven", address: "636 N Vine Ave, Ontario, CA" },
     { tenant: "7 Eleven", address: "194 W Napa St, Sonoma, CA" },
-    { tenant: "7 Eleven", address: "140 Beach Road, Marina, CA" }
+    { tenant: "7 Eleven", address: "140 Beach Road, Marina, CA" },
+    { tenant: "Wienerschnitzel", address: "9419 Central Ave, Montclair, CA" },
+    { tenant: "7 Eleven", address: "1276 West Baseline Road, Rialto, CA" }
   ],
 
   "Colorado": [
@@ -1696,7 +1700,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Burger King", address: "4360 National Rd E, Richmond, IN" },
     { tenant: "Burger King", address: "11741 Pendleton Pike, Indianapolis, IN" },
     { tenant: "Speedway", address: "1706 South Bend Ave, South Bend, IN" },
-    { tenant: "7 Eleven", address: "54543 County Rd 17, Elkhart, IN" }
+    { tenant: "7 Eleven", address: "54543 County Rd 17, Elkhart, IN" },
+    { tenant: "7 Eleven", address: "623 E Jackson Blvd., Elkhart, IN" }
   ],
 
   "Iowa": [
@@ -1915,7 +1920,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "7 Eleven", address: "3963 George Washington Memorial Hwy, Hayes, VA" },
     { tenant: "7 Eleven", address: "30 S Reynolds St, Alexandria, VA" },
     { tenant: "7 Eleven", address: "800 Franklin St, Alexandria, VA" },
-    { tenant: "7 Eleven", address: "211 N Main St, Bridgewater, VA" }
+    { tenant: "7 Eleven", address: "211 N Main St, Bridgewater, VA" },
+    { tenant: "Arby's", address: "3200 W. Mercury Blvd., Hampton, VA" }
   ],
 
   "Washington": [
