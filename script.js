@@ -16,7 +16,7 @@
 */
 const CONTENT = {
     // Site
-    siteName: 'Bluejay Acquisitions LLC',
+    siteName: 'BlueJay National LLC',
 
     // Navigation Labels
     navLinks: [
@@ -53,7 +53,7 @@ const CONTENT = {
     noResults: 'No properties found matching your search.',
 
     // About Preview
-    aboutEyebrow: 'About BlueJay Acquisitions LLC',
+    aboutEyebrow: 'About BlueJay National LLC',
     aboutPreviewTitle: 'Industry Leader in Net Lease',
     aboutPreviewText: 'Driven by vision, hard work and efficiency we specialize in acquiring and managing high-performing commercial properties across the nation creating long-term value for our partners, tenants, and communities.',
     aboutPreviewCta: 'Learn More About Us',
@@ -78,7 +78,7 @@ const CONTENT = {
     footerAddress2: 'Bloomfield Hills, MI 48304',
     footerPhone: '(248) 737-3980',
     footerEmail: 'info@bluejayacquisitions.com',
-    footerCopyright: '© 2024 Bluejay Acquisitions LLC. All rights reserved.',
+    footerCopyright: '© 2024 BlueJay National LLC. All rights reserved.',
 
     // About Page
     aboutPageTitle: 'About Us',
@@ -86,7 +86,7 @@ const CONTENT = {
     aboutIntroTitle: 'Our Story',
     aboutIntroText: 'Bluejay Acquisitoins LLC is a fully integrated, self-administered, and self-managed real estate investment company focused on the acquisition and development of properties net leased to industry leading, omni-channel retail tenants throughout the United States.',
     aboutHistoryTitle: 'Our History',
-    aboutHistoryText: 'Founded in 1971 as Agree Development Company, we have grown from a regional developer to a national leader in the net lease sector. Today, Bluejay Acquisitions LLC is a $12B+ industry leader with a portfolio spanning all 50 states.',
+    aboutHistoryText: 'Founded in 1971 as Agree Development Company, we have grown from a regional developer to a national leader in the net lease sector. Today, BlueJay National LLC is a $12B+ industry leader with a portfolio spanning all 50 states.',
     aboutMissionTitle: 'Our Mission',
     aboutMissionText: 'To be the premier net lease REIT, delivering consistent growth and value for our shareholders through disciplined acquisitions, strategic development, and operational excellence.',
 
@@ -96,7 +96,7 @@ const CONTENT = {
     acquireStatValue: '$360M+',
     acquireStatLabel: 'Acquired Throughout the United States',
     acquireIntroTitle: 'Acquisition Focus',
-    acquireIntroText: 'Bluejay Acquisitions LLC has acquired over $360 million in retail net lease properties throughout the United States, with individual acquisitions ranging from $100,000 to $10 million per asset. We focus on properties that offer stable, long-term cash flows with industry-leading tenants.',
+    acquireIntroText: 'BlueJay National LLC has acquired over $360 million in retail net lease properties throughout the United States, with individual acquisitions ranging from $100,000 to $10 million per asset. We focus on properties that offer stable, long-term cash flows with industry-leading tenants.',
     acquireCriteriaTitle: 'Acquisition Criteria',
     acquireCriteria: [
         'Single-tenant and multi-tenant net lease properties',
@@ -1634,7 +1634,9 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "7 Eleven", address: "194 W Napa St, Sonoma, CA" },
     { tenant: "7 Eleven", address: "140 Beach Road, Marina, CA" },
     { tenant: "Wienerschnitzel", address: "9419 Central Ave, Montclair, CA" },
-    { tenant: "7 Eleven", address: "1276 West Baseline Road, Rialto, CA" }
+    { tenant: "7 Eleven", address: "1276 West Baseline Road, Rialto, CA" },
+    { tenant: "Jack In The Box", address: "6601 Alondra Blvd, Paramount, CA" },
+    { tenant: "Jack In The Box", address: "10151 Ben Nevis Blvd, Riverside, CA" }
   ],
 
   "Colorado": [
@@ -1701,7 +1703,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Burger King", address: "11741 Pendleton Pike, Indianapolis, IN" },
     { tenant: "Speedway", address: "1706 South Bend Ave, South Bend, IN" },
     { tenant: "7 Eleven", address: "54543 County Rd 17, Elkhart, IN" },
-    { tenant: "7 Eleven", address: "623 E Jackson Blvd., Elkhart, IN" }
+    { tenant: "7 Eleven", address: "623 E Jackson Blvd., Elkhart, IN" },
+    { tenant: "Burger King", address: "3904 W. Bethel Avenue, Muncie, IN" }
   ],
 
   "Iowa": [
@@ -1797,7 +1800,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Taco Bell", address: "1518 E Santa Fe Ave, Grants, NM" },
     { tenant: "Family Dollar", address: "248 NM-50, Pecos, NM" },
     { tenant: "Speedway", address: "507 East Broadway, Farmington, NM" },
-    { tenant: "Arby's", address: "3270 Coors Blvd NW, Albuquerque, NM" }
+    { tenant: "Arby's", address: "3270 Coors Blvd NW, Albuquerque, NM" },
+    { tenant: "Delek Gas", address: "3610 Candelaria Rd NE, Albuquerque, NM" }
   ],
 
   "New York": [
