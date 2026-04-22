@@ -77,7 +77,7 @@ const CONTENT = {
     footerAddress1: '70 E. Long Lake Road',
     footerAddress2: 'Bloomfield Hills, MI 48304',
     footerPhone: '(248) 737-3980',
-    footerEmail: 'info@bluejayacquisitions.com',
+    footerEmail: 'info@bluejaynational.com',
     footerCopyright: '© 2024 BlueJay National LLC. All rights reserved.',
 
     // About Page
@@ -122,11 +122,11 @@ const CONTENT = {
 
     // Regional Contacts
     regionalContacts: [
-        { region: 'Principal', name: 'Sam Librizzi', title: 'Principal', email: 'sam@bluejayacquisitions.com', phone: '(248) 737-3980' },
-        { region: 'Acquisitions', name: 'Tyler Soderberg', title: 'Acquisitions', email: 'tyler@bluejayacquisitions.com', phone: '(248) 737-3980' },
-        { region: 'Acquisitions', name: 'Rob Ginsberg', title: 'Acquisitions', email: 'rob@bluejayacquisitions.com', phone: '(248) 737-3980' },
-        { region: 'Asset Management', name: 'Steve Mastros', title: 'Asset Management', email: 'steve@bluejayacquisitions.com', phone: '(248) 737-3980' },
-        { region: 'Accounting', name: 'Susan Crabtree', title: 'Accounting', email: 'susan@bluejayacquisitions.com', phone: '(248) 737-3980' }
+        { region: 'Principal', name: 'Sam Librizzi', title: 'Principal', email: 'sam@bluejaynational.com', phone: '(248) 737-3980' },
+        { region: 'Acquisitions', name: 'Tyler Soderberg', title: 'Acquisitions', email: 'tyler@bluejaynational.com', phone: '(248) 737-3980' },
+        { region: 'Acquisitions', name: 'Rob Ginsberg', title: 'Acquisitions', email: 'rob@bluejaynational.com', phone: '(248) 737-3980' },
+        { region: 'Asset Management', name: 'Steve Mastros', title: 'Asset Management', email: 'steve@bluejaynational.com', phone: '(248) 737-3980' },
+        { region: 'Accounting', name: 'Susan Crabtree', title: 'Accounting', email: 'susan@bluejaynational.com', phone: '(248) 737-3980' }
     ]
 };
 
