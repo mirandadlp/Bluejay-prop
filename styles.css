@@ -416,7 +416,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     max-width: var(--container-max);
     margin-inline: auto;
-    padding-inline: clamp(1.5rem, 4vw, 3rem);
+    padding-inline: var(--container-padding);
 }
 
 /* Logo */
@@ -428,7 +428,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    height: 75px;
+    height: 56px;
     width: auto;
     display: block;
     transition: opacity var(--transition-base), transform var(--transition-base);
@@ -649,7 +649,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer Logo */
 .footer-logo-img {
-    height: 75px;
+    height: 56px;
     width: auto;
     display: block;
     opacity: 0.9;
@@ -1954,13 +1954,13 @@ h1, h2, h3, h4, h5, h6 {
 .footer-content-centered {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--space-3);
-    text-align: center;
+    text-align: left;
 }
 
 .footer-content-centered .footer-logo-img {
-    max-height: 60px;
+    max-height: 45px;
     width: auto;
 }
 
@@ -2255,8 +2255,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .logo-img {
-        height: 36px;
-        max-height: 42px;
+        height: 27px;
+        max-height: 32px;
     }
 
     .primary-nav {
