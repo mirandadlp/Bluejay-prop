@@ -428,7 +428,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    height: 100px;
+    height: 75px;
     width: auto;
     display: block;
     transition: opacity var(--transition-base), transform var(--transition-base);
@@ -649,7 +649,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer Logo */
 .footer-logo-img {
-    height: 100px;
+    height: 75px;
     width: auto;
     display: block;
     opacity: 0.9;
@@ -1960,7 +1960,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-content-centered .footer-logo-img {
-    max-height: 80px;
+    max-height: 60px;
     width: auto;
 }
 
@@ -2255,8 +2255,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .logo-img {
-        height: 48px;
-        max-height: 56px;
+        height: 36px;
+        max-height: 42px;
     }
 
     .primary-nav {
