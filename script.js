@@ -1704,7 +1704,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Speedway", address: "1706 South Bend Ave, South Bend, IN" },
     { tenant: "7 Eleven", address: "54543 County Rd 17, Elkhart, IN" },
     { tenant: "7 Eleven", address: "623 E Jackson Blvd., Elkhart, IN" },
-    { tenant: "Burger King", address: "3904 W. Bethel Avenue, Muncie, IN" }
+    { tenant: "Burger King", address: "3904 W. Bethel Avenue, Muncie, IN" },
+    { tenant: "7 Eleven", address: "910 W Douglas Rd, Mishawaka, IN" }
   ],
 
   "Iowa": [
@@ -1752,7 +1753,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Burger King", address: "3015 S. Westnedge Ave, Kalamazoo, MI" },
     { tenant: "Aspen Dental", address: "1817 M-139, Benton Harbor, MI" },
     { tenant: "Family Dollar", address: "481 Pipestone St, Benton Harbor, MI" },
-    { tenant: "7 Eleven", address: "27010 Dequindre Rd, Warren, MI" }
+    { tenant: "7 Eleven", address: "27010 Dequindre Rd, Warren, MI" },
+    { tenant: "Wendy’s", address: "1865 E Sherman Blvd, Muskegon, MI" }
   ],
 
   "Minnesota": [
@@ -1812,7 +1814,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "7 Eleven", address: "358 Mooney Pond Rd., Brookhaven, NY" },
     { tenant: "7 Eleven", address: "154 Oak St, Copiague, NY" },
     { tenant: "Autozone", address: "852 N Clinton Ave, Rochester, NY" },
-    { tenant: "Speedway", address: "229 S Brandywine Ave, Schenectady, NY" }
+    { tenant: "Speedway", address: "229 S Brandywine Ave, Schenectady, NY" },
+    { tenant: "7 Eleven", address: "83 Franklin Ave, Valley Stream, NY" }
   ],
 
   "North Carolina": [
@@ -1884,7 +1887,9 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Churchs", address: "234 Valley Hi Drive, San Antonio, TX" },
     { tenant: "Shipley Do Nuts", address: "1739 W 7th Ave, Corsicana, TX" },
     { tenant: "7 Eleven", address: "2417 Jupiter Rd, Plano, TX" },
-    { tenant: "Jack In The Box", address: "742 SW Military Dr, San Antonio, TX" }
+    { tenant: "Jack In The Box", address: "742 SW Military Dr, San Antonio, TX" },
+    { tenant: "Jack In The Box", address: "11630 Hempstead Hwy, Houston, TX" },
+    { tenant: "Jack In The Box", address: "13351 Briar Forest Drive, Houston, TX" }
   ],
 
   "Utah": [
@@ -1925,7 +1930,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "7 Eleven", address: "30 S Reynolds St, Alexandria, VA" },
     { tenant: "7 Eleven", address: "800 Franklin St, Alexandria, VA" },
     { tenant: "7 Eleven", address: "211 N Main St, Bridgewater, VA" },
-    { tenant: "Arby's", address: "3200 W. Mercury Blvd., Hampton, VA" }
+    { tenant: "Arby's", address: "3200 W. Mercury Blvd., Hampton, VA" },
+    { tenant: "KFC", address: "1300 Fordham Drive, Virginia Beach, VA" }
   ],
 
   "Washington": [
