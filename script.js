@@ -1589,7 +1589,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Big 5", address: "19th Ave And Bell Rd, Phoenix, AZ" },
     { tenant: "Burger King", address: "2207 West Happy Valley Road, Phoenix, AZ" },
     { tenant: "Circle K", address: "11271 E Tanque Verde Rd, Tucson, AZ" },
-    { tenant: "Arby's", address: "119 E Baseline Rd, Phoenix, AZ" }
+    { tenant: "Arby's", address: "119 E Baseline Rd, Phoenix, AZ" },
+    { tenant: "Schlotzkys", address: "3900 East Fry Boulevard, Sierra Vista, AZ" }
   ],
 
   "California": [
@@ -1636,7 +1637,10 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Wienerschnitzel", address: "9419 Central Ave, Montclair, CA" },
     { tenant: "7 Eleven", address: "1276 West Baseline Road, Rialto, CA" },
     { tenant: "Jack In The Box", address: "6601 Alondra Blvd, Paramount, CA" },
-    { tenant: "Jack In The Box", address: "10151 Ben Nevis Blvd, Riverside, CA" }
+    { tenant: "Jack In The Box", address: "10151 Ben Nevis Blvd, Riverside, CA" },
+    { tenant: "7 Eleven", address: "4627 Da Vinci Dr, Stockton, CA" },
+    { tenant: "Western Dental", address: "12700 Sherman Way, North Hollywood, CA" },
+    { tenant: "7 Eleven", address: "13985 Torrey Del Mar Dr, San Diego, CA" }
   ],
 
   "Colorado": [
@@ -1648,7 +1652,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "O’Riley Auto", address: "SSWC Townsend Ave & Columbia Way, Montrose, CO" },
     { tenant: "Safeway Anchored Shopping Center", address: "SEC Mexico & Buckley, Aurora, CO" },
     { tenant: "7 Eleven", address: "1600 W 92nd Ave, Federal Heights, CO" },
-    { tenant: "7 Eleven", address: "1690 Pearl St, Denver, CO" }
+    { tenant: "7 Eleven", address: "1690 Pearl St, Denver, CO" },
+    { tenant: "7 Eleven", address: "6008 Frederick Way, Frederick, CO" }
   ],
 
   "Connecticut": [
@@ -1669,7 +1674,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Wendys", address: "280 Lakeland Park Blvd, Lakeland, FL" },
     { tenant: "7 Eleven", address: "7525 Osceola Polk Line Road, Davenport, FL" },
     { tenant: "Burger King", address: "9675 Bird Rd, Miami, FL" },
-    { tenant: "Einstein Bagels", address: "4639 Kirkman Rd, Orlando, FL" }
+    { tenant: "Einstein Bagels", address: "4639 Kirkman Rd, Orlando, FL" },
+    { tenant: "7 Eleven", address: "1725 Drew St, Clearwater, FL" }
   ],
 
   "Georgia": [
@@ -1737,7 +1743,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "7 Eleven", address: "2326 Sparrows Point Rd, Sparrows Point, MD" },
     { tenant: "7 Eleven", address: "19412 Walter Johnson Drive, Germantown, MD" },
     { tenant: "7 Eleven", address: "4213 Ridge Rd, Westminster, MD" },
-    { tenant: "7 Eleven", address: "7501 Dunmanway, Baltimore, MD" }
+    { tenant: "7 Eleven", address: "7501 Dunmanway, Baltimore, MD" },
+    { tenant: "7 Eleven", address: "8235 Perry Hall Blvd, Nottingham, MD" }
   ],
 
   "Massachusetts": [
@@ -1754,7 +1761,9 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Aspen Dental", address: "1817 M-139, Benton Harbor, MI" },
     { tenant: "Family Dollar", address: "481 Pipestone St, Benton Harbor, MI" },
     { tenant: "7 Eleven", address: "27010 Dequindre Rd, Warren, MI" },
-    { tenant: "Wendy’s", address: "1865 E Sherman Blvd, Muskegon, MI" }
+    { tenant: "Wendy’s", address: "1865 E Sherman Blvd, Muskegon, MI" },
+    { tenant: "7 Eleven", address: "2397 S Mission St, Mt Pleasant, MI" },
+    { tenant: "7 Eleven", address: "8570 Homestead Dr, Zeeland, MI" }
   ],
 
   "Minnesota": [
@@ -1844,7 +1853,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "7 Eleven", address: "1430 NE 181st Ave., Portland, OR" },
     { tenant: "7 Eleven", address: "9111 Southeast Division St, Portland, OR" },
     { tenant: "Wendy’s", address: "641 Lancaster Dr NE., Salem, OR" },
-    { tenant: "Jack in the Box", address: "550 NE Circle Blvd, Corvallis, OR" }
+    { tenant: "Jack in the Box", address: "550 NE Circle Blvd, Corvallis, OR" },
+    { tenant: "7 Eleven", address: "1560 9th St, Florence, OR" }
   ],
 
   "Pennsylvania": [
@@ -1957,7 +1967,8 @@ const ACQUIRED_PROPERTIES = {
     { tenant: "Famous Daves", address: "3030 Milton Ave, Janesville, WI" },
     { tenant: "Dairy Queen", address: "6520 W North Ave, Wauwatosa, WI" },
     { tenant: "Arby's", address: "2601 N. 20th Ave, Wausau, WI" },
-    { tenant: "Ihop", address: "5800 Durand Ave, Racine, WI" }
+    { tenant: "Ihop", address: "5800 Durand Ave, Racine, WI" },
+    { tenant: "Lindsay Hallman Paints", address: "5016 Washington Ave, Racine, WI" }
   ]
 };
 
